@@ -17,7 +17,7 @@ nav {
     border: 3px solid black;
     background: linear-gradient(to bottom,#283991, #141945);
     border-radius: 25px;
-    width: 32vw;
+    width: 400px;
 }
 
 nav ul li {
