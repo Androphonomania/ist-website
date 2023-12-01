@@ -6,18 +6,23 @@
 }
 
 body {
-    font-family: 'Palladio', sans-serif
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+    font-family: 'Palladio', serif;
 }
 
 nav {
     border: 3px solid black;
-    background-color: #283991;
+    background: linear-gradient(to bottom,#283991, #141945);
     border-radius: 25px;
+    width: 32vw;
 }
 
 nav ul li {
     display: inline;
-    font-size: 150%;
+    font-size: 120%;
 }
 
 nav ul li::after {
@@ -29,8 +34,13 @@ nav ul li:last-child::after {
     content: "";
 }
 
+nav ul li:first-child {
+    margin-left: -1vw;
+}
+
 nav ul li a {
     color: white;
+    text-underline-offset: 0.5vh;
 }
 
 nav ul li a:visited {
