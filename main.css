@@ -47,10 +47,15 @@ nav ul li:first-child {
 nav ul li a {
     color: white;
     text-decoration: none;
+    text-underline-offset: 5px;
 }
 
 nav ul li a:visited {
     color: white;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 button {
