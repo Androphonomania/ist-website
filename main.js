@@ -15,3 +15,12 @@ window.onload = function () {
         }
     });
 }
+
+const shake = function() {
+    for (let i = 0; i < document.children.length; i++) {
+        document.children[i].classList.add('animate__animated', 'animate__tada')
+        document.children[i].addEventListener('animationend', function() {
+            document.children[i].classList.remove('animate__animated', 'animate__tada')
+        })
+    }
+}
