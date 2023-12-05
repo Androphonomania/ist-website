@@ -1,5 +1,5 @@
 window.onload = function () {
-    const icon = document.getElementById("icon")
+    const icon = document.getElementById("icon");
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         icon.setAttribute("href", "favicon-dark.ico")
