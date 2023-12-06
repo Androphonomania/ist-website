@@ -23,3 +23,7 @@ window.onload = function () {
         }
     }
 }
+
+const openSearchBar = function() {
+    
+}

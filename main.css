@@ -39,7 +39,11 @@ nav table tr td img:hover {
     cursor: pointer;
 }
 
-#lastNav {
+#searchText {
+    padding: 0px;
+}
+
+#searchButton {
     padding: 10px;
 }
 
