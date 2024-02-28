@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Palladio';
-    src: url('palladio.woff') format('woff'),
-    url('palladio.ttf') format('ttf');
+    src: url('../fonts/palladio.woff') format('woff'),
+    url('../fonts/palladio.ttf') format('ttf');
 }
 
 body {
