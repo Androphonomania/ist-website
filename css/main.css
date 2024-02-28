@@ -17,58 +17,25 @@ h1 {
 }
 
 nav {
-    border: 3px solid black;
     background: linear-gradient(to bottom,#283991, #192661);
-    border-radius: 25px;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
-nav table tr td {
-    display: inline-block;
-    font-size: 150%;
-    padding: 10px 97px;
-    text-align: center;
+.navImg {
+    padding: 1%
 }
 
-nav table tr td img {
-    border-right: none;
-    float: inline-end;
-}
-
-nav table tr td img:hover {
+.navImg:hover {
     cursor: pointer;
 }
 
-#searchText {
-    padding: 0px;
+#hamburgerMenu img {
+    float: inline-start;
 }
 
-#searchButton {
-    padding: 10px;
-}
-
-nav table tr:first-child {
-    margin-left: 1vw;
-    padding-left: 5px;
-}
-
-nav table tr td a {
-    color: white;
-    text-decoration: none;
-    text-underline-offset: 5px;
-}
-
-nav table tr td a:visited {
-    color: white;
-}
-
-nav table tr td a:hover {
-    text-decoration: underline;
-}
-
-nav table tr td a.selected:hover {
-    text-decoration: none;
+#searchButton img {
+    float: inline-end;
 }
 
 button {
@@ -76,12 +43,4 @@ button {
     margin: 10px;
     border-radius: 50px;
     font-family: 'Rubik', sans-serif;
-}
-
-td {
-    padding: 5px;
-}
-
-table {
-    border-collapse: collapse;
 }

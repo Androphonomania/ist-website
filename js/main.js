@@ -27,3 +27,7 @@ window.onload = function () {
 const openSearchBar = function() {
     alert("search bar opened");
 }
+
+const openHamburgerMenu = function() {
+    alert("hamburger menu opened");
+}
