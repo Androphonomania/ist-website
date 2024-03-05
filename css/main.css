@@ -17,6 +17,7 @@ h1 {
 
 nav {
     background: linear-gradient(to bottom,#283991, #192661);
+    max-width: 100vw;
     width: 100vw;
     display: inline-flex;
     margin: 0%;
