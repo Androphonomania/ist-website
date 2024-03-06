@@ -42,12 +42,25 @@ nav {
     float: left;
     flex: 0;
     padding-top: 5px;
+    padding-right: 6px;
+    padding-left: 3px;
 }
 
 #searchButton img {
     position: relative;
     float: inline-end;
     flex: 1;
+}
+
+#navRSCLogo img {
+    padding-top: 0px;
+    padding-left: 3px;
+}
+
+#navRSCText p {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* button {
