@@ -73,15 +73,17 @@ nav {
     font-size: 3vh !important;
 }
 
-#footer table {
+table {
+    border-collapse: collapse;
+}
+
+#footer {
     width: 100%;
-    border-top: 1px solid;
+    border-top: 4px solid #0f0f97;
 }
 
 td {
-    border-collapse: collapse;
-    border-right: 1px solid;
-    border-left: 1px solid;
+    border: 1px solid;
 }
 
 /* button {
