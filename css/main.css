@@ -78,12 +78,16 @@ nav {
     font-size: 3vh !important;
 }
 
-#footer {
+#footer table {
     width: 100%;
     border-top: 1px solid;
-    border-collapse: collapse;
 }
 
+td {
+    border-collapse: collapse;
+    border-right: 1px solid;
+    border-left: 1px solid;
+}
 
 /* button {
     padding: 13px;
