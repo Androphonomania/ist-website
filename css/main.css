@@ -67,6 +67,13 @@ nav {
     font-size: auto !important;
 }
 
+#footer {
+    width: 100%;
+    border-top: 1px solid;
+    border-collapse: collapse;
+}
+
+
 /* button {
     padding: 13px;
     margin: 10px;
