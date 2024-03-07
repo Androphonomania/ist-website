@@ -79,11 +79,11 @@ table {
 
 #footer {
     width: 100%;
-    border-top: 4px solid #0f0f97;
+    border-top: 3px solid #0f0f97;
 }
 
 td {
-    border: 1px solid;
+    border: 2px solid #666;
 }
 
 /* button {
