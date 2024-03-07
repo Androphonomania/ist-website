@@ -101,6 +101,11 @@ td {
     border: 2px solid #666;
 }
 
+#acknowledgement {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
 /* button {
     padding: 13px;
     margin: 10px;
