@@ -27,11 +27,13 @@ nav {
     display: inline-flex;
     margin: 0%;
     box-sizing: border-box;
+    height: 10vh;
 }
 
 .navImg {
     padding: 1%;
     display: inline-block;
+    width: 3vw;
 }
 
 .navImg:hover {
@@ -41,9 +43,10 @@ nav {
 #hamburgerMenu img {
     float: left;
     flex: 0;
-    padding-top: 5px;
-    padding-right: 6px;
-    padding-left: 3px;
+    padding-top: 0.9vh;
+    margin-right: 0.6vw;
+    padding-left: 0.2vw;
+    width: 3vw
 }
 
 #searchButton img {
@@ -53,14 +56,15 @@ nav {
 }
 
 #navRSCLogo img {
-    padding-top: 0px;
-    padding-left: 3px;
+    padding-top: 0;
+    padding-left: 0.25vw;
 }
 
 #navRSCText p {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: auto !important;
 }
 
 /* button {
