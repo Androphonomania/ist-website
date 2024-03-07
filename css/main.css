@@ -55,6 +55,7 @@ nav {
     margin-left: 65vw;
     width: 3vw;
     height: auto;
+    position: relative;
 }
 
 #navRSCLogo img {
@@ -73,6 +74,10 @@ nav {
     font-weight: bolder;
     font-size: 3vh;
                                                                                                                                                                                                                                                                                                                                                                         `````````````````````````````````````````````
+}
+
+#navRSCText p {
+    width: 30vw;
 }
 
 #navSep {
