@@ -44,27 +44,38 @@ nav {
     float: left;
     flex: 0;
     padding-top: 0.9vh;
-    margin-right: 0.6vw;
+    margin-right: 0.7vw;
     padding-left: 0.2vw;
-    width: 3vw
+    width: 3vw;
+    height: 4.5vh;
 }
 
 #searchButton img {
     position: relative;
     float: inline-end;
     flex: 1;
+    padding-top: 0vh;
+    margin-right: 0.7vw;
+    padding-left: 0.2vw;
+    width: 3vw;
+    height: 6vh;
 }
 
 #navRSCLogo img {
     padding-top: 0;
     padding-left: 0.25vw;
+    margin-top: 0.3vh;
+    margin-right: 0.3vw;
+    padding-left: 0vw;
+    width: 2.9vw;
+    height: 5.6vh;
 }
 
 #navRSCText p {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: auto !important;
+    font-weight: bolder;
+    font-size: 3vh !important;
 }
 
 #footer {
