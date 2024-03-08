@@ -7,10 +7,6 @@
     url('../fonts/palladio.ttf') format('ttf');
 }
 
-header {
-    margin-left: 2%;
-}
-
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0%;
@@ -35,36 +31,42 @@ nav {
 
 .navImg {
     padding: 1%;
-    display: block;
 }
 
 .navImg:hover {
     cursor: pointer;
 }
 
+#navLeft div{
+    display: inline;
+    position: relative;
+}
+
 #hamburgerMenu img {
-    padding-top: 0.9vh;
+    margin-top: 0.8vh;
     margin-right: 0.1vw;
-    padding-left: 0.2vw;
+    padding-left: 0.7vw;
     width: 3vw;
     height: auto;
+}
+
+#searchButton {
+    float: right;
 }
 
 #searchButton img {
     padding-top: 0vh;
     margin-right: 0.7vw;
-    margin-left: 65vw;
+    margin-left: 52vw;
     width: 3vw;
     height: auto;
     position: relative;
 }
 
 #navRSCLogo img {
-    padding-top: 0;
-    padding-left: 0.25vw;
-    margin-top: 0.3vh;
+    padding-top: 0.5vh;
+    padding-left: 0.4vw;
     margin-right: 0.3vw;
-    padding-left: 0vw;
     width: 2.9vw;
     height: auto;
 }
@@ -83,6 +85,7 @@ nav {
 #navSep {
     margin-top: 1.5vh;
     font-size: 6vh;
+    margin-left: 0.2vw;
 }
 
 #navRSCText p:hover {
