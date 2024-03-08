@@ -110,6 +110,11 @@ td {
     padding-right: 1%;
 }
 
+#acknowledgement p {
+    font-size: 10px;
+    font-family: 'Albert Sans';
+}
+
 /* button {
     padding: 13px;
     margin: 10px;
