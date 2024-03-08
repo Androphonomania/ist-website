@@ -91,6 +91,7 @@ nav {
 
 table {
     border-collapse: collapse;
+    height:auto;
 }
 
 #footer {
@@ -103,13 +104,17 @@ td {
 }
 
 #acknowledgement {
-    padding-left: 1%;
-    padding-right: 1%;
+    padding: 0% 0.5%;
+    font-size: 12px;
+    font-family: 'Albert Sans', sans-serif;
 }
 
-#acknowledgement p {
-    font-size: 10px;
-    font-family: 'Albert Sans';
+table,td .internalFooter {
+    border: none;
+}
+
+.footerBox {
+    width: 50%;
 }
 
 /* button {
