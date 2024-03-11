@@ -104,6 +104,7 @@ header {
 
 header div {
     display: inline;
+    vertical-align: middle;
 }
 
 #headerImage {
@@ -123,6 +124,11 @@ header div {
     font-family: 'Palladio';
     font-size: 4vw;
     float: left;
+}
+
+#fallbackP {
+    margin-top: 25vh;
+    margin-left: 1vw;
 }
 
 table {

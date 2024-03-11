@@ -13,22 +13,19 @@
 </head>
 
 <body>
-    <img src="../img/rsclogo.png" width="236.2" height="117.2">
+    <nav>
+        <div class="navImg" id="hamburgerMenu"><img onclick="openHamburgerMenu()" src="../img/ham.png"></div>
+        <div id="navSep">|</div>
+        <div class="navImg" id="navRSCLogo"><a href="index.html"><img src="../img/favicon-dark.ico"></a></div>
+        <a href="index.html" id="navRSCText">
+            <p id="navRSCTextP">Ryde Secondary College</p>
+        </a></div>
+
+        <div class="navImg" id="searchButton"><img onclick="openSearchBar()" src="../img/search.webp"></div>
+    </nav>
     <header>
-        <h1>Ryde Secondary College</h1>
-        <h3>Contact Us</h3>
-        <nav>
-            <table>
-                <tr>
-                    <td><a href="index.html">Home</a></td>
-                    <td><a class="selected">Contact Us</a></td>
-                    <td><a href="subjects.html">Subjects</a></td>
-                    <td><a href="resources.html">Resources</a></td>
-                    <td id="searchText"></td>
-                    <td id="searchButton"><img onclick="openSearchBar()" src="../img/search.webp" width="30" height="30"></td>
-                </tr>
-            </table>
-        </nav>
+        <div id="headerImage"><img src="../img/rsclogo.png" height="auto"></div>
+        <div id="headerTitle"><h3>Contact Us</h3></div>
     </header>
 </body>
 
