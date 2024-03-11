@@ -10,6 +10,7 @@
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0%;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -33,7 +34,7 @@ nav {
     padding: 1%;
 }
 
-.navImg:hover {
+.navImg img:hover {
     cursor: pointer;
 }
 
@@ -64,7 +65,7 @@ nav {
 }
 
 #navRSCLogo img {
-    padding-top: 0.5vh;
+    padding-top: 0.4vh;
     padding-left: 0.4vw;
     margin-right: 0.3vw;
     width: 2.9vw;
@@ -90,6 +91,34 @@ nav {
 
 #navRSCText p:hover {
     text-decoration: none;
+}
+
+header {
+    background-color: #f3f3f3;
+    padding: 2%;
+    padding-bottom: 0%;
+    width: 100vw;
+    overflow: hidden;
+    float: left;
+}
+
+header div {
+    display: inline;
+}
+
+#headerImage {
+    float: left;
+}
+
+#headerTitle {
+    margin-top: -6vh;
+    margin-bottom: -3vh;
+    margin-left: 2.5vw;
+    padding-top: -100vh;
+    padding-bottom: -100vh;
+    font-family: 'Palladio';
+    font-size: 4vw;
+    float: left;
 }
 
 table {
