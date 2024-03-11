@@ -165,6 +165,7 @@ table.internalFooter {
 
 .footerImg {
     width: 100%;
+    margin-top: 5px;
 }
 
 .footerTitle {
@@ -176,6 +177,22 @@ table.internalFooter {
     margin: 5px 0px;
 }
 
+.socialImg {
+    width: 15%;
+    margin: 5px 8%;
+}
+
+#social1 {
+    float: left;
+}
+
+#social2 {
+    margin-left: 12%;
+}
+
+#social3 {
+    float: right;
+}
 
 /* button {
     padding: 13px;
