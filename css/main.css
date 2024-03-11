@@ -137,14 +137,25 @@ td {
 
 #acknowledgement {
     padding: 0% 0.5%;
-    font-size: 12px;
     font-family: 'Albert Sans', sans-serif;
 }
 
 table,td .internalFooter {
-    border: none;
+    border: dashed;
+}
+
+table.internalFooter {
+    width:100%;
 }
 
 .footerBox {
     width: 50%;
+}
+
+.leftInternal {
+    width: 60%;
+}
+
+.footerImg {
+    width: 100%;
 }
