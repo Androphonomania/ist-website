@@ -110,6 +110,10 @@ header div {
     float: left;
 }
 
+#headerImage img {
+    width: 16vw;
+}
+
 #headerTitle {
     margin-top: -6vh;
     margin-bottom: -3vh;
