@@ -178,6 +178,10 @@ table.internalFooter {
     font-weight: bold;
 }
 
+#footerInfo {
+    margin: 5px 0px;
+}
+
 
 /* button {
     padding: 13px;
