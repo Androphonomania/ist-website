@@ -142,6 +142,8 @@ td {
 #acknowledgement {
     padding: 0% 0.5%;
     font-family: 'Albert Sans', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 table,td .internalFooter {
@@ -158,8 +160,21 @@ table.internalFooter {
 
 .leftInternal {
     width: 60%;
+    padding: 5px 8px;
 }
 
 .footerImg {
     width: 100%;
 }
+
+.footerTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* button {
+    padding: 13px;
+    margin: 10px;
+    border-radius: 50px;
+    font-family: 'Rubik', sans-serif;
+} */
