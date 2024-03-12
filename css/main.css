@@ -20,6 +20,7 @@ h1 {
 
 nav {
     background: linear-gradient(to bottom,#283991, #192661);
+    z-index: 100;
     max-width: 100vw;
     width: 100vw;
     display: inline-flex;
@@ -43,7 +44,7 @@ nav {
     position: relative;
 }
 
-#hamburgerMenu img {
+#hamIcon img {
     margin-top: 0.8vh;
     margin-right: 0.1vw;
     padding-left: 0.7vw;
@@ -76,11 +77,19 @@ nav {
     color: white;
     text-decoration: none;
     font-weight: bolder;
+}
+
+#navSep {
     font-size: 3vh;
+}
+
+#navRSCText {
+    margin-top: -1.3vh;
 }
 
 #navRSCText p {
     width: 30vw;
+    font-size: 4vh;
 }
 
 #navSep {
@@ -126,14 +135,34 @@ header div {
     float: left;
 }
 
+#headerTitle h3 {
+    font-weight: 500;
+}
+
 hamburger-menu {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 #hamWhite {
+    position: fixed;
+    z-index: 99;
+    margin-top: 10vh;
     background-color: white;
-    width: 40%;
+    width: 35vw;
+    height: 90vh;
+    overflow-y:visible;
+    opacity: 0;
+}
+
+#hamBlack {
+    position: fixed;
+    z-index: 98;
+    margin-top: 10vh;
+    background-color: black;
+    width: 100vw;
+    height: 90vh;
+    opacity: 0;
 }
 
 #fallbackP {
