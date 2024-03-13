@@ -20,6 +20,8 @@ h1 {
 
 nav {
     background: linear-gradient(to bottom,#283991, #192661);
+    margin-top: 1vh;
+    margin-right: 10vw;
     z-index: 100;
     max-width: 100vw;
     width: 100vw;
@@ -29,6 +31,24 @@ nav {
     height: 10vh;
     max-height: 75px;
     min-height: 50px;
+    position: fixed;
+}
+
+#fakeNav {
+    background-color: #f3f3f3;
+    margin-right: 10vw;
+    max-width: 100vw;
+    width: 100vw;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-bottom: -1vh;
+    box-sizing: border-box;
+    height: 10vh;
+    max-height: 75px;
+    min-height: 50px;
+    position: relative;
 }
 
 .navImg {
@@ -109,6 +129,8 @@ header {
     width: 100vw;
     overflow: hidden;
     float: left;
+    margin-top: 0;
+    border: 0;
 }
 
 header div {
