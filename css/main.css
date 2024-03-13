@@ -105,6 +105,7 @@ nav {
 
 #navRSCText {
     margin-top: -1.3vh;
+    text-decoration: none;
 }
 
 #navRSCText p {
