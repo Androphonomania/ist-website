@@ -285,6 +285,10 @@ table.internalFooter {
     margin: 5px 8%;
 }
 
+.DOEInternal {
+    width:35%;
+}
+
 /* button {
     padding: 13px;
     margin: 10px;
