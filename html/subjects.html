@@ -13,16 +13,36 @@
 </head>
 
 <body>
+    <hamburger-menu id="hamMenu">
+        <div id="hamWhite">
+            <ul id="hamLinks1">
+                <li><a>About Our School ▾</a></li>
+                <li><a>Supporting Our Students ▾</a></li>
+                <li><a>Learning at Our School ▾</a></li>
+            </ul>
+            <hr />
+            <ul id="hamLinks2">
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a>Enrolment</a></li>
+                <li><a href="https://portal.schoolbytes.education/auth/login" target="_blank">Payments - Schoolbytes<img class="hamLinkExternal" src="../img/newtabThin.png"></a></li>
+                <li><a href="https://rydesecondarycollege.sentral.com.au/" target="_blank">Sentral<img class="hamLinkExternal" src="../img/newtabThin.png"></a></li>
+                <li><a href="https://portal.education.nsw.gov.au/" target="_blank">Student Portal<img class="hamLinkExternal" src="../img/newtabThin.png"></a></li>
+            </ul>
+        </div>
+        <div id="hamBlack" onclick="openHamburgerMenu()"></div>
+    </hamburger-menu>
     <nav>
-        <div class="navImg" id="hamburgerMenu"><img onclick="openHamburgerMenu()" src="../img/ham.png"></div>
+        <div class="navImg" id="hamIcon"><img id="hamIconImg" onclick="openHamburgerMenu()" src="../img/ham.png"></div>
         <div id="navSep">|</div>
         <div class="navImg" id="navRSCLogo"><a href="index.html"><img src="../img/favicon-dark.ico"></a></div>
         <a href="index.html" id="navRSCText">
-            <p id="navRSCTextP">Ryde Secondary College</p>
+            <p>Ryde Secondary College</p>
         </a></div>
 
         <div class="navImg" id="searchButton"><img onclick="openSearchBar()" src="../img/search.webp"></div>
     </nav>
+    <div id="fakeNav"></div>
     <header>
         <div id="headerImage"><img src="../img/rsclogo.png" height="auto"></div>
         <div id="headerTitle"><h3>Subjects</h3></div>
