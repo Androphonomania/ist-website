@@ -4,7 +4,7 @@
 @font-face {
     font-family: 'Palladio';
     src: url('../fonts/palladio.woff') format('woff'),
-    url('../fonts/palladio.ttf') format('ttf');
+        url('../fonts/palladio.ttf') format('ttf');
 }
 
 body {
@@ -19,7 +19,7 @@ h1 {
 }
 
 nav {
-    background: linear-gradient(to bottom,#283991, #192661);
+    background: linear-gradient(to bottom, #283991, #192661);
     margin-top: 1vh;
     margin-right: 10vw;
     z-index: 100;
@@ -59,7 +59,7 @@ nav {
     cursor: pointer;
 }
 
-#navLeft div{
+#navLeft div {
     display: inline;
     position: relative;
 }
@@ -93,7 +93,8 @@ nav {
     height: auto;
 }
 
-#navRSCText p, #navSep {
+#navRSCText p,
+#navSep {
     color: white;
     text-decoration: none;
     font-weight: bolder;
@@ -174,7 +175,7 @@ hamburger-menu {
     background-color: white;
     width: 30vw;
     height: 90vh;
-    overflow-y:visible;
+    overflow-y: auto;
     opacity: 0;
 }
 
@@ -193,24 +194,53 @@ hamburger-menu {
     border-color: #e06666;
 }
 
-#hamLinks1, #hamLinks2{
+#hamLinks1,
+#hamLinks2 {
     margin-top: 4vh;
 }
 
-#hamLinks1 li, #hamLinks2 li {
+#hamLinks1 li,
+#hamLinks2 li {
     list-style-type: none;
     margin-bottom: 3vh;
-    margin-left: -1vw;
+    margin-left: -1.3vw;
 }
 
 #hamLinks1 {
     margin-bottom: 4.5vh;
 }
 
-#hamLinks1 li a, #hamLinks2 li a {
+#hamLinks1 li>* {
+    display: inline;
+}
+
+.hamArrow {
+    position: absolute;
+    margin-top: 0.9vh;
+    margin-left: 0.6vw;
+    font-size: 1.3vw;
+}
+
+#hamWhite a {
     text-decoration: none;
     color: black;
     font-size: 2vw;
+}
+
+#hamWhite a:hover {
+    text-decoration: underline;
+}
+
+.hamExpand a {
+    font-size: 1.3vw !important;
+}
+
+.hamExpand li {
+    margin-bottom: 1.2vh !important;
+}
+
+.hamExpand ul:first-child {
+    margin-top: 1.6vh;
 }
 
 .hamLinkExternal {
@@ -228,7 +258,7 @@ hamburger-menu {
 
 table {
     border-collapse: collapse;
-    height:auto;
+    height: auto;
 }
 
 #footer {
@@ -247,13 +277,14 @@ td {
     margin-bottom: 5px;
 }
 
-table,td .internalFooter {
+table,
+td .internalFooter {
     border: dashed;
 }
 
 table.internalFooter {
-    width:100%;
-    height:90%;
+    width: 100%;
+    height: 90%;
 }
 
 .footerBox {
@@ -286,12 +317,5 @@ table.internalFooter {
 }
 
 .DOEInternal {
-    width:35%;
+    width: 35%;
 }
-
-/* button {
-    padding: 13px;
-    margin: 10px;
-    border-radius: 50px;
-    font-family: 'Rubik', sans-serif;
-} */

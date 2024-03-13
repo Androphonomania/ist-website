@@ -11,23 +11,59 @@
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" id="icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
- 
+
 <body>
     <hamburger-menu id="hamMenu">
         <div id="hamWhite">
             <ul id="hamLinks1">
-                <li><a>About Our School ▾</a></li>
-                <li><a>Supporting Our Students ▾</a></li>
-                <li><a>Learning at Our School ▾</a></li>
+                <li><a href="javascript:void(0)" onclick="hamAboutExpand()">About Our School</a>
+                    <div class="hamArrow" id="hamArrow1"> ▾</div>
+                    <div class="hamExpand" id="hamExpand1">
+                        <ul>
+                            <li><a>Community Partnerships</a></li>
+                            <li><a>School Planning and Reporting</a></li>
+                            <li><a>Financial Contributions and Assistance</a></li>
+                            <li><a>What We Offer</a></li>
+                            <li><a>Canteen</a></li>
+                            <li><a>P & C</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)" onclick="hamSupportExpand()">Supporting Our Students</a>
+                    <div class="hamArrow" id="hamArrow2"> ▾</div>
+                    <div class="hamExpand" id="hamExpand2">
+                        <ul>
+                            <li><a>Year 7 2024</a></li>
+                            <li><a>Student Health and Safety</a></li>
+                            <li><a>Help with Homework</a></li>
+                            <li><a>What to Expect in High School</a></li>
+                            <li><a>Student Information</a></li>
+                            <li><a>Parents, Carers, and the Community</a></li>
+                        </ul>
+                </li>
+                <li><a href="javascript:void(0)" onclick="hamLearnExpand()">Learning at Our School</a>
+                    <div class="hamArrow" id="hamArrow3"> ▾</div>
+                    <div class="hamExpand" id="hamExpand3">
+                        <ul>
+                            <li><a href="subjects.html">Subjects</a></li>
+                            <li><a>Learning at Home</a></li>
+                            <li><a>Learning Across the Curriculum</a></li>
+                            <li><a>Assessment and Reporting</a></li>
+                            <li><a>Scholarships and Awards</a></li>
+                        </ul>
+                </li>
             </ul>
             <hr />
             <ul id="hamLinks2">
                 <li><a href="contact-us.html">Contact Us</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a>Enrolment</a></li>
-                <li><a href="https://portal.schoolbytes.education/auth/login" target="_blank">Payments - Schoolbytes<img class="hamLinkExternal" src="../img/newtabThin.png"></a></li>
-                <li><a href="https://rydesecondarycollege.sentral.com.au/" target="_blank">Sentral<img class="hamLinkExternal" src="../img/newtabThin.png"></a></li>
-                <li><a href="https://portal.education.nsw.gov.au/" target="_blank">Student Portal<img class="hamLinkExternal" src="../img/newtabThin.png"></a></li>
+                <li><a href="https://portal.schoolbytes.education/auth/login" target="_blank">Payments - Schoolbytes<img
+                            class="hamLinkExternal" src="../img/newtabThin.png"></a></li>
+                <li><a href="https://rydesecondarycollege.sentral.com.au/" target="_blank">Sentral<img
+                            class="hamLinkExternal" src="../img/newtabThin.png"></a></li>
+                <li><a href="https://portal.education.nsw.gov.au/" target="_blank">Student Portal<img
+                            class="hamLinkExternal" src="../img/newtabThin.png"></a></li>
             </ul>
         </div>
         <div id="hamBlack" onclick="openHamburgerMenu()"></div>
@@ -45,7 +81,9 @@
     <div id="fakeNav"></div>
     <header>
         <div id="headerImage"><img src="../img/rsclogo.png" height="auto"></div>
-        <div id="headerTitle"><h3>Home Page</h3></div>
+        <div id="headerTitle">
+            <h3>Home Page</h3>
+        </div>
     </header>
     <footer>
         <table id="footer">

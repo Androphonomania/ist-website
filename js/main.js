@@ -37,6 +37,12 @@ let hamMenu;
 let hamIcon;
 let hamWhite;
 let hamBlack;
+let hamArrow1;
+let hamArrow2;
+let hamArrow3;
+let hamExpand1;
+let hamExpand2;
+let hamExpand3;
 
 window.onload = function () {
     icon = document.getElementById("icon");
@@ -44,8 +50,11 @@ window.onload = function () {
     hamIcon = document.getElementById("hamIconImg");
     hamWhite = document.getElementById("hamWhite");
     hamBlack = document.getElementById("hamBlack");
+    hamArrow1 = document.getElementById("hamArrow1");
+    hamArrow2 = document.getElementById("hamArrow2");
+    hamArrow3 = document.getElementById("hamArrow3");
 
-    hamMenu.hidden = true;
+    hamMenu.style.display = "none";
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         icon.setAttribute("href", "../img/favicon-dark.ico")
@@ -75,15 +84,32 @@ const openSearchBar = function () {
 }
 
 const openHamburgerMenu = function () {
-    if (hamMenu.hidden) {
+    if (hamMenu.style.display === "none") {
         hamIcon.setAttribute("src", "../img/hamClose.png");
         hamWhite.style.opacity = 1;
         hamBlack.style.opacity = 0.3;
-        hamMenu.hidden = false;
+        hamMenu.style.display = "block";
+        hamExpand1 = document.getElementById("hamExpand1");
+        hamExpand2 = document.getElementById("hamExpand2");
+        hamExpand3 = document.getElementById("hamExpand3");
+        hamExpand1.style.display = "none";
+        hamExpand2.hidden = true;
+        hamExpand3.hidden = true;
     } else {
         hamIcon.setAttribute("src", "../img/ham.png");
         hamWhite.style.opacity = 0;
         hamBlack.style.opacity = 0;
         hamMenu.hidden = true;
     }
+}
+
+const hamAboutExpand = function () {
+    alert("ham1 expanded");
+}
+
+const hamSupportExpand = function () {
+    alert("ham2 expanded");
+}
+const hamLearnExpand = function () {
+    alert("ham3 expanded");
 }
