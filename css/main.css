@@ -187,6 +187,31 @@ hamburger-menu {
     opacity: 0;
 }
 
+#hamWhite hr {
+    width: 90%;
+    border-color: #e06666;
+}
+
+#hamLinks1, #hamLinks2{
+    margin-top: 4vh;
+}
+
+#hamLinks1 li, #hamLinks2 li {
+    list-style-type: none;
+    margin-bottom: 3vh;
+    margin-left: -1vw;
+}
+
+#hamLinks1 {
+    margin-bottom: 4.5vh;
+}
+
+#hamLinks1 li a, #hamLinks2 li a {
+    text-decoration: none;
+    color: black;
+    font-size: 2vw;
+}
+
 #fallbackP {
     margin-top: 25vh;
     margin-left: 1vw;
