@@ -247,12 +247,12 @@ td {
 }
 
 table,td .internalFooter {
-    border: dashed;
+    border: none;
 }
 
 table.internalFooter {
     width:100%;
-    height:90%;
+    
 }
 
 .footerBox {
@@ -286,6 +286,18 @@ table.internalFooter {
 
 .DOEInternal {
     width:35%;
+}
+
+.DOEThirds {
+    padding: 10px 20px;
+}
+
+.DOELower {
+    padding:0px 20px 45px 20px;
+}
+
+.DOECenter {
+    padding:10px 20px 4px;
 }
 
 /* button {
