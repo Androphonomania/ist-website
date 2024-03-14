@@ -53,8 +53,14 @@ window.onload = function () {
     hamArrow1 = document.getElementById("hamArrow1");
     hamArrow2 = document.getElementById("hamArrow2");
     hamArrow3 = document.getElementById("hamArrow3");
+    hamExpand1 = document.getElementById("hamExpand1");
+    hamExpand2 = document.getElementById("hamExpand2");
+    hamExpand3 = document.getElementById("hamExpand3");
 
     hamMenu.hidden = true;
+    hamExpand1.style.display = 'none';
+    hamExpand2.style.display = 'none';
+    hamExpand3.style.display = 'none';
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         icon.setAttribute("href", "../img/favicon-dark.ico")
@@ -89,9 +95,6 @@ const openHamburgerMenu = function () {
         hamWhite.style.opacity = 1;
         hamBlack.style.opacity = 0.3;
         hamMenu.hidden = false;
-        hamExpand1 = document.getElementById("hamExpand1");
-        hamExpand2 = document.getElementById("hamExpand2");
-        hamExpand3 = document.getElementById("hamExpand3");
         hamExpand1.hidden = true;
         hamExpand2.hidden = true;
         hamExpand3.hidden = true;
@@ -104,12 +107,54 @@ const openHamburgerMenu = function () {
 }
 
 const hamAboutExpand = function () {
-    alert("ham1 expanded");
+    if (hamArrow1.innerHTML === " ▾") {
+        hamArrow1.innerHTML = " ▴";
+        hamExpand1.style.display = 'block';
+        if (hamArrow2.innerHTML === " ▴") {
+            hamArrow2.innerHTML = " ▾";
+            hamExpand2.style.display = 'none';
+        }
+        if (hamArrow3.innerHTML === " ▴") {
+            hamArrow3.innerHTML = " ▾";
+            hamExpand3.style.display = 'none';
+        }
+    } else {
+        hamArrow1.innerHTML = " ▾";
+        hamExpand1.style.display = 'none';
+    }
 }
 
 const hamSupportExpand = function () {
-    alert("ham2 expanded");
+    if (hamArrow2.innerHTML === " ▾") {
+        hamArrow2.innerHTML = " ▴";
+        hamExpand2.style.display = 'block';
+        if (hamArrow1.innerHTML === " ▴") {
+            hamArrow1.innerHTML = " ▾";
+            hamExpand1.style.display = 'none';
+        }
+        if (hamArrow3.innerHTML === " ▴") {
+            hamArrow3.innerHTML = " ▾";
+            hamExpand3.style.display = 'none';
+        }
+    } else {
+        hamArrow2.innerHTML = " ▾";
+        hamExpand2.style.display = 'none';
+    }
 }
 const hamLearnExpand = function () {
-    alert("ham3 expanded");
+    if (hamArrow3.innerHTML === " ▾") {
+        hamArrow3.innerHTML = " ▴";
+        hamExpand3.style.display = 'block';
+        if (hamArrow1.innerHTML === " ▴") {
+            hamArrow1.innerHTML = " ▾";
+            hamExpand1.style.display = 'none';
+        }
+        if (hamArrow2.innerHTML === " ▴") {
+            hamArrow2.innerHTML = " ▾";
+            hamExpand2.style.display = 'none';
+        }
+    } else {
+        hamArrow3.innerHTML = " ▾";
+        hamExpand3.style.display = 'none';
+    }
 }
