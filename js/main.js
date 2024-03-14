@@ -1,6 +1,6 @@
 var preloadedImg = [];
 
-function preload(array) {
+const preload = function (array) {
     for (var i = 0; i < array.length; i++) {
         preloadedImg[i] = new Image();
         preloadedImg[i].src = arguments[i];
