@@ -93,8 +93,7 @@ nav {
     height: auto;
 }
 
-#navRSCText p,
-#navSep {
+#navRSCText, #navSep {
     color: white;
     text-decoration: none;
     font-weight: bolder;
@@ -105,11 +104,11 @@ nav {
 }
 
 #navRSCText {
-    margin-top: -1.3vh;
+    margin-top: 2.5vh;
     text-decoration: none;
 }
 
-#navRSCText p {
+#navRSCText {
     width: 30vw;
     font-size: 4vh;
 }

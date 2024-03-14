@@ -54,7 +54,7 @@ window.onload = function () {
     hamArrow2 = document.getElementById("hamArrow2");
     hamArrow3 = document.getElementById("hamArrow3");
 
-    hamMenu.style.display = "none";
+    hamMenu.hidden = true;
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         icon.setAttribute("href", "../img/favicon-dark.ico")
@@ -84,15 +84,15 @@ const openSearchBar = function () {
 }
 
 const openHamburgerMenu = function () {
-    if (hamMenu.style.display === "none") {
+    if (hamMenu.hidden) {
         hamIcon.setAttribute("src", "../img/hamClose.png");
         hamWhite.style.opacity = 1;
         hamBlack.style.opacity = 0.3;
-        hamMenu.style.display = "block";
+        hamMenu.hidden = false;
         hamExpand1 = document.getElementById("hamExpand1");
         hamExpand2 = document.getElementById("hamExpand2");
         hamExpand3 = document.getElementById("hamExpand3");
-        hamExpand1.style.display = "none";
+        hamExpand1.hidden = true;
         hamExpand2.hidden = true;
         hamExpand3.hidden = true;
     } else {
