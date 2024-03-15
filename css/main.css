@@ -7,6 +7,16 @@
         url('../fonts/palladio.ttf') format('ttf');
 }
 
+@keyframes hamOpen {
+    from {opacity: 0;}
+    to {opactiy: 0.3;}
+}
+
+@keyframes hamClose {
+    from {opacity: 0.3;}
+    to {opactiy: 0;}
+}
+
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0%;

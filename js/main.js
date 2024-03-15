@@ -98,11 +98,29 @@ const openHamburgerMenu = function () {
         hamExpand1.hidden = true;
         hamExpand2.hidden = true;
         hamExpand3.hidden = true;
+        hamWhite.className = "";
+        hamWhite.classList.add("animate__animated");
+        hamWhite.classList.add("animate__faster");
+        hamWhite.classList.add("animate__slideInLeft");
+        hamBlack.style.animation = "0.5s easeinout 0s hamOpen;";
+        console.log("opening")
+        setTimeout(function() {
+            console.log("opened")
+        }, 500)
     } else {
         hamIcon.setAttribute("src", "../img/ham.png");
-        hamWhite.style.opacity = 0;
-        hamBlack.style.opacity = 0;
-        hamMenu.hidden = true;
+        hamWhite.className = "";
+        hamWhite.classList.add("animate__animated");
+        hamWhite.classList.add("animate__faster");
+        hamWhite.classList.add("animate__slideOutLeft");
+        hamBlack.style.animation = "0.5s easeinout 0s hamClose;";
+        console.log("closing")
+        setTimeout(function() {
+            hamWhite.style.opacity = 0;
+            hamBlack.style.opacity = 0;
+            hamMenu.hidden = true;
+            console.log("closed")
+        }, 500)
     }
 }
 
