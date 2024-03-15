@@ -1,6 +1,6 @@
 var preloadedImg = [];
 
-function preload(array) {
+const preload = function (array) {
     for (var i = 0; i < array.length; i++) {
         preloadedImg[i] = new Image();
         preloadedImg[i].src = arguments[i];
@@ -53,8 +53,14 @@ window.onload = function () {
     hamArrow1 = document.getElementById("hamArrow1");
     hamArrow2 = document.getElementById("hamArrow2");
     hamArrow3 = document.getElementById("hamArrow3");
+    hamExpand1 = document.getElementById("hamExpand1");
+    hamExpand2 = document.getElementById("hamExpand2");
+    hamExpand3 = document.getElementById("hamExpand3");
 
-    hamMenu.style.display = "none";
+    hamMenu.hidden = true;
+    hamExpand1.style.display = 'none';
+    hamExpand2.style.display = 'none';
+    hamExpand3.style.display = 'none';
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         icon.setAttribute("href", "../img/favicon-dark.ico")
@@ -84,32 +90,89 @@ const openSearchBar = function () {
 }
 
 const openHamburgerMenu = function () {
-    if (hamMenu.style.display === "none") {
+    if (hamMenu.hidden) {
         hamIcon.setAttribute("src", "../img/hamClose.png");
         hamWhite.style.opacity = 1;
         hamBlack.style.opacity = 0.3;
-        hamMenu.style.display = "block";
-        hamExpand1 = document.getElementById("hamExpand1");
-        hamExpand2 = document.getElementById("hamExpand2");
-        hamExpand3 = document.getElementById("hamExpand3");
-        hamExpand1.style.display = "none";
+        hamMenu.hidden = false;
+        hamExpand1.hidden = true;
         hamExpand2.hidden = true;
         hamExpand3.hidden = true;
+        hamWhite.className = "";
+        hamWhite.classList.add("animate__animated");
+        hamWhite.classList.add("animate__faster");
+        hamWhite.classList.add("animate__slideInLeft");
+        hamBlack.style.animation = "0.5s easeinout 0s hamOpen;";
+        console.log("opening")
+        setTimeout(function() {
+            console.log("opened")
+        }, 500)
     } else {
         hamIcon.setAttribute("src", "../img/ham.png");
-        hamWhite.style.opacity = 0;
-        hamBlack.style.opacity = 0;
-        hamMenu.hidden = true;
+        hamWhite.className = "";
+        hamWhite.classList.add("animate__animated");
+        hamWhite.classList.add("animate__faster");
+        hamWhite.classList.add("animate__slideOutLeft");
+        hamBlack.style.animation = "0.5s easeinout 0s hamClose;";
+        console.log("closing")
+        setTimeout(function() {
+            hamWhite.style.opacity = 0;
+            hamBlack.style.opacity = 0;
+            hamMenu.hidden = true;
+            console.log("closed")
+        }, 500)
     }
 }
 
 const hamAboutExpand = function () {
-    alert("ham1 expanded");
+    if (hamArrow1.innerHTML === " ▾") {
+        hamArrow1.innerHTML = " ▴";
+        hamExpand1.style.display = 'block';
+        if (hamArrow2.innerHTML === " ▴") {
+            hamArrow2.innerHTML = " ▾";
+            hamExpand2.style.display = 'none';
+        }
+        if (hamArrow3.innerHTML === " ▴") {
+            hamArrow3.innerHTML = " ▾";
+            hamExpand3.style.display = 'none';
+        }
+    } else {
+        hamArrow1.innerHTML = " ▾";
+        hamExpand1.style.display = 'none';
+    }
 }
 
 const hamSupportExpand = function () {
-    alert("ham2 expanded");
+    if (hamArrow2.innerHTML === " ▾") {
+        hamArrow2.innerHTML = " ▴";
+        hamExpand2.style.display = 'block';
+        if (hamArrow1.innerHTML === " ▴") {
+            hamArrow1.innerHTML = " ▾";
+            hamExpand1.style.display = 'none';
+        }
+        if (hamArrow3.innerHTML === " ▴") {
+            hamArrow3.innerHTML = " ▾";
+            hamExpand3.style.display = 'none';
+        }
+    } else {
+        hamArrow2.innerHTML = " ▾";
+        hamExpand2.style.display = 'none';
+    }
 }
 const hamLearnExpand = function () {
-    alert("ham3 expanded");
+    if (hamArrow3.innerHTML === " ▾") {
+        hamArrow3.innerHTML = " ▴";
+        hamExpand3.style.display = 'block';
+        if (hamArrow1.innerHTML === " ▴") {
+            hamArrow1.innerHTML = " ▾";
+            hamExpand1.style.display = 'none';
+        }
+        if (hamArrow2.innerHTML === " ▴") {
+            hamArrow2.innerHTML = " ▾";
+            hamExpand2.style.display = 'none';
+        }
+    } else {
+        hamArrow3.innerHTML = " ▾";
+        hamExpand3.style.display = 'none';
+    }
 }
