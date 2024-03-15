@@ -42,6 +42,7 @@ nav {
     max-height: 75px;
     min-height: 50px;
     position: fixed;
+    align-items: center;
 }
 
 #fakeNav {
@@ -83,13 +84,13 @@ nav {
 }
 
 #searchButton {
-    float: right;
+    margin-left:auto;
 }
 
 #searchButton img {
     padding-top: 0vh;
     margin-right: 0.7vw;
-    margin-left: 52vw;
+    /*margin-left: 52vw;*/
     width: 3vw;
     height: auto;
     position: relative;
@@ -124,7 +125,6 @@ nav {
 }
 
 #navSep {
-    margin-top: 1.5vh;
     font-size: 6vh;
     margin-left: 0.2vw;
 }
