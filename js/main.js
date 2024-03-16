@@ -94,8 +94,6 @@ const openSearchBar = function () {
 const openHamburgerMenu = function () {
     if (hamMenu.hidden) {
         hamIcon.setAttribute("src", "../img/hamClose.png");
-        hamWhite.style.opacity = 1;
-        hamBlack.style.opacity = 0.3;
         hamMenu.hidden = false;
         hamExpand1.hidden = true;
         hamExpand2.hidden = true;
@@ -104,25 +102,27 @@ const openHamburgerMenu = function () {
         hamWhite.classList.add("animate__animated");
         hamWhite.classList.add("animate__faster");
         hamWhite.classList.add("animate__slideInLeft");
-        hamBlack.style.animation = "0.5s easeinout 0s hamOpen;";
+        hamBlack.className = "";
+        hamBlack.classList.add("hamOpenNow")
         console.log("opening")
         setTimeout(function() {
+            hamBlack.style.opacity = 0.3;
             console.log("opened")
-        }, 500)
+        }, 480)
     } else {
         hamIcon.setAttribute("src", "../img/ham.png");
         hamWhite.className = "";
         hamWhite.classList.add("animate__animated");
         hamWhite.classList.add("animate__faster");
         hamWhite.classList.add("animate__slideOutLeft");
-        hamBlack.style.animation = "0.5s easeinout 0s hamClose;";
+        hamBlack.className = "";
+        hamBlack.classList.add("hamCloseNow")
         console.log("closing")
         setTimeout(function() {
-            hamWhite.style.opacity = 0;
             hamBlack.style.opacity = 0;
             hamMenu.hidden = true;
             console.log("closed")
-        }, 500)
+        }, 480)
     }
 }
 

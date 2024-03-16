@@ -9,12 +9,20 @@
 
 @keyframes hamOpen {
     from {opacity: 0;}
-    to {opactiy: 0.3;}
+    to {opacity: 0.3;}
 }
 
 @keyframes hamClose {
     from {opacity: 0.3;}
-    to {opactiy: 0;}
+    to {opacity: 0;}
+}
+
+.hamOpenNow {
+    animation: 0.5s ease-in-out 0s hamOpen;
+}
+
+.hamCloseNow {
+    animation: 0.5s ease-in-out 0s hamClose;
 }
 
 body {
@@ -185,7 +193,7 @@ hamburger-menu {
     width: 30vw;
     height: 90vh;
     overflow-y: auto;
-    opacity: 0;
+    opacity: 1;
 }
 
 #hamBlack {
