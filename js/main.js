@@ -1,3 +1,5 @@
+// import * as ts from tween.umd.js
+
 var preloadedImg = [];
 
 const preload = function (array) {
