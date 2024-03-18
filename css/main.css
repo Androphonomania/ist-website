@@ -211,7 +211,10 @@ hamburger-menu {
     border-color: #e06666;
 }
 
-#hamLinks1,
+#hamLinks1 {
+    margin-top: 5vh;
+}
+
 #hamLinks2 {
     margin-top: 4vh;
 }
