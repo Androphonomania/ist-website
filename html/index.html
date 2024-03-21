@@ -67,15 +67,26 @@
         </div>
         <div id="hamBlack" onclick="openHamburgerMenu()" class="hamOpenNow"></div>
     </hamburger-menu>
+    <search-menu>
+        <div id="searchWhite"></div>
+        <div id="searchBlack" onclick="openSearch()" class="hamOpenNow"></div>
+    </search-menu>
     <nav>
         <div class="navImg" id="hamIcon"><img id="hamIconImg" onclick="openHamburgerMenu()" src="../img/ham.png"></div>
         <div id="navSep">|</div>
         <div class="navImg" id="navRSCLogo"><a href="index.html"><img src="../img/favicon-dark.ico"></a></div>
         <div><a href="index.html" id="navRSCText">
-            Ryde Secondary College
-        </a></div>
+                Ryde Secondary College
+            </a></div>
 
-        <div class="navImg" id="searchButton"><img onclick="openSearchBar()" src="../img/search.webp"></div>
+        <div id="searchContainer">
+            <form action="localhost:3000/php/search.php" method="POST">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">
+                    <div class="navImg" id="searchButton"><img onclick="openSearch()" src="../img/search.webp"></div>
+                </button>
+            </form>
+        </div>
     </nav>
     <div id="fakeNav"></div>
     <header>
@@ -110,9 +121,12 @@
                         </tr>
                         <tr>
                             <td class="internalFooter" align="center">
-                                <a href="https://portal.schoolbytes.education/auth/login"><img class="socialImg" src="../img/sentral.png"></a>
-                                <a href="https://www.facebook.com/RydeSecondaryCollege/"><img class="socialImg" src="../img/instagram.png"></a>
-                                <a href="https://www.instagram.com/rscprefects/"><img class="socialImg" src="../img/facebook.png"></a>
+                                <a href="https://portal.schoolbytes.education/auth/login"><img class="socialImg"
+                                        src="../img/sentral.png"></a>
+                                <a href="https://www.facebook.com/RydeSecondaryCollege/"><img class="socialImg"
+                                        src="../img/instagram.png"></a>
+                                <a href="https://www.instagram.com/rscprefects/"><img class="socialImg"
+                                        src="../img/facebook.png"></a>
                             </td>
                         </tr>
                     </table>
@@ -132,26 +146,25 @@
                                 style="line-height: 165%;">
                                 <a href="https://education.nsw.gov.au/about-us/rights-and-accountability/accessibility"
                                     target="_blank">Accessibility</a> <br>
-                                <a href="https://education.nsw.gov.au/policy-library" target="_blank"
-                                    >Policy Library</a> <br>
-                                <a href="https://education.nsw.gov.au/rights-and-accountability/information-access"
-                                    target="_blank" >Information Access</a>
+                                <a href="https://education.nsw.gov.au/policy-library" target="_blank">Policy Library</a>
                                 <br>
-                                <a href="https://education.nsw.gov.au/skills-nsw/contact-us" target="_blank"
-                                    >Department Contacts</a>
+                                <a href="https://education.nsw.gov.au/rights-and-accountability/information-access"
+                                    target="_blank">Information Access</a>
+                                <br>
+                                <a href="https://education.nsw.gov.au/skills-nsw/contact-us" target="_blank">Department
+                                    Contacts</a>
                             </td>
                             <td class="internalFooter DOECenter" colspan="1" rowspan="1"
                                 style="line-height: 165%; vertical-align: top;">
                                 <a href="https://education.nsw.gov.au/about-us/rights-and-accountability/privacy"
-                                    target="_blank" >Privacy</a> <br>
-                                <a href="https://education.nsw.gov.au/about-us/copyright" target="_blank"
-                                    >Copyright</a>
+                                    target="_blank">Privacy</a> <br>
+                                <a href="https://education.nsw.gov.au/about-us/copyright" target="_blank">Copyright</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="internalFooter DOELower" colspan="2">
                                 <a href="https://education.nsw.gov.au/about-us/rights-and-accountability/complaints-compliments-and-suggestions"
-                                    target="_blank" >Complaints,
+                                    target="_blank">Complaints,
                                     Compliments, Suggestions</a>
                             </td>
                         </tr>

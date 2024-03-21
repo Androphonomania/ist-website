@@ -87,8 +87,8 @@ window.onload = function () {
     }
 }
 
-const openSearchBar = function () {
-    alert("search bar opened");
+const openSearch = function () {
+    // later
 }
 
 const openHamburgerMenu = function () {
