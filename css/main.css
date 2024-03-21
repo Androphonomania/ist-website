@@ -104,32 +104,32 @@ nav {
     position: relative;
 }
 
-#searchContainer {
-    margin-left:auto;
-    height: auto;
-    position: relative;
-}
-
-#searchContainer input {
+nav input {
     background: none;
     color: white;
     border: none;
     border-bottom: 1px white solid;
     font-size: 2vw;
-    margin-top: -5vh;
+    margin-left: auto;
+    position: relative;
 }
 
-#searchContainer button {
+nav input:hover {
+    outline: none;
+}
+
+nav button {
     background: none;
     border: none;
     margin-top: 0.4vh;
-    margin-left: auto;
+    margin-left: 1vw;
     height: auto;
     position: relative;
 }
 
 ::placeholder {
     color: #CCCCCC;
+    font-style: italic;
  }
 
 #navRSCLogo img {
