@@ -28,7 +28,6 @@
 body {
     font-family: 'Rubik', sans-serif;
     margin: 0%;
-    margin-left: 1.1vw;
     overflow-x: hidden;
 }
 
@@ -46,7 +45,6 @@ nav {
     width: 100vw;
     display: inline-flex;
     margin: 0%;
-    margin-left: -1.1vw;
     box-sizing: border-box;
     height: 10vh;
     max-height: 75px;
@@ -225,7 +223,6 @@ hamburger-menu {
     height: 91vh;
     overflow-y: auto;
     opacity: 1;
-    margin-left: -1.1vw;
 }
 
 #hamBlack {
@@ -301,6 +298,28 @@ hamburger-menu {
     margin-top: -0.3vh;
     width: 3vw;
     height: auto;
+}
+
+#hamWhite {
+    position: fixed;
+    z-index: 99;
+    margin-top: 9vh;
+    background-color: white;
+    width: 30vw;
+    height: 91vh;
+    overflow-y: auto;
+    opacity: 1;
+    margin-left: -1.1vw;
+}
+
+#searchBlack {
+    position: fixed;
+    z-index: 98;
+    margin-top: 0vh;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
 }
 
 #fallbackP {
