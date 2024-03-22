@@ -67,9 +67,9 @@
         </div>
         <div id="hamBlack" onclick="openHamburgerMenu()" class="hamOpenNow"></div>
     </hamburger-menu>
-    <search-menu>
+    <search-menu id="searchMenu">
         <div id="searchWhite"></div>
-        <div id="searchBlack" onclick="openSearch()" class="hamOpenNow"></div>
+        <div id="searchBlack" onclick="openSearch()"></div>
     </search-menu>
     <nav>
         <div class="navImg" id="hamIcon"><img id="hamIconImg" onclick="openHamburgerMenu()" src="../img/ham.png"></div>
@@ -78,10 +78,8 @@
         <div><a href="index.html" id="navRSCText">
                 Ryde Secondary College
             </a></div>
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">
-                    <div class="navImg" id="searchButton"><img onclick="openSearch()" src="../img/search.webp"></div>
-                </button>
+        <input id="searchInput" type="text" placeholder="Search.." name="search" onsubmit="openSearch()">
+        <div class="navImg" id="searchButton"><img onclick="openSearch(null)" src="../img/search.webp"></div>
     </nav>
     <div id="headerExtend"></div>
     <header>
