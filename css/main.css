@@ -311,7 +311,9 @@ hamburger-menu {
     height: 91vh;
     overflow-y: auto;
     opacity: 1;
-    border: 2px #595959 solid
+    border: 2px #595959 solid;
+    padding: 1.5vw;
+    font-size: 1.5vw;
 }
 
 #searchBlack {

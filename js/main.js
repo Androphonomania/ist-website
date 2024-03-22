@@ -199,6 +199,11 @@ const openSearch = function(term) {
         searchWhite.classList.add("animate__slideInDown");
         searchBlack.className = "";
         searchBlack.classList.add("hamOpenNow")
+        if (term) {
+            searchWhite.innerHTML = "Results for '"+ term + "'."
+        } else {
+            searchWhite.innerHTML = "No results found for '" + term + "'."
+        }
         setTimeout(function() {
             searchBlack.style.opacity = 0.3;
         }, 480)
