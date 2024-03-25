@@ -200,7 +200,7 @@ const openSearch = function(term) {
         searchBlack.className = "";
         searchBlack.classList.add("hamOpenNow")
         if (term) {
-            searchWhite.innerHTML = "Results for '"+ term + "'."
+            searchWhite.innerHTML = "Search results for '"+ term + "'."
         } else {
             searchWhite.innerHTML = "No results found for '" + term + "'."
         }

@@ -113,6 +113,7 @@ nav input {
     margin-left: auto;
     position: relative;
     outline: none;
+    font-family: 'Rubik', sans-serif;
 }
 
 nav input:focus {
