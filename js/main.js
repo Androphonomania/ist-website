@@ -69,6 +69,7 @@ window.onload = function () {
 
     hamMenu.hidden = true;
     searchMenu.hidden = true;
+    searchInput.hidden = true;
     hamExpand1.style.display = 'none';
     hamExpand2.style.display = 'none';
     hamExpand3.style.display = 'none';
@@ -196,10 +197,15 @@ const openSearch = function (term) {
     if (searchMenu.hidden) {
         console.log(term)
         searchMenu.hidden = false;
+        searchInput.hidden = false;
+        searchInput.className = "";
+        searchInput.classList.add("animate__animated")
+        searchInput.classList.add("animate__faster");
+        searchInput.classList.add("animate__slideInRight");
         searchWhite.className = "";
         searchWhite.classList.add("animate__animated");
         searchWhite.classList.add("animate__faster");
-        searchWhite.classList.add("animate__slideInDown");
+        searchWhite.classList.add("animate__slideInRight");
         searchBlack.className = "";
         searchBlack.classList.add("hamOpenNow")
         if (term) {
