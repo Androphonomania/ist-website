@@ -67,9 +67,9 @@
         </div>
         <div id="hamBlack" onclick="openHamburgerMenu()" class="hamOpenNow"></div>
     </hamburger-menu>
-    <search-menu>
-        <div id="searchWhite"></div>
-        <div id="searchBlack" onclick="openSearch()" class="hamOpenNow"></div>
+    <search-menu id="searchMenu">
+        <div id="searchWhite">No results found for ''.</div>
+        <div id="searchBlack" onclick="openSearch()"></div>
     </search-menu>
     <nav>
         <div class="navImg" id="hamIcon"><img id="hamIconImg" onclick="openHamburgerMenu()" src="../img/ham.png"></div>
@@ -78,17 +78,10 @@
         <div><a href="index.html" id="navRSCText">
                 Ryde Secondary College
             </a></div>
-
-        <div id="searchContainer">
-            <form action="localhost:3000/php/search.php" method="POST">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">
-                    <div class="navImg" id="searchButton"><img onclick="openSearch()" src="../img/search.webp"></div>
-                </button>
-            </form>
-        </div>
+        <input id="searchInput" type="text" placeholder="Search.." name="search" onsubmit="openSearch()">
+        <div class="navImg" id="searchButton"><img onclick="openSearch(null)" src="../img/search.webp"></div>
     </nav>
-    <div id="fakeNav"></div>
+    <div id="headerExtend"></div>
     <header>
         <div id="headerImage"><img src="../img/rsclogo.png" height="auto"></div>
         <div id="headerTitle">

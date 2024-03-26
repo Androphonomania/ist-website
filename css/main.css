@@ -8,13 +8,23 @@
 }
 
 @keyframes hamOpen {
-    from {opacity: 0;}
-    to {opacity: 0.3;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.3;
+    }
 }
 
 @keyframes hamClose {
-    from {opacity: 0.3;}
-    to {opacity: 0;}
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 .hamOpenNow {
@@ -53,7 +63,7 @@ nav {
     align-items: center;
 }
 
-#fakeNav {
+#headerExtend {
     background-color: #f3f3f3;
     margin-right: 10vw;
     max-width: 100vw;
@@ -92,7 +102,7 @@ nav {
 }
 
 #searchButton {
-    margin-left:auto;
+    margin-left: 1vw;
 }
 
 #searchButton img {
@@ -104,32 +114,35 @@ nav {
     position: relative;
 }
 
-#searchContainer {
-    margin-left:auto;
-    height: auto;
-    position: relative;
-}
-
-#searchContainer input {
+nav input {
     background: none;
     color: white;
     border: none;
     border-bottom: 1px white solid;
     font-size: 2vw;
+    margin-left: auto;
+    position: relative;
+    outline: none;
+    font-family: 'Rubik', sans-serif;
 }
 
-#searchContainer button {
+nav input:focus {
+    outline: none;
+}
+
+nav button {
     background: none;
     border: none;
     margin-top: 0.4vh;
-    margin-left: auto;
     height: auto;
     position: relative;
 }
 
 ::placeholder {
     color: #CCCCCC;
- }
+    font-style: italic;
+    font-family: 'Rubik', sans-serif;
+}
 
 #navRSCLogo img {
     padding-top: 0.6vh;
@@ -139,7 +152,8 @@ nav {
     height: auto;
 }
 
-#navRSCText, #navSep {
+#navRSCText,
+#navSep {
     color: white;
     text-decoration: none;
     font-weight: bolder;
@@ -177,6 +191,7 @@ header {
     float: left;
     margin-top: 0;
     border: 0;
+    align-items: center;
 }
 
 header div {
@@ -218,7 +233,7 @@ hamburger-menu {
     margin-top: 9vh;
     background-color: white;
     width: 30vw;
-    height: 100vh;
+    height: 91vh;
     overflow-y: auto;
     opacity: 1;
 }
@@ -298,6 +313,31 @@ hamburger-menu {
     height: auto;
 }
 
+#searchWhite {
+    position: fixed;
+    z-index: 99;
+    margin-left: 70vw;
+    margin-top: 9vh;
+    background-color: white;
+    width: 30vw;
+    height: 91vh;
+    overflow-y: auto;
+    opacity: 1;
+    border: 2px #595959 solid;
+    padding: 1.5vw;
+    font-size: 1.5vw;
+}
+
+#searchBlack {
+    position: fixed;
+    z-index: 98;
+    margin-top: 0vh;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+}
+
 #fallbackP {
     margin-top: 25vh;
     margin-left: 1vw;
@@ -324,13 +364,14 @@ td {
     margin-bottom: 5px;
 }
 
-table,td .internalFooter {
+table,
+td .internalFooter {
     border: none;
 }
 
 table.internalFooter {
-    width:100%;
-    
+    width: 100%;
+
 }
 
 .footerBox {
@@ -363,7 +404,7 @@ table.internalFooter {
 }
 
 .DOEInternal {
-    width:35%;
+    width: 35%;
 }
 
 .DOEThirds {
@@ -371,11 +412,11 @@ table.internalFooter {
 }
 
 .DOELower {
-    padding:0px 20px 40px 20px;
+    padding: 0px 20px 40px 20px;
 }
 
 .DOECenter {
-    padding:10px 20px 4px;
+    padding: 10px 20px 4px;
 }
 
 .DOEFoot a:hover {

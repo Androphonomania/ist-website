@@ -45,6 +45,10 @@ let hamArrow3;
 let hamExpand1;
 let hamExpand2;
 let hamExpand3;
+let searchMenu;
+let searchWhite;
+let searchBlack;
+let searchInput;
 
 window.onload = function () {
     icon = document.getElementById("icon");
@@ -58,8 +62,13 @@ window.onload = function () {
     hamExpand1 = document.getElementById("hamExpand1");
     hamExpand2 = document.getElementById("hamExpand2");
     hamExpand3 = document.getElementById("hamExpand3");
+    searchMenu = document.getElementById("searchMenu");
+    searchWhite = document.getElementById("searchWhite");
+    searchBlack = document.getElementById("searchBlack");
+    searchInput = document.getElementById("searchInput");
 
     hamMenu.hidden = true;
+    searchMenu.hidden = true;
     hamExpand1.style.display = 'none';
     hamExpand2.style.display = 'none';
     hamExpand3.style.display = 'none';
@@ -85,10 +94,12 @@ window.onload = function () {
             a.setAttribute("href", "../html/fallback.html");
         }
     }
-}
 
-const openSearch = function () {
-    // later
+    searchInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && searchMenu.hidden) {
+            openSearch(searchInput.value)
+        }
+    });
 }
 
 const openHamburgerMenu = function () {
@@ -104,10 +115,11 @@ const openHamburgerMenu = function () {
         hamWhite.classList.add("animate__slideInLeft");
         hamBlack.className = "";
         hamBlack.classList.add("hamOpenNow")
-        console.log("opening")
-        setTimeout(function() {
+        if (!searchMenu.hidden) {
+            openSearch();
+        }
+        setTimeout(function () {
             hamBlack.style.opacity = 0.3;
-            console.log("opened")
         }, 480)
     } else {
         hamIcon.setAttribute("src", "../img/ham.png");
@@ -117,11 +129,9 @@ const openHamburgerMenu = function () {
         hamWhite.classList.add("animate__slideOutLeft");
         hamBlack.className = "";
         hamBlack.classList.add("hamCloseNow")
-        console.log("closing")
-        setTimeout(function() {
+        setTimeout(function () {
             hamBlack.style.opacity = 0;
             hamMenu.hidden = true;
-            console.log("closed")
         }, 480)
     }
 }
@@ -177,4 +187,43 @@ const hamLearnExpand = function () {
         hamArrow3.innerHTML = " ▾";
         hamExpand3.style.display = 'none';
     }
+}
+
+const openSearch = function (term) {
+    if (term === null) {
+        term = searchInput.value
+    }
+    if (searchMenu.hidden) {
+        console.log(term)
+        searchMenu.hidden = false;
+        searchWhite.className = "";
+        searchWhite.classList.add("animate__animated");
+        searchWhite.classList.add("animate__faster");
+        searchWhite.classList.add("animate__slideInDown");
+        searchBlack.className = "";
+        searchBlack.classList.add("hamOpenNow")
+        if (term) {
+            searchWhite.innerHTML = "Search results for '" + term + "'."
+        } else {
+            searchWhite.innerHTML = "No results found for '" + term + "'."
+        }
+        if (!hamMenu.hidden) {
+            openHamburgerMenu();
+        }
+        setTimeout(function () {
+            searchBlack.style.opacity = 0.3;
+        }, 480)
+    } else {
+        searchWhite.className = "";
+        searchWhite.classList.add("animate__animated");
+        searchWhite.classList.add("animate__faster");
+        searchWhite.classList.add("animate__slideOutUp");
+        searchBlack.className = "";
+        searchBlack.classList.add("hamCloseNow")
+        setTimeout(function () {
+            searchBlack.style.opacity = 0;
+            searchMenu.hidden = true;
+        }, 480)
+    }
+    return false;
 }
