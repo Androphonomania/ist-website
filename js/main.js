@@ -95,11 +95,11 @@ window.onload = function () {
         }
     }
 
-    searchInput.addEventListener('keydown', function(e) {
+    searchInput.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' && searchMenu.hidden) {
-          openSearch(searchInput.value)
+            openSearch(searchInput.value)
         }
-      });
+    });
 }
 
 const openHamburgerMenu = function () {
@@ -118,7 +118,7 @@ const openHamburgerMenu = function () {
         if (!searchMenu.hidden) {
             openSearch();
         }
-        setTimeout(function() {
+        setTimeout(function () {
             hamBlack.style.opacity = 0.3;
         }, 480)
     } else {
@@ -129,7 +129,7 @@ const openHamburgerMenu = function () {
         hamWhite.classList.add("animate__slideOutLeft");
         hamBlack.className = "";
         hamBlack.classList.add("hamCloseNow")
-        setTimeout(function() {
+        setTimeout(function () {
             hamBlack.style.opacity = 0;
             hamMenu.hidden = true;
         }, 480)
@@ -189,7 +189,7 @@ const hamLearnExpand = function () {
     }
 }
 
-const openSearch = function(term) {
+const openSearch = function (term) {
     if (term === null) {
         term = searchInput.value
     }
@@ -203,14 +203,14 @@ const openSearch = function(term) {
         searchBlack.className = "";
         searchBlack.classList.add("hamOpenNow")
         if (term) {
-            searchWhite.innerHTML = "Search results for '"+ term + "'."
+            searchWhite.innerHTML = "Search results for '" + term + "'."
         } else {
             searchWhite.innerHTML = "No results found for '" + term + "'."
         }
         if (!hamMenu.hidden) {
             openHamburgerMenu();
         }
-        setTimeout(function() {
+        setTimeout(function () {
             searchBlack.style.opacity = 0.3;
         }, 480)
     } else {
@@ -220,7 +220,7 @@ const openSearch = function(term) {
         searchWhite.classList.add("animate__slideOutUp");
         searchBlack.className = "";
         searchBlack.classList.add("hamCloseNow")
-        setTimeout(function() {
+        setTimeout(function () {
             searchBlack.style.opacity = 0;
             searchMenu.hidden = true;
         }, 480)

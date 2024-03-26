@@ -8,13 +8,23 @@
 }
 
 @keyframes hamOpen {
-    from {opacity: 0;}
-    to {opacity: 0.3;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.3;
+    }
 }
 
 @keyframes hamClose {
-    from {opacity: 0.3;}
-    to {opacity: 0;}
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 .hamOpenNow {
@@ -132,7 +142,7 @@ nav button {
     color: #CCCCCC;
     font-style: italic;
     font-family: 'Rubik', sans-serif;
- }
+}
 
 #navRSCLogo img {
     padding-top: 0.6vh;
@@ -142,7 +152,8 @@ nav button {
     height: auto;
 }
 
-#navRSCText, #navSep {
+#navRSCText,
+#navSep {
     color: white;
     text-decoration: none;
     font-weight: bolder;
@@ -353,13 +364,14 @@ td {
     margin-bottom: 5px;
 }
 
-table,td .internalFooter {
+table,
+td .internalFooter {
     border: none;
 }
 
 table.internalFooter {
-    width:100%;
-    
+    width: 100%;
+
 }
 
 .footerBox {
@@ -392,7 +404,7 @@ table.internalFooter {
 }
 
 .DOEInternal {
-    width:35%;
+    width: 35%;
 }
 
 .DOEThirds {
@@ -400,11 +412,11 @@ table.internalFooter {
 }
 
 .DOELower {
-    padding:0px 20px 40px 20px;
+    padding: 0px 20px 40px 20px;
 }
 
 .DOECenter {
-    padding:10px 20px 4px;
+    padding: 10px 20px 4px;
 }
 
 .DOEFoot a:hover {
