@@ -115,6 +115,9 @@ const openHamburgerMenu = function () {
         hamWhite.classList.add("animate__slideInLeft");
         hamBlack.className = "";
         hamBlack.classList.add("hamOpenNow")
+        if (!searchMenu.hidden) {
+            openSearch();
+        }
         setTimeout(function() {
             hamBlack.style.opacity = 0.3;
         }, 480)
@@ -203,6 +206,9 @@ const openSearch = function(term) {
             searchWhite.innerHTML = "Search results for '"+ term + "'."
         } else {
             searchWhite.innerHTML = "No results found for '" + term + "'."
+        }
+        if (!hamMenu.hidden) {
+            openHamburgerMenu();
         }
         setTimeout(function() {
             searchBlack.style.opacity = 0.3;
