@@ -220,10 +220,14 @@ const openSearch = function (term) {
             searchBlack.style.opacity = 0.3;
         }, 480)
     } else {
+        searchInput.className = "";
+        searchInput.classList.add("animate__animated");
+        searchInput.classList.add("animate__faster");
+        searchInput.classList.add("animate__FadeOutRight");
         searchWhite.className = "";
         searchWhite.classList.add("animate__animated");
         searchWhite.classList.add("animate__faster");
-        searchWhite.classList.add("animate__slideOutUp");
+        searchWhite.classList.add("animate__slideOutRight");
         searchBlack.className = "";
         searchBlack.classList.add("hamCloseNow")
         setTimeout(function () {
