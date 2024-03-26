@@ -190,6 +190,10 @@ const hamLearnExpand = function () {
     }
 }
 
+const commitSearch = function () {
+    
+}
+
 const openSearch = function (term, button) {
     if (term === null) {
         term = searchInput.value
