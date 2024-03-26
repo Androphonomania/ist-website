@@ -236,8 +236,4 @@ const openSearch = function (term) {
         }, 480)
     }
     return false;
-
-searchInput.addEventListener("input",function(){
-    
-})
 }
