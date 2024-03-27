@@ -41,11 +41,6 @@ body {
     overflow-x: hidden;
 }
 
-h1 {
-    font-family: 'Palladio', serif;
-    font-weight: 600;
-}
-
 nav {
     background: linear-gradient(to bottom, #283991, #192661);
     margin-top: 1vh;
@@ -161,7 +156,7 @@ nav button {
 }
 
 #navSep {
-    font-size: 3vh;
+    font-size: 1vh;
 }
 
 #navRSCText {
@@ -249,9 +244,44 @@ hamburger-menu {
     opacity: 0;
 }
 
-#hamWhite hr {
+#hamHr {
     width: 90%;
     border-color: #e06666;
+}
+
+#homeHr1 {
+    margin-top: 3vh;
+    width: 95%;
+    border-color: #e06666;
+}
+
+#homeSchoolInfo {
+    margin: 3vh auto;
+    width: 95%;
+    color: #393939;
+    font-size: 1.5vw;
+    text-align: center;
+    align-items: center;
+}
+
+#homeHr2 {
+    margin: 0;
+    margin-top: 3vh;
+    width: 100%;
+    border-color: #000000;
+}
+
+#homeSlideshow {
+    height: 60vh;
+    margin: 0;
+    padding: 1vw;
+    background: linear-gradient(to right, #ffffff, #eeeeee, #ffffff);
+}
+
+#homeHr3 {
+    margin: 0;
+    width: 100%;
+    border-color: #000000;
 }
 
 #hamLinks1 {
@@ -339,6 +369,25 @@ hamburger-menu {
     opacity: 0;
 }
 
+#content {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+#homeTopMarquee {
+    margin-left: -100vw;
+}
+
+.homeTopImg {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 20vh;
+    width: auto;
+}
+
 #fallbackP {
     margin-top: 25vh;
     margin-left: 1vw;
@@ -350,6 +399,7 @@ table {
 }
 
 #footer {
+    margin: 0;
     width: 100vw;
     border-top: 3px solid #0f0f97;
 }
@@ -430,15 +480,15 @@ table.internalFooter {
 }
 
 .DOEFoot {
-    background: linear-gradient(to left, #ffffff, #e8e8e8);
+    background: linear-gradient(to left, #ffffff, #eeeeee);
 }
 
 .RSCFoot {
-    background: linear-gradient(to right, #ffffff, #e8e8e8);
+    background: linear-gradient(to right, #ffffff, #eeeeee);
 }
 
 .AckFoot {
-    background: linear-gradient(to right, #ffffff, #e8e8e8, #ffffff);
+    background: linear-gradient(to right, #ffffff, #eeeeee, #ffffff);
 }
 
 input[type = 'search']::-webkit-search-cancel-button{
@@ -463,5 +513,5 @@ input[type = 'search']::-webkit-search-cancel-button{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	tranform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
