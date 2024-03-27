@@ -194,7 +194,7 @@ const commitSearch = function () {
     
 }
 
-const openSearch = function (term) {
+const openSearch = function (term, button) {
     if (term === null) {
         term = searchInput.value
     }
@@ -224,20 +224,22 @@ const openSearch = function (term) {
             searchBlack.style.opacity = 0.3;
         }, 480)
     } else {
-        searchInput.className = "";
-        searchInput.classList.add("animate__animated");
-        searchInput.classList.add("animate__faster");
-        searchInput.classList.add("animate__fadeOutRight");
-        searchWhite.className = "";
-        searchWhite.classList.add("animate__animated");
-        searchWhite.classList.add("animate__faster");
-        searchWhite.classList.add("animate__slideOutRight");
-        searchBlack.className = "";
-        searchBlack.classList.add("hamCloseNow")
-        setTimeout(function () {
-            searchBlack.style.opacity = 0;
-            searchMenu.hidden = true;
-        }, 480)
+        if (!button) {
+            searchInput.className = "";
+            searchInput.classList.add("animate__animated");
+            searchInput.classList.add("animate__faster");
+            searchInput.classList.add("animate__fadeOutRight");
+            searchWhite.className = "";
+            searchWhite.classList.add("animate__animated");
+            searchWhite.classList.add("animate__faster");
+            searchWhite.classList.add("animate__slideOutRight");
+            searchBlack.className = "";
+            searchBlack.classList.add("hamCloseNow")
+            setTimeout(function () {
+                searchBlack.style.opacity = 0;
+                searchMenu.hidden = true;
+            }, 480)
+        }
     }
     return false;
 }
