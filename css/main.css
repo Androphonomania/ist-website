@@ -418,6 +418,11 @@ table.internalFooter {
 
 .DOECenter {
     padding: 10px 20px 4px;
+    width: 20%;
+}
+
+td#DOELogo img {
+    width: 60%;
 }
 
 .DOEFoot a:hover {
@@ -474,9 +479,10 @@ input[type = 'search']::-webkit-search-cancel-button{
 }
 
 #subjectsContent {
-    width:79%;
+    width:78.5%;
     float:left;
     border-left: 10px solid #192661ff;
+    border-right: 10px solid #192661ff;
 }
 
 .subject {
@@ -492,8 +498,110 @@ h4.subject {
     font-size: 30px;
 }
 
+ul.subject {
+    list-style: none;
+    margin-top: -20px;
+}
+
+ul.subject li:before {
+    content: "- ";
+}
+
 #art {
     background-color: #ead1dcff;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
+}
+
+#english {
+    text-align: right;
+    float:right;
+    background-color: #FFF2CC;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+#HSIE {
+    background-color: #D0DFE2;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    clear: both;
+}
+
+#languages {
+    text-align: right;
+    float:right;
+    background-color: #FCE5CD;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+#maths {
+    background-color: #F5CACC;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    clear: both;
+}
+
+#PDHPE {
+    text-align: right;
+    float:right;
+    background-color: #D9EAD3;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+#science {
+    background-color: #D1E1F3;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    clear: both;
+}
+
+#TAS {
+    text-align: right;
+    float:right;
+    background-color: #DBD2EA;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+img.subjectDescLink {
+    height:16px;
+    margin-left: 3px;
+    vertical-align:middle;
+}
+
+a.subjectDescLink {
+    color:black;
+    font-weight: bold;
+}
+
+#religion {
+    background-color: #E6B8AF;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    clear: both;
+}
+
+#lifeReady {
+    text-align: right;
+    float:right;
+    background-color: #C9DBF8;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+#resourcesSearchButton img {
+  height:20px;
 }
