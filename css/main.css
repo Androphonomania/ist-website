@@ -514,24 +514,32 @@ input[type = 'search']::-webkit-search-cancel-button{
 #subjectsNav {
     width:20%;
     float: left;
+    position: sticky;
+    top: 75px;
 }
 
 .subjectsNavButton {
     width:90%;
-    margin:10px;
+    margin:14px;
     background-color: #990000ff;
     border-radius: 10px;
-    min-height: 30px;
+    height: 55px;
     font-family: 'Rubik';
-    font-size: 15px;
+    font-size: 30px;
     color: white;
-    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #subjectsContent {
-    width:78.5%;
+    width:77.75vw;
     float:left;
     border-left: 10px solid #192661ff;
+
+}
+
+div.subjectsBody {
     border-right: 10px solid #192661ff;
 }
 
