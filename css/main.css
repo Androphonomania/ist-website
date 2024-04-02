@@ -27,6 +27,16 @@
     }
 }
 
+@keyframes marquee {
+    0% {
+        transform: translate3D(0%);
+    }
+
+    100% {
+        transform: translate3D(-100%);
+    }
+}
+
 .hamOpenNow {
     animation: 0.5s ease-in-out 0s hamOpen;
 }
@@ -249,41 +259,6 @@ hamburger-menu {
     border-color: #e06666;
 }
 
-#homeHr1 {
-    margin-top: 3vh;
-    width: 95%;
-    border-color: #e06666;
-}
-
-#homeSchoolInfo {
-    margin: 3vh auto;
-    width: 95%;
-    color: #393939;
-    font-size: 1.5vw;
-    text-align: center;
-    align-items: center;
-}
-
-#homeHr2 {
-    margin: 0;
-    margin-top: 3vh;
-    width: 100%;
-    border-color: #000000;
-}
-
-#homeSlideshow {
-    height: 60vh;
-    margin: 0;
-    padding: 1vw;
-    background: linear-gradient(to right, #ffffff, #eeeeee, #ffffff);
-}
-
-#homeHr3 {
-    margin: 0;
-    width: 100%;
-    border-color: #000000;
-}
-
 #hamLinks1 {
     margin-top: 5vh;
 }
@@ -370,6 +345,7 @@ hamburger-menu {
 }
 
 #content {
+    width: 100%;
     padding: 0;
     border: 0;
     margin: 0;
@@ -377,6 +353,13 @@ hamburger-menu {
 
 #homeTopMarquee {
     margin-left: -100vw;
+    overflow: hidden;
+}
+
+#homeTopMarqueeContent {
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee 240s linear infinite;
 }
 
 .homeTopImg {
@@ -386,6 +369,55 @@ hamburger-menu {
     border: 0;
     height: 20vh;
     width: auto;
+}
+
+#homeHr1 {
+    margin-top: 24vh;
+    width: 95%;
+    border-color: #e06666;
+}
+
+#homeSchoolInfo {
+    margin: 3vh auto;
+    width: 95%;
+    color: #393939;
+    font-size: 1.5vw;
+    text-align: center;
+    align-items: center;
+}
+
+#homeHr2 {
+    margin: 0;
+    margin-top: 3vh;
+    width: 100%;
+    border-color: #000000;
+}
+
+#homeSlideshow {
+    height: 60vh;
+    margin: 0;
+    padding: 1vw;
+    background: linear-gradient(to right, #ffffff, #e2e2e2, #ffffff);
+}
+
+#homeLinks {
+    height: 60vh;
+    margin: 0;
+    padding: 1vw;
+    background: linear-gradient(to right, #e2e2e2, #ffffff, #e2e2e2);
+}
+
+#homeHr3 {
+    margin: 0;
+    width: 100%;
+    border-color: #000000;
+}
+
+#homeCollage {
+    height: auto;
+    width: 90vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
 
 #fallbackP {
