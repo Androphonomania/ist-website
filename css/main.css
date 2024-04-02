@@ -413,6 +413,13 @@ hamburger-menu {
     border-color: #000000;
 }
 
+#homeCollage {
+    height: auto;
+    width: 90vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
 #fallbackP {
     margin-top: 25vh;
     margin-left: 1vw;
