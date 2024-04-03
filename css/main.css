@@ -359,7 +359,7 @@ hamburger-menu {
 #homeTopMarqueeContent {
     position: absolute;
     white-space: nowrap;
-    animation: marquee 600s linear infinite;
+    animation: marquee 580s linear infinite;
 }
 
 .homeTopImg {
@@ -558,7 +558,7 @@ input[type='search']::-webkit-search-cancel-button {
     width: 90%;
     margin: 14px;
     background-color: #990000ff;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     height: 55px;
     font-family: 'Rubik';
     font-size: 30px;
