@@ -236,7 +236,7 @@ hamburger-menu {
 #hamWhite {
     position: fixed;
     z-index: 99;
-    margin-top: 9vh;
+    margin-top: 8.4vh;
     background-color: white;
     width: 30vw;
     height: 91vh;
@@ -260,7 +260,7 @@ hamburger-menu {
 }
 
 #hamLinks1 {
-    margin-top: 5vh;
+    margin-top: 4vh;
 }
 
 #hamLinks2 {
@@ -323,7 +323,7 @@ hamburger-menu {
     position: fixed;
     z-index: 99;
     margin-left: 70vw;
-    margin-top: 9vh;
+    margin-top: 8.4vh;
     background-color: white;
     width: 30vw;
     height: 91vh;
