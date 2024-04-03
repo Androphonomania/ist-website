@@ -359,7 +359,7 @@ hamburger-menu {
 #homeTopMarqueeContent {
     position: absolute;
     white-space: nowrap;
-    animation: marquee 240s linear infinite;
+    animation: marquee 600s linear infinite;
 }
 
 .homeTopImg {

@@ -52,7 +52,7 @@
                         </ul>
                 </li>
             </ul>
-            <hr />
+            <hr id="hamHr" />
             <ul id="hamLinks2">
                 <li><a href="contact-us.html">Contact Us</a></li>
                 <li><a href="resources.html">Resources</a></li>
@@ -78,13 +78,16 @@
         <div><a href="index.html" id="navRSCText">
                 Ryde Secondary College
             </a></div>
-        <input id="searchInput" type="text" placeholder="Search.." name="search" onsubmit="openSearch()">
-        <div class="navImg" id="searchButton"><img onclick="openSearch(null)" src="../img/search.webp"></div>
+        <input id="searchInput" type="search" placeholder="Search." name="search">
+
+        <div class="navImg" id="searchButton"><img onclick="openSearch(null, true)" src="../img/search.webp"></div>
     </nav>
     <div id="headerExtend"></div>
     <header>
         <div id="headerImage"><img src="../img/rsclogo.png" height="auto"></div>
-        <div id="headerTitle"><h3>Fallback</h3></div>
+        <div id="headerTitle">
+            <h3>Fallback</h3>
+        </div>
     </header>
     <p id="fallbackP">This page has not been implemented for the purpose of the assessment.</p>
     <footer>
