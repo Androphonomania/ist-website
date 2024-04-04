@@ -377,6 +377,18 @@ hamburger-menu {
     border-color: #e06666;
 }
 
+#contactHr1 {
+    margin-top: 24vh;
+    width: 95%;
+    border-color: #e06666;
+}
+
+.contactHr2 {
+    margin-top: 0;
+    width: 95%;
+    border-color: #e06666;
+}
+
 #homeSchoolInfo {
     margin: 3vh auto;
     width: 95%;
@@ -407,7 +419,7 @@ hamburger-menu {
     background: linear-gradient(to right, #e2e2e2, #ffffff, #e2e2e2);
 }
 
-#homeHr3 {
+.homeHr3 {
     margin: 0;
     width: 100%;
     border-color: #000000;
@@ -418,6 +430,31 @@ hamburger-menu {
     width: 90vw;
     margin-top: 3vh;
     margin-bottom: 3vh;
+}
+
+#contactStuff1Container > *, #contactStuff2Container  > * {
+    text-align: center;
+}
+
+#contactStuff1, #contactStuff2 {
+    margin: 0;
+}
+
+#contactStuff1 > *, #contactStuff2 > * {
+    margin: 4vh 3vw;
+    text-align: center;
+    display: inline-block;
+}
+
+.contactStuffImg {
+    width: 8vw;
+    height: auto;
+}
+
+.contactStuffTitle {
+    margin: 0;
+    margin-bottom: 0vh;
+    font-size: 3vw;
 }
 
 #fallbackP {

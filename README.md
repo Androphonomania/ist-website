@@ -1,12 +1,2 @@
 # IST Website
-hi jamie
-
-Hi Artin
-
-Testing testing
-
-changing again
-
-balls
-
-finally
+This is our website made for our IST assessment.
