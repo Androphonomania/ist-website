@@ -29,11 +29,11 @@
 
 @keyframes marquee {
     0% {
-        transform: translate3D(0%, 0, 0);
+        transform: translate3D(0%);
     }
 
     100% {
-        transform: translate3D(-100%, 0, 0);
+        transform: translate3D(-100%);
     }
 }
 
@@ -236,7 +236,7 @@ hamburger-menu {
 #hamWhite {
     position: fixed;
     z-index: 99;
-    margin-top: 8.4vh;
+    margin-top: 9vh;
     background-color: white;
     width: 30vw;
     height: 91vh;
@@ -260,7 +260,7 @@ hamburger-menu {
 }
 
 #hamLinks1 {
-    margin-top: 4vh;
+    margin-top: 5vh;
 }
 
 #hamLinks2 {
@@ -323,7 +323,7 @@ hamburger-menu {
     position: fixed;
     z-index: 99;
     margin-left: 70vw;
-    margin-top: 8.4vh;
+    margin-top: 9vh;
     background-color: white;
     width: 30vw;
     height: 91vh;
@@ -359,7 +359,7 @@ hamburger-menu {
 #homeTopMarqueeContent {
     position: absolute;
     white-space: nowrap;
-    animation: marquee 580s linear infinite;
+    animation: marquee 240s linear infinite;
 }
 
 .homeTopImg {
@@ -539,7 +539,7 @@ input[type='search']::-webkit-search-cancel-button {
 
 .subjectsBody:after {
     content: "";
-    display: table;
+    display:table;
     clear: both;
 }
 
@@ -547,7 +547,7 @@ input[type='search']::-webkit-search-cancel-button {
     width: 20%;
     float: left;
     position: sticky;
-    top: 75px;
+    top:75px;
 }
 
 #subjectsNav a {
@@ -558,7 +558,7 @@ input[type='search']::-webkit-search-cancel-button {
     width: 90%;
     margin: 14px;
     background-color: #990000ff;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     height: 55px;
     font-family: 'Rubik';
     font-size: 30px;
@@ -570,14 +570,10 @@ input[type='search']::-webkit-search-cancel-button {
 
 
 #subjectsContent {
-    width: 77.75vw;
+    width: 76.27vw;
     float: left;
-    border-left: 10px solid #192661ff;
-
-}
-
-div.subjectsBody {
-    border-right: 10px solid #192661ff;
+    border-left: 20px solid #192661ff;
+    border-right: 20px solid #192661ff;
 }
 
 .subject {
@@ -585,12 +581,17 @@ div.subjectsBody {
     padding: 10px;
     margin: 10px;
     margin-left: 0;
+    margin-right: 0;
     font-family: 'Rubik';
+    font-size: 25px;
+    color:#595959;
 }
 
 h4.subject {
     padding: 0;
-    font-size: 35px;
+    font-size: 40px;
+    font-weight: 400;
+    color:black;
 }
 
 ul.subject {
@@ -604,77 +605,86 @@ ul.subject li:before {
 
 #art {
     background-color: #ead1dcff;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    scroll-margin-top: 80px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    scroll-margin-top: 95px;
+    padding-left: 20px;
+    margin-top: 20px;
 }
 
 #english {
     text-align: right;
     float: right;
     background-color: #FFF2CC;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
     margin-right: 0;
     margin-bottom: 20px;
     scroll-margin-top: 95px;
+    padding-right: 20px;
 }
 
 #HSIE {
     background-color: #D0DFE2;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
     clear: both;
     scroll-margin-top: 95px;
+    padding-left: 20px;
 }
 
 #languages {
     text-align: right;
     float: right;
     background-color: #FCE5CD;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
     margin-right: 0;
     margin-bottom: 20px;
     scroll-margin-top: 95px;
+    padding-right: 20px;
 }
 
 #maths {
     background-color: #F5CACC;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
     clear: both;
     scroll-margin-top: 95px;
+    padding-left: 20px;
 }
 
 #PDHPE {
     text-align: right;
     float: right;
     background-color: #D9EAD3;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
     margin-right: 0;
     margin-bottom: 20px;
     scroll-margin-top: 95px;
+    padding-right: 20px;
 }
 
 #science {
     background-color: #D1E1F3;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
     clear: both;
     scroll-margin-top: 95px;
+    padding-left: 20px;
 }
 
 #TAS {
     text-align: right;
     float: right;
     background-color: #DBD2EA;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
     margin-right: 0;
     margin-bottom: 20px;
     scroll-margin-top: 95px;
+    padding-right: 20px;
 }
 
 img.subjectDescLink {
@@ -690,24 +700,31 @@ a.subjectDescLink {
 
 #religion {
     background-color: #E6B8AF;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
     clear: both;
     scroll-margin-top: 95px;
+    padding-left: 20px;
 }
 
 #lifeReady {
     text-align: right;
     float: right;
     background-color: #C9DBF8;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
     margin-right: 0;
     margin-bottom: 20px;
     scroll-margin-top: 95px;
+    padding-right: 20px;
 }
 
 #resourcesSearchButton img {
     height: 20px;
     scroll-margin-top: 95px;
+}
+
+#english h4.subject, #languages h4.subject, #PDHPE h4.subject, #TAS h4.subject, #lifeReady h4.subject {
+    float:right;
+    width:100%;
 }
