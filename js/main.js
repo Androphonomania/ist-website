@@ -49,6 +49,7 @@ let searchMenu;
 let searchWhite;
 let searchBlack;
 let searchInput;
+let marqueeContent;
 
 window.onload = function () {
     icon = document.getElementById("icon");
@@ -66,6 +67,8 @@ window.onload = function () {
     searchWhite = document.getElementById("searchWhite");
     searchBlack = document.getElementById("searchBlack");
     searchInput = document.getElementById("searchInput");
+    marqueeContent = document.getElementById("homeTopMarqueeContent");
+    console.log(marqueeContent);
 
     hamMenu.hidden = true;
     searchMenu.hidden = true;
@@ -73,6 +76,11 @@ window.onload = function () {
     hamExpand1.style.display = 'none';
     hamExpand2.style.display = 'none';
     hamExpand3.style.display = 'none';
+
+    if (marqueeContent) {
+        marqueeContent.classList.add("marqueeAnim");
+        console.log(marqueeContent.classList)
+    }
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         icon.setAttribute("href", "../img/favicon-dark.ico")

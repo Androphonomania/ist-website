@@ -28,12 +28,12 @@
 }
 
 @keyframes marquee {
-    0% {
-        transform: translate3D(0%);
+    from {
+        transform: translateX(0%);
     }
 
-    100% {
-        transform: translate3D(-100%);
+    to {
+        transform: translateX(-100%);
     }
 }
 
@@ -260,7 +260,7 @@ hamburger-menu {
 }
 
 #hamLinks1 {
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 
 #hamLinks2 {
@@ -323,7 +323,7 @@ hamburger-menu {
     position: fixed;
     z-index: 99;
     margin-left: 70vw;
-    margin-top: 9vh;
+    margin-top: 8vh;
     background-color: white;
     width: 30vw;
     height: 91vh;
@@ -359,7 +359,10 @@ hamburger-menu {
 #homeTopMarqueeContent {
     position: absolute;
     white-space: nowrap;
-    animation: marquee 240s linear infinite;
+}
+
+.marqueeAnim {
+    animation: 600s linear 0s marquee;
 }
 
 .homeTopImg {
