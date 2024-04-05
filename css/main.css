@@ -420,6 +420,19 @@ hamburger-menu {
     margin: 0;
     padding: 1vw;
     background: linear-gradient(to right, #e2e2e2, #ffffff, #e2e2e2);
+    text-align: center;
+}
+
+.homeLink {
+    display: inline;
+}
+
+.homeLinkImg {
+    width: 20vw;
+    height: auto;
+    filter: drop-shadow(0px 0.4vh 7px black);
+    z-index: 50;
+    margin: 0 3vw;
 }
 
 .homeHr3 {
