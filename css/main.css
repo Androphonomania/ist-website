@@ -720,11 +720,52 @@ a.subjectDescLink {
 }
 
 #resourcesSearchButton img {
-    height: 20px;
+    width: 30px;
     scroll-margin-top: 95px;
 }
 
 #english h4.subject, #languages h4.subject, #PDHPE h4.subject, #TAS h4.subject, #lifeReady h4.subject {
     float:right;
     width:100%;
+}
+
+.mainSearchBar {
+    display: flex;
+    margin-top: 115px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+div.mainSearchBarLeft {
+    display: flex;
+    width: 50%;
+}
+
+#mainSearchInput {
+    width:60%;
+}
+
+div.mainSearchBarRight {
+    width: 50%;
+    display: flex;
+    justify-content:right;
+}
+
+#sort {
+    width: 40%;
+    margin: 0px 10px;
+}
+
+#filter {
+    width: 10%;
+}
+
+#filterImg {
+    height: 30px;
+}
+
+#filterOptions {
+    position: absolute;
+    margin-left: -50px;
+    margin-top: 20px;
 }

@@ -90,10 +90,46 @@
         </div>
     </header>
     <content class="mainSearchBar">
-        <input id="searchInput" type="text" placeholder="Search." name="search">
-        <div class="navImg" id="resourcesSearchButton"><img src="../img/searchMaroon.png"></div>
-        <select id="sort"></select>
-        <select id="filter"></select>
+        <div class="mainSearchBarLeft">
+            <input id="mainSearchInput" type="text" placeholder="Search." name="search">
+            <div class="navImg" id="resourcesSearchButton"><img src="../img/searchMaroon.png"></div>
+        </div>
+        <div class="mainSearchBarRight">
+            <select name="sort" id="sort">
+                <option value="relevance">Relevance</option>
+                <hr  />
+                <option value="alpha">A - Z</option>
+                <hr/>
+                <option value="revAlpha">Z - A</option>
+                <hr/>
+                <option value="old">Oldest</option>
+                <hr/>
+                <option value="new">Newest</option>
+            </select>
+            <details id="filter" name="filter">
+                <summary><img id="filterImg" src="../img/filter.png"></summary>
+                <fieldset id="filterOptions">
+                    <Legend>Sort:</Legend>
+                    <h6>File Type</h6>
+                    <div>
+                        <input type="checkbox" id="docx" name="docx" />
+                        <label for="docx">Docx</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="docx" name="docx" />
+                        <label for="docx">Docx</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="docx" name="docx" />
+                        <label for="docx">Docx</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="docx" name="docx" />
+                        <label for="docx">Docx</label>
+                    </div>
+                </fieldset>
+            </details>
+        </div>
     </content>
     <footer>
         <table id="footer">
