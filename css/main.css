@@ -37,6 +37,10 @@
     }
 }
 
+:root {
+    --homeslideimgheight: 0;
+}
+
 .hamOpenNow {
     animation: 0.5s ease-in-out 0s hamOpen;
 }
@@ -435,6 +439,76 @@ hamburger-menu {
     margin: 0 3vw;
 }
 
+#homeSlideShow { 
+    text-align: center;
+}
+
+#homeSlideFrame {
+    margin-top: 5vh;
+}
+
+#homeSlideLeftArrow {
+    position: absolute;
+    margin-top: 0;
+    height: 27vw;
+    width: 4vw;
+    border-top: 2px black solid;
+    border-left: 2px black solid;
+    border-bottom: 2px black solid;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#homeSlideRightArrow {
+    position: absolute;
+    margin-top: 0;
+    margin-left: auto;
+    height: 27vw;
+    width: 4vw;
+    border-top: 2px black solid;
+    border-right: 2px black solid;
+    border-bottom: 2px black solid;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#homeSlideLeftArrow img {
+    margin-top: 12vw;
+    width: 2vw;
+    rotate: -90deg;
+}
+
+#homeSlideRightArrow img {
+    margin-top: 12vw;
+    width: 2vw;
+    rotate: 90deg;
+}
+
+#homeSlideImg {
+    width: 40vw;
+    height: 27vw;
+    --homeslideimgheight: height;
+    border: 2px black solid;
+}
+
+#homeSlideButtons {
+    margin-top: 1vh;
+}
+
+#homeSlideButtons > a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.homeSlideButton {
+    display: inline-block;
+    border: 1px #595959 solid;
+    background-color: #eee;
+    width: 1vw;
+    height: 1vw;
+    margin: 1vh 0.3vw;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0.2vh 3px black);
+}
+
 .homeHr3 {
     margin: 0;
     width: 100%;
@@ -474,7 +548,7 @@ hamburger-menu {
 }
 
 #fallbackP {
-    margin-top: 25vh;
+    margin-top: 22vh;
     margin-left: 1vw;
 }
 
@@ -570,15 +644,15 @@ td#DOELogo img {
 }
 
 .DOEFoot {
-    background: linear-gradient(to left, #ffffff, #eeeeee);
+    background: linear-gradient(to left, #ffffff, #f3f3f3);
 }
 
 .RSCFoot {
-    background: linear-gradient(to right, #ffffff, #eeeeee);
+    background: linear-gradient(to right, #ffffff, #f3f3f3);
 }
 
 .AckFoot {
-    background: linear-gradient(to right, #ffffff, #eeeeee, #ffffff);
+    background: linear-gradient(to right, #ffffff, #f3f3f3, #ffffff);
 }
 
 input[type='search']::-webkit-search-cancel-button {

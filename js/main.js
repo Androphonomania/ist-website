@@ -11,27 +11,20 @@ const preload = function (array) {
 
 preload(
     "../img/chev.png",
-    "../img/chevW.png",
-    "../img/DOE.png",
     "../img/download.png",
-    "../img/facebook.png",
     "../img/favicon-dark.ico",
     "../img/favicon.ico",
     "../img/filter.png",
     "../img/ham.png",
     "../img/hamClose.png",
-    "../img/instagram.png",
     "../img/lastpage.png",
     "../img/missingimg.png",
     "../img/newtabThick.png",
     "../img/newtabThin.png",
     "../img/nextpage.png",
-    "../img/rsclogo.png",
     "../img/search.webp",
     "../img/searchBlack.png",
-    "../img/searchMaroon.png",
-    "../img/sentral.png",
-    "../img/sentralP.png"
+    "../img/searchMaroon.png"
 );
 
 let icon;
@@ -202,9 +195,9 @@ const commitSearch = function (term) {
         term = searchInput.value
     }
     if (term) {
-        searchWhite.innerHTML = "Search results for '" + term + "'."
+        searchWhite.textContent = "Search results for '" + term + "'."
     } else {
-        searchWhite.innerHTML = "No results found for '" + term + "'."
+        searchWhite.textContent = "No results found for '" + term + "'."
     }
 }
 
