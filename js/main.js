@@ -248,3 +248,10 @@ const homeSlideLeft = function() {
 const homeSlideRight = function() {
 
 }
+$(document).ready(function() {
+    $('#mainSearchResults').DataTable();
+});
+
+new DataTable('#mainSearchResults', {
+    pageLength: 1
+});
