@@ -581,15 +581,15 @@ td#DOELogo img {
 }
 
 .DOEFoot {
-    background: linear-gradient(to left, #ffffff, #eeeeee);
+    background: linear-gradient(to left, #ffffff, #f3f3f3);
 }
 
 .RSCFoot {
-    background: linear-gradient(to right, #ffffff, #eeeeee);
+    background: linear-gradient(to right, #ffffff, #f3f3f3);
 }
 
 .AckFoot {
-    background: linear-gradient(to right, #ffffff, #eeeeee, #ffffff);
+    background: linear-gradient(to right, #ffffff, #f3f3f3, #ffffff);
 }
 
 input[type='search']::-webkit-search-cancel-button {
