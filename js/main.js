@@ -202,9 +202,9 @@ const commitSearch = function (term) {
         term = searchInput.value
     }
     if (term) {
-        searchWhite.innerHTML = "Search results for '" + term + "'."
+        searchWhite.textContent = "Search results for '" + term + "'."
     } else {
-        searchWhite.innerHTML = "No results found for '" + term + "'."
+        searchWhite.textContent = "No results found for '" + term + "'."
     }
 }
 

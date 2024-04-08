@@ -435,6 +435,17 @@ hamburger-menu {
     margin: 0 3vw;
 }
 
+.homeSlideButton {
+    display: inline-block;
+    border: 1px #595959 solid;
+    background-color: #eee;
+    width: 1vw;
+    height: 1vw;
+    margin: 1vh 0.3vw;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0.2vh 3px black);
+}
+
 .homeHr3 {
     margin: 0;
     width: 100%;
