@@ -455,19 +455,19 @@ hamburger-menu {
     border-top: 2px black solid;
     border-left: 2px black solid;
     border-bottom: 2px black solid;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #homeSlideRightArrow {
     position: absolute;
     margin-top: 0;
-    margin-left: auto;
+    margin-left: -4vw;
     height: 27vw;
-    width: 4vw;
+    width: 3.87vw;
     border-top: 2px black solid;
     border-right: 2px black solid;
     border-bottom: 2px black solid;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #homeSlideLeftArrow img {
@@ -482,6 +482,32 @@ hamburger-menu {
     rotate: 90deg;
 }
 
+#homeSlideInfo {
+    margin: 0;
+    margin-left: 4.15vw;
+    margin-top: 29.1vh;
+    width: 32.13vw;
+    height: 15vh;
+    position: absolute;
+    border-bottom: 2px black solid;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#homeSlideInfo {
+    padding-top: 1vh;
+    text-decoration: none;
+    color: black;
+}
+
+#homeSlideInfo strong {
+    font-size: 2vw;
+}
+
+#homeSlideInfo p {
+    margin-top: 0.3vh;
+    font-size: 0.9vw;
+}
+
 #homeSlideImg {
     width: 40vw;
     height: 27vw;
@@ -493,7 +519,7 @@ hamburger-menu {
     margin-top: 1vh;
 }
 
-#homeSlideButtons > a {
+#homeSlideButtons a {
     text-decoration: none;
     text-align: center;
 }

@@ -240,3 +240,11 @@ const openSearch = function (term, button) {
     }
     return false;
 }
+
+const homeSlideLeft = function() {
+    
+}
+
+const homeSlideRight = function() {
+
+}
