@@ -7,8 +7,16 @@
     <title>Resources - Ryde Secondary College</title>
     <link href="../css/main.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="../js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" id="icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script type="text/javascript" class="init">
+        $(document).ready(function() {
+    $('#mainSearchResults').DataTable();
+});
+    </script>
 </head>
 
 <body>
@@ -130,6 +138,22 @@
                 </fieldset>
             </details>
         </div>
+    </content>
+    <content class="resourcesBody">
+        <table id="mainSearchResults" class="searchResults">
+            <tbody>
+                <tr>
+                    <td>thumbnail1</td>
+                    <td>content1</td>
+                    <td>file1</td>
+                </tr>
+                <tr>
+                    <td>thumbnail2</td>
+                    <td>content2</td>
+                    <td>file2</td>
+                </tr>
+            </tbody>
+        </table>
     </content>
     <footer>
         <table id="footer">

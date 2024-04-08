@@ -247,3 +247,11 @@ const openSearch = function (term, button) {
     }
     return false;
 }
+
+$(document).ready(function() {
+    $('#mainSearchResults').DataTable();
+});
+
+new DataTable('#mainSearchResults', {
+    pageLength: 1
+});
