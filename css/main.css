@@ -27,6 +27,46 @@
     }
 }
 
+@keyframes homeSlideGlowAnim {
+    from {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    to {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes homeSlideUnglowAnim {
+    from {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    to {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+@keyframes homeSlideArrowBigAnim {
+    from {
+        width: 2vw;
+    }
+
+    to {
+        width: 2.5vw;
+    }
+}
+
+@keyframes homeSlideArrowSmallAnim {
+    from {
+        width: 2.5vw;
+    }
+
+    to {
+        width: 2vw;
+    }
+}
+
 @keyframes marquee {
     from {
         transform: translateX(0%);
@@ -47,6 +87,22 @@
 
 .hamCloseNow {
     animation: 0.5s ease-in-out 0s hamClose;
+}
+
+.homeSlideGlow {
+    animation: 0.2s ease-in-out 0s homeSlideGlowAnim;
+}
+
+.homeSlideUnglow {
+    animation: 0.2s ease-in-out 0s homeSlideUnglowAnim;
+}
+
+.homeSlideArrowBig {
+    animation: 0.2s ease-in-out 0s homeSlideArrowBigAnim;
+}
+
+.homeSlideArrowSmall {
+    animation: 0.2s ease-in-out 0s homeSlideArrowSmallAnim;
 }
 
 body {
@@ -492,9 +548,6 @@ hamburger-menu {
     position: absolute;
     border-bottom: 2px black solid;
     background-color: rgba(255, 255, 255, 0.7);
-}
-
-#homeSlideInfo {
     padding-top: 1vh;
     text-decoration: none;
     color: black;
@@ -506,7 +559,7 @@ hamburger-menu {
 
 #homeSlideInfo p {
     margin-top: 0.3vh;
-    font-size: 0.9vw;
+    font-size: 0.8vw;
 }
 
 #homeSlideImg {

@@ -115,6 +115,53 @@ window.onload = function () {
         }
     }
 
+    let timer2;
+
+    const hover = function (element) {
+        element.addEventListener('mouseenter', function () {
+            element.className = ""
+            element.classList.add("homeSlideGlow")
+            let potentialArrow = document.querySelector(("#" + element.id + " img"))
+            if (potentialArrow) {
+                potentialArrow.className = ""
+                potentialArrow.classList.add("homeSlideArrowBig")
+            }
+            if (timer2) {
+                timer2 = "";
+            }
+            timer2 = setTimeout(function () {
+                element.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+                if (potentialArrow) {
+                    potentialArrow.style.width = "2.5vw";
+                }
+                timer2 = ""
+            }, 160)
+        })
+        element.addEventListener('mouseleave', function () {
+            element.className = ""
+            element.classList.add("homeSlideUnglow");
+            let potentialArrow = document.querySelector(("#" + element.id + " img"))
+            if (potentialArrow) {
+                potentialArrow.className = ""
+                potentialArrow.classList.add("homeSlideArrowSmall")
+            }
+            if (timer2) {
+                timer2 = "";
+            }
+            timer2 = setTimeout(function () {
+                element.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+                if (potentialArrow) {
+                    potentialArrow.style.width = "2vw";
+                }
+                timer2 = ""
+            }, 160)
+        })
+    }
+
+    hover(document.getElementById("homeSlideLeftArrow"))
+    hover(document.getElementById("homeSlideRightArrow"))
+    hover(homeSlideInfo)
+
     searchInput.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' && !searchMenu.hidden) {
             commitSearch(searchInput.value)
