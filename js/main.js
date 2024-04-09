@@ -17,6 +17,12 @@ preload(
     "../img/filter.png",
     "../img/ham.png",
     "../img/hamClose.png",
+    "../img/homeSlide1.png",
+    "../img/homeSlide2.png",
+    "../img/homeSlide3.png",
+    "../img/homeSlide4.png",
+    "../img/homeSlide5.png",
+    "../img/homeSlide6.png",
     "../img/lastpage.png",
     "../img/missingimg.png",
     "../img/newtabThick.png",
@@ -43,6 +49,9 @@ let searchWhite;
 let searchBlack;
 let searchInput;
 let marqueeContent;
+let homeSlideImg;
+let homeSlideInfo;
+let homeSlideButtonList;
 
 window.onload = function () {
     icon = document.getElementById("icon");
@@ -61,6 +70,17 @@ window.onload = function () {
     searchBlack = document.getElementById("searchBlack");
     searchInput = document.getElementById("searchInput");
     marqueeContent = document.getElementById("homeTopMarqueeContent");
+    homeSlideImg = document.getElementById("homeSlideImg");
+    homeSlideInfo = document.getElementById("homeSlideInfo");
+
+    homeSlideButtonList = {
+        1: document.getElementById("homeSlideButton1"),
+        2: document.getElementById("homeSlideButton2"),
+        3: document.getElementById("homeSlideButton3"),
+        4: document.getElementById("homeSlideButton4"),
+        5: document.getElementById("homeSlideButton5"),
+        6: document.getElementById("homeSlideButton6")
+    };
 
     hamMenu.hidden = true;
     searchMenu.hidden = true;
@@ -190,7 +210,6 @@ const hamLearnExpand = function () {
 }
 
 const commitSearch = function (term) {
-    console.log(term)
     if (term === null) {
         term = searchInput.value
     }
@@ -241,13 +260,62 @@ const openSearch = function (term, button) {
     return false;
 }
 
+let homeSlideImgList = {
+    1: "../img/homeSlide1.png",
+    2: "../img/homeSlide2.png",
+    3: "../img/homeSlide3.png",
+    4: "../img/homeSlide4.png",
+    5: "../img/homeSlide5.png",
+    6: "../img/homeSlide6.png"
+};
+
+let homeSlideInfoList = {
+    1: `<strong>DIVERSITY</strong>
+    <p>With an enrolment of over 1400 students, RSC is a co-educational high school with an academically selective cohort, a gifted and talented stream, mainstream classes and a Special Education Unit for students with special  needs. 70% of students come from multi-lingual backgrounds. Diversity is a major characteristic of RSC.</p>`,
+    2: `<strong>SPORT</strong>
+    <p>All students have the opportunity to participate in Swimming, Athletics and Cross Country carnivals as well as Inter School activities.<br /><br />Tuesday Sport includes a wide range of Grade and House Summer Sports, Winter Sports and Social Sports.</p>`,
+    3: `<strong>STUDENT LEADERSHIP</strong>
+    <p>Opportunities for school leadership exist within our team of twelve prefects and four captains. The positions are elected by both the students and staff.<br /><br />Our captains lead our prefect body and manage our regular College Assembly program.</p>`,
+    4: `<strong>ACADEMIC EXCELLENCE</strong>
+    <p>At Ryde Secondary College our students are proudly continuing our tradition of academic excellence.<br /><br />Your son or daughter will thrive in our vibrant college where they will be challenged and engaged by a diverse curriculum rich in traditional and innovative disciplines.</p>`,
+    5: `<strong>COLLEGE TOURS</strong>
+    <p>College tours are available throughout the year, generally once per month. Please contact the school to make a booking for the next available tour.<br /><br />Please click the here above to take a guided virtual tour or contact us on 9809 4894 to book a tour date with us.</p>`,
+    6: `<strong>OPPORTUNITY</strong>
+    <p>We have a wide range of opportunities for students to participate in activities, competitions and performance at Ryde Secondary College.<br /><br />We provide more than 100 co-curricular activities to students. These create opportunities to develop a wide range of talents and interests and achieve at the highest levels.</p>`
+};
+
+let homeSlideCurr = 1;
+
 const homeSlideLeft = function() {
-    
+    homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+    homeSlideCurr--;
+    if (homeSlideCurr === 0) {
+        homeSlideCurr = 6;
+    };
+    homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+    homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+    homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
 }
 
 const homeSlideRight = function() {
-
+    homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+    homeSlideCurr++;
+    if (homeSlideCurr === 7) {
+        homeSlideCurr = 1;
+    };
+    homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+    homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+    homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
 }
+
+const homeSlideButton = function(num) {
+    homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+    homeSlideCurr = num;
+    homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+    homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+    homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+}
+
 $(document).ready(function() {
     $('#mainSearchResults').DataTable();
 });
