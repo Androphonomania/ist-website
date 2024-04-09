@@ -339,7 +339,7 @@ async function homeSlideAutoReset() {
                 homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
                 homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
                 resolve();
-            }, 5000);
+            }, 10000);
         });
     }
 }
