@@ -236,6 +236,9 @@ const openSearch = function (term, button) {
         searchBlack.className = "";
         searchWhite.innerHTML = "Enter a search term."
         searchBlack.classList.add("hamOpenNow")
+        if (!hamMenu.hidden) {
+            openHamburgerMenu();
+        }
         setTimeout(function () {
             searchBlack.style.opacity = 0.3;
         }, 480)
