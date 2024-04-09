@@ -286,7 +286,7 @@ let homeSlideInfoList = {
 
 let homeSlideCurr = 1;
 
-const homeSlideLeft = function() {
+const homeSlideLeft = function () {
     homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
     homeSlideCurr--;
     if (homeSlideCurr === 0) {
@@ -295,9 +295,10 @@ const homeSlideLeft = function() {
     homeSlideImg.src = homeSlideImgList[homeSlideCurr];
     homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
     homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+    homeSlideAutoReset();
 }
 
-const homeSlideRight = function() {
+const homeSlideRight = function () {
     homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
     homeSlideCurr++;
     if (homeSlideCurr === 7) {
@@ -306,17 +307,46 @@ const homeSlideRight = function() {
     homeSlideImg.src = homeSlideImgList[homeSlideCurr];
     homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
     homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+    homeSlideAutoReset();
 }
 
-const homeSlideButton = function(num) {
+const homeSlideButton = function (num) {
     homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
     homeSlideCurr = num;
     homeSlideImg.src = homeSlideImgList[homeSlideCurr];
     homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
     homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+    homeSlideAutoReset();
 }
 
-$(document).ready(function() {
+let timer;
+
+async function homeSlideAutoReset() {
+    let i = 0;
+    while (i < 10) {
+        await new Promise((resolve, reject) => {
+            if (timer) {
+                clearTimeout(timer);
+            }
+
+            timer = setTimeout(() => {
+                homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+                homeSlideCurr++;
+                if (homeSlideCurr === 7) {
+                    homeSlideCurr = 1;
+                };
+                homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+                homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+                homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+                resolve();
+            }, 5000);
+        });
+    }
+}
+
+homeSlideAutoReset();
+
+$(document).ready(function () {
     $('#mainSearchResults').DataTable();
 });
 
