@@ -437,6 +437,7 @@ hamburger-menu {
     filter: drop-shadow(0px 0.4vh 7px black);
     z-index: 50;
     margin: 0 3vw;
+    margin-top: 4.5vh;
 }
 
 #homeSlideShow { 
