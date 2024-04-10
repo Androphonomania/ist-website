@@ -483,8 +483,9 @@ hamburger-menu {
     text-align: center;
 }
 
-.homeLink {
+#homeLinks a {
     display: inline;
+    text-decoration: none;
 }
 
 .homeLinkImg {
@@ -494,6 +495,29 @@ hamburger-menu {
     z-index: 50;
     margin: 0 3vw;
     margin-top: 4.5vh;
+}
+
+.homeLinkInfo {
+    z-index: 10;
+    margin: 0;
+    margin-top: 4.5vh;
+    margin-left: 12.2vw;
+    width: 20vw;
+    height: 21.85vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-top: 1vh;
+    text-decoration: none;
+    color: black;
+}
+
+.homeLinkTop {
+    font-size: 1.6vw;
+}
+
+.homeLinkBottom {
+    font-size: 1vw;
+    margin-top: 13vh;
 }
 
 #homeSlideShow { 

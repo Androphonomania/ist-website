@@ -329,7 +329,7 @@ let homeSlideInfoList = {
     4: `<strong>ACADEMIC EXCELLENCE</strong>
     <p>At Ryde Secondary College our students are proudly continuing our tradition of academic excellence.<br /><br />Your son or daughter will thrive in our vibrant college where they will be challenged and engaged by a diverse curriculum rich in traditional and innovative disciplines.</p>`,
     5: `<strong>COLLEGE TOURS</strong>
-    <p>College tours are available throughout the year, generally once per month. Please contact the school to make a booking for the next available tour.<br /><br />Please click the here above to take a guided virtual tour or contact us on 9809 4894 to book a tour date with us.</p>`,
+    <p>College tours are available throughout the year, generally once per month. Please contact the school to make a booking for the next available tour.<br /><br />Click here for more information on the dates of the tours or contact us on 9809 4894 to book a tour date with us.</p>`,
     6: `<strong>OPPORTUNITY</strong>
     <p>We have a wide range of opportunities for students to participate in activities, competitions and performance at Ryde Secondary College.<br /><br />We provide more than 100 co-curricular activities to students. These create opportunities to develop a wide range of talents and interests and achieve at the highest levels.</p>`
 };
