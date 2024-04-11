@@ -241,10 +241,83 @@ const openSearch = function (term, button) {
     return false;
 }
 
+
+let tableSort = document.createElement('div');
+let searchFilter = document.createElement('div');
+tableSort.innerHTML = "Item 1";
+searchFilter.innerHTML = '<details id="filter" name="filter">' +
+'<summary><img id="filterImg" src="../img/filter.png"></summary>' +
+'<div id="filterGroup">' +
+    '<fieldset id="filterOptions">' +
+        '<Legend>Sort:</Legend>' +
+        '<h6>File Type</h6>' +
+        '<div>' +
+            '<input type="checkbox" id="docx" name="docx" value="Docx"/>' +
+            '<label for="docx">Docx</label>' +
+        '</div>' +
+        '<div>' +
+            '<input type="checkbox" id="PDF" name="PDF" value="PDF"/>' +
+            '<label for="PDF">PDF</label>' +
+        '</div>' +
+        '<div>' +
+            '<input type="checkbox" id="web" name="web" value="Web Page"/>' +
+            '<label for="web">Web Page</label>' +
+        '</div>' +
+        '<div>' +
+            '<input type="checkbox" id="other" name="other" value="Other"/>' +
+            '<label for="other">Other</label>' +
+        '</div>' +
+    '</fieldset>' +
+'</div>' +
+'</details>';
+
 $(document).ready(function() {
-    $('#mainSearchResults').DataTable();
+    var table = $('#mainSearchResults').DataTable({
+        lengthChange: false,
+        layout: {
+            top2Start: 'search',
+            top2End: [tableSort, searchFilter],
+            topStart: 'info',
+            topEnd: null,
+            bottomStart: 'paging',
+            bottomEnd: null    
+        },
+        columnDefs: [{visible:false,type:'date',targets:3}],
+        
+        language: {
+          'paginate': {
+                'previous': '<img class="paginationImg" src="../img/nextpage.png">',
+                'next': '<span class="next-icon"></span>'
+            }
+        }
+    });
+    var mydiv = document.querySelector('#filterGroup');  // track event on parent element
+    var selected = [];  // store selected checkbox here
+
+    mydiv.addEventListener('change', event => {  // listen to any change
+
+        if (event.target.type === 'checkbox') {  // is it coming from a checkbox?
+
+            var checked = document.querySelectorAll('input[type="checkbox"]:checked'); // get all checked checkbox
+            selected = Array.from(checked, (x) => x.value);  // map from the node itself to the node value
+
+            var filterRegex = selected.join('|');  // construct regular expression for the search
+            table.column(2).search(filterRegex, true, false).draw();   // do the search
+
+        }
+    });
+
+    var mysort = document.getElementById('sort');
+    mysort.addEventListener('change', event => {
+        if (mysort.value == 'alpha') {
+            table.order([1, 'asc']).draw();
+        } else if (mysort.value == 'revAlpha') {
+            table.order([1, 'desc']).draw();
+        } else if (mysort.value == 'newest') {
+            table.order([3,'desc']).draw();
+        } else if (mysort.value == 'oldest') {
+            table.order([3,'asc']).draw();
+        }
+    });
 });
 
-new DataTable('#mainSearchResults', {
-    pageLength: 1
-});

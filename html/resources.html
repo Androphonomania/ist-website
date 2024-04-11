@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Resources - Ryde Secondary College</title>
-    <link href="../css/main.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
     <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" id="icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script type="text/javascript" src="../js/main.js"></script>
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
@@ -92,60 +92,123 @@
             <h3>Resources</h3>
         </div>
     </header>
-    <content class="mainSearchBar">
-        <div class="mainSearchBarLeft">
-            <input id="mainSearchInput" type="text" placeholder="Search." name="search">
-            <div class="navImg" id="resourcesSearchButton"><img src="../img/searchMaroon.png"></div>
-        </div>
-        <div class="mainSearchBarRight">
-            <select name="sort" id="sort">
-                <option value="relevance">Relevance</option>
-                <hr  />
-                <option value="alpha">A - Z</option>
-                <hr/>
-                <option value="revAlpha">Z - A</option>
-                <hr/>
-                <option value="old">Oldest</option>
-                <hr/>
-                <option value="new">Newest</option>
-            </select>
-            <details id="filter" name="filter">
-                <summary><img id="filterImg" src="../img/filter.png"></summary>
-                <fieldset id="filterOptions">
-                    <Legend>Sort:</Legend>
-                    <h6>File Type</h6>
-                    <div>
-                        <input type="checkbox" id="docx" name="docx" />
-                        <label for="docx">Docx</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="docx" name="docx" />
-                        <label for="docx">Docx</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="docx" name="docx" />
-                        <label for="docx">Docx</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="docx" name="docx" />
-                        <label for="docx">Docx</label>
-                    </div>
-                </fieldset>
-            </details>
-        </div>
-    </content>
     <content class="resourcesBody">
-        <table id="mainSearchResults" class="searchResults">
-            <tbody>
+        
+        <div>Sort By:
+            <select id="sort" name="sort">
+                <option value="relevance" selected>Relevance</option>
+                <option value="alpha">A-Z</option>
+                <option value="revAlpha">Z-A</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+            </select>
+        </div>
+    
+        <table id="mainSearchResults" class="row-border">
+            <thead>
                 <tr>
-                    <td>thumbnail1</td>
-                    <td>content1</td>
-                    <td>file1</td>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th class="hiddenColumn"></th>
                 </tr>
-                <tr>
-                    <td>thumbnail2</td>
-                    <td>content2</td>
-                    <td>file2</td>
+            </thead>
+            <tbody>
+                <tr class="mainSearchResultsRow">
+                    <td class="thumbnailCell">
+                        <div class="thumbnailBox"><img src="../docs/RSC_Bell_Times.png" class="thumbnail"></div>
+                    </td>
+                    <td class="resourceContent">
+                        <h4 class="resourceTitle">2024 RSC Bell Times</h4>
+                        <p>content</p>
+                    </td>
+                    <td class="resourceDetailsCell">
+                        <table class="resourceDetails">
+                            <tr class="resourceDetailsRow">
+                                <td rowspan="2" class="tablePadding"></td>
+                                <td class="resourceDetailsImg">
+                                    <a href="../html/fallback.html" target="_blank"><img src="../img/download.png" class="resourceDetailsImg"></a>
+                                </td>
+                                <td class="resourceDetailsImg">
+                                    <a href="../html/fallback.html" target="_blank"><img src="../img/newtabThick.png" class="resourceDetailsImg"></a>
+                                </td>
+                            </tr>
+                            <tr class="resourceDetailsRow">
+                                <td colspan="2">
+                                    <p class="resourceDetailsTxt">
+                                        File Type: Docx <br>
+                                        File Size: 287 KB <br>
+                                        Last Updated: 14/11/2023
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="hiddenColumn">14/11/2023</td>
+                </tr>
+                <tr class="mainSearchResultsRow">
+                    <td>
+                        <div class="thumbnailBox"><img src="../docs/RSC_Bell_Times.png" class="thumbnail"></div>
+                    </td>
+                    <td class="resourceContent">
+                        <h4 class="resourceTitle">A2024 RSC Bell Times tree</h4>
+                        <p>content</p>
+                    </td>
+                    <td>
+                        <table class="resourceDetails">
+                            <tr class="resourceDetailsRow">
+                                <td rowspan="2" class="tablePadding"></td>
+                                <td class="resourceDetailsImg">
+                                    <a href="../html/fallback.html" target="_blank"><img src="../img/download.png" class="resourceDetailsImg"></a>
+                                </td>
+                                <td class="resourceDetailsImg">
+                                    <a href="../html/fallback.html" target="_blank"><img src="../img/newtabThick.png" class="resourceDetailsImg"></a>
+                                </td>
+                            </tr>
+                            <tr class="resourceDetailsRow">
+                                <td colspan="2">
+                                    <p class="resourceDetailsTxt">
+                                        File Type: PDF <br>
+                                        File Size: 287 KB <br>
+                                        Last Updated: 14/11/2023
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="hiddenColumn">15/11/2024</td>
+                </tr>
+                <tr class="mainSearchResultsRow">
+                    <td>
+                        <div class="thumbnailBox"><img src="../docs/RSC_Bell_Times.png" class="thumbnail"></div>
+                    </td>
+                    <td class="resourceContent">
+                        <h4 class="resourceTitle">tree A2024 RSC Bell Times</h4>
+                        <p>content</p>
+                    </td>
+                    <td>
+                        <table class="resourceDetails">
+                            <tr class="resourceDetailsRow">
+                                <td rowspan="2" class="tablePadding"></td>
+                                <td class="resourceDetailsImg">
+                                    <a href="../html/fallback.html" target="_blank"><img src="../img/download.png" class="resourceDetailsImg"></a>
+                                </td>
+                                <td class="resourceDetailsImg">
+                                    <a href="../html/fallback.html" target="_blank"><img src="../img/newtabThick.png" class="resourceDetailsImg"></a>
+                                </td>
+                            </tr>
+                            <tr class="resourceDetailsRow">
+                                <td colspan="2">
+                                    <p class="resourceDetailsTxt">
+                                        File Type: PDF <br>
+                                        File Size: 287 KB <br>
+                                        Last Updated: 14/11/2023
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="hiddenColumn">17/11/2024</td>
                 </tr>
             </tbody>
         </table>

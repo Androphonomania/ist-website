@@ -563,7 +563,7 @@ table {
     border-top: 3px solid #0f0f97;
 }
 
-td {
+td.footerBox {
     border: 2px solid #666;
 }
 
@@ -846,53 +846,89 @@ a.subjectDescLink {
     padding-right: 20px;
 }
 
-#resourcesSearchButton img {
-    width: 30px;
-    scroll-margin-top: 95px;
-}
-
 #english h4.subject, #languages h4.subject, #PDHPE h4.subject, #TAS h4.subject, #lifeReady h4.subject {
     float:right;
     width:100%;
 }
 
-.mainSearchBar {
+table#mainSearchResults thead {
+    display: none;
+}
+
+#mainSearchResults {
+    width:99% !important;
+}
+
+.thumbnailBox {
+    height: 200px;
+    width: 200px;
+    background-color: lightgray;
+    border: 2px solid gray;
     display: flex;
-    margin-top: 115px;
-    margin-bottom: 5px;
-    padding: 10px;
+    align-content: center;
+    justify-content: center;
 }
 
-div.mainSearchBarLeft {
-    display: flex;
-    width: 50%;
+.thumbnail {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
 }
 
-#mainSearchInput {
-    width:60%;
+.resourceDetails {
+    width:100%;
+    height:200px;
+    border-left: 2px solid gray;
 }
 
-div.mainSearchBarRight {
-    width: 50%;
-    display: flex;
-    justify-content:right;
+.tablePadding {
+    width: 40px;
 }
 
-#sort {
-    width: 40%;
-    margin: 0px 10px;
+table.resourceDetails td {
+    border-bottom: none !important;
 }
 
-#filter {
-    width: 10%;
+.resourceDetailsRow {
+    height:50%;
+}
+
+img.resourceDetailsImg {
+    height:110px;
+}
+
+.resourceDetailsTxt {
+    margin: 0;
+    font-size: 20px;
+}
+
+.mainSearchResultsRow {
+    height:225px;
+}
+
+h4.resourceTitle {
+    font-family: 'Rubik';
+    font-size: 30px;
+    font-weight: 500;
 }
 
 #filterImg {
-    height: 30px;
+    height:20px;
 }
 
-#filterOptions {
-    position: absolute;
-    margin-left: -50px;
-    margin-top: 20px;
+details summary::marker {
+    content: "";
+  }
+
+.resourceDetailsCell {
+    width: 30%;
+}
+
+.thumbnailCell {
+    width: 15%;
+}
+
+.paginationImg {
+    width: 20px;
+    rotate: 180deg;
 }
