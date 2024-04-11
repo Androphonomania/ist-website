@@ -52,6 +52,18 @@ let marqueeContent;
 let homeSlideImg;
 let homeSlideInfo;
 let homeSlideButtonList;
+let homeLink1;
+let homeLink2;
+let homeLink3;
+let homeLink4;
+let homeLink5;
+let homeLink6;
+let homeLinkInfo1;
+let homeLinkInfo2;
+let homeLinkInfo3;
+let homeLinkInfo4;
+let homeLinkInfo5;
+let homeLinkInfo6;
 
 window.onload = function () {
     icon = document.getElementById("icon");
@@ -72,6 +84,18 @@ window.onload = function () {
     marqueeContent = document.getElementById("homeTopMarqueeContent");
     homeSlideImg = document.getElementById("homeSlideImg");
     homeSlideInfo = document.getElementById("homeSlideInfo");
+    homeLink1 = document.getElementById("homeLink1");
+    homeLink2 = document.getElementById("homeLink2");
+    homeLink3 = document.getElementById("homeLink3");
+    homeLink4 = document.getElementById("homeLink4");
+    homeLink5 = document.getElementById("homeLink5");
+    homeLink6 = document.getElementById("homeLink6");
+    homeLinkInfo1 = document.getElementById("homeLinkInfo1");
+    homeLinkInfo2 = document.getElementById("homeLinkInfo2");
+    homeLinkInfo3 = document.getElementById("homeLinkInfo3");
+    homeLinkInfo4 = document.getElementById("homeLinkInfo4");
+    homeLinkInfo5 = document.getElementById("homeLinkInfo5");
+    homeLinkInfo6 = document.getElementById("homeLinkInfo6");
 
     homeSlideButtonList = {
         1: document.getElementById("homeSlideButton1"),
@@ -117,7 +141,7 @@ window.onload = function () {
 
     let timer2;
 
-    const hover = function (element) {
+    const hover1 = function (element) {
         element.addEventListener('mouseenter', function () {
             element.className = ""
             element.classList.add("homeSlideGlow")
@@ -158,9 +182,43 @@ window.onload = function () {
         })
     }
 
-    hover(document.getElementById("homeSlideLeftArrow"))
-    hover(document.getElementById("homeSlideRightArrow"))
-    hover(homeSlideInfo)
+    let timer3;
+
+    const hover2 = function (element) {
+        element.addEventListener('mouseenter', function () {
+            element.className = "homeLinkInfo"
+            element.classList.add("homeInfoFadeIn")
+            if (timer3) {
+                timer3 = "";
+            }
+            timer3 = setTimeout(function () {
+                element.classList.add("homeInfoFadeInComplete");
+                timer3 = ""
+            }, 270)
+        })
+        element.addEventListener('mouseleave', function () {
+            element.className = "homeLinkInfo"
+            element.classList.add("homeInfoFadeOut");
+            if (timer3) {
+                timer3 = "";
+            }
+            timer3 = setTimeout(function () {
+                element.classList.add("homeInfoFadeOutComplete");
+                timer3 = "";
+            }, 270)
+        })
+    }
+
+    hover1(document.getElementById("homeSlideLeftArrow"));
+    hover1(document.getElementById("homeSlideRightArrow"));
+    hover1(homeSlideInfo);
+
+    hover2(homeLinkInfo1);
+    hover2(homeLinkInfo2);
+    hover2(homeLinkInfo3);
+    hover2(homeLinkInfo4);
+    hover2(homeLinkInfo5);
+    hover2(homeLinkInfo6);
 
     searchInput.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' && !searchMenu.hidden) {
@@ -400,30 +458,30 @@ let tableSort = document.createElement('div');
 let searchFilter = document.createElement('div');
 tableSort.innerHTML = "Item 1";
 searchFilter.innerHTML = '<details id="filter" name="filter">' +
-'<summary><img id="filterImg" src="../img/filter.png"></summary>' +
-'<div id="filterGroup">' +
+    '<summary><img id="filterImg" src="../img/filter.png"></summary>' +
+    '<div id="filterGroup">' +
     '<fieldset id="filterOptions">' +
-        '<Legend>Sort:</Legend>' +
-        '<h6>File Type</h6>' +
-        '<div>' +
-            '<input type="checkbox" id="docx" name="docx" value="Docx"/>' +
-            '<label for="docx">Docx</label>' +
-        '</div>' +
-        '<div>' +
-            '<input type="checkbox" id="PDF" name="PDF" value="PDF"/>' +
-            '<label for="PDF">PDF</label>' +
-        '</div>' +
-        '<div>' +
-            '<input type="checkbox" id="web" name="web" value="Web Page"/>' +
-            '<label for="web">Web Page</label>' +
-        '</div>' +
-        '<div>' +
-            '<input type="checkbox" id="other" name="other" value="Other"/>' +
-            '<label for="other">Other</label>' +
-        '</div>' +
+    '<Legend>Sort:</Legend>' +
+    '<h6>File Type</h6>' +
+    '<div>' +
+    '<input type="checkbox" id="docx" name="docx" value="Docx"/>' +
+    '<label for="docx">Docx</label>' +
+    '</div>' +
+    '<div>' +
+    '<input type="checkbox" id="PDF" name="PDF" value="PDF"/>' +
+    '<label for="PDF">PDF</label>' +
+    '</div>' +
+    '<div>' +
+    '<input type="checkbox" id="web" name="web" value="Web Page"/>' +
+    '<label for="web">Web Page</label>' +
+    '</div>' +
+    '<div>' +
+    '<input type="checkbox" id="other" name="other" value="Other"/>' +
+    '<label for="other">Other</label>' +
+    '</div>' +
     '</fieldset>' +
-'</div>' +
-'</details>';
+    '</div>' +
+    '</details>';
 
 $(document).ready(function () {
     var table = $('#mainSearchResults').DataTable({
@@ -434,29 +492,33 @@ $(document).ready(function () {
             topStart: 'info',
             topEnd: null,
             bottomStart: 'paging',
-            bottomEnd: null    
+            bottomEnd: null
         },
-        columnDefs: [{visible:false,type:'date',targets:3}],
-        
+        columnDefs: [{
+            visible: false,
+            type: 'date',
+            targets: 3
+        }],
+
         language: {
-          'paginate': {
+            'paginate': {
                 'previous': '<img class="paginationImg" src="../img/nextpage.png">',
                 'next': '<span class="next-icon"></span>'
             }
         }
     });
-    var mydiv = document.querySelector('#filterGroup');  // track event on parent element
-    var selected = [];  // store selected checkbox here
+    var mydiv = document.querySelector('#filterGroup'); // track event on parent element
+    var selected = []; // store selected checkbox here
 
-    mydiv.addEventListener('change', event => {  // listen to any change
+    mydiv.addEventListener('change', event => { // listen to any change
 
-        if (event.target.type === 'checkbox') {  // is it coming from a checkbox?
+        if (event.target.type === 'checkbox') { // is it coming from a checkbox?
 
             var checked = document.querySelectorAll('input[type="checkbox"]:checked'); // get all checked checkbox
-            selected = Array.from(checked, (x) => x.value);  // map from the node itself to the node value
+            selected = Array.from(checked, (x) => x.value); // map from the node itself to the node value
 
-            var filterRegex = selected.join('|');  // construct regular expression for the search
-            table.column(2).search(filterRegex, true, false).draw();   // do the search
+            var filterRegex = selected.join('|'); // construct regular expression for the search
+            table.column(2).search(filterRegex, true, false).draw(); // do the search
 
         }
     });
@@ -468,10 +530,9 @@ $(document).ready(function () {
         } else if (mysort.value == 'revAlpha') {
             table.order([1, 'desc']).draw();
         } else if (mysort.value == 'newest') {
-            table.order([3,'desc']).draw();
+            table.order([3, 'desc']).draw();
         } else if (mysort.value == 'oldest') {
-            table.order([3,'asc']).draw();
+            table.order([3, 'asc']).draw();
         }
     });
 });
-

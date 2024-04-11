@@ -77,6 +77,26 @@
     }
 }
 
+@keyframes homeInfoFadeInAnim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes homeInfoFadeOutAnim {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 :root {
     --homeslideimgheight: 0;
 }
@@ -103,6 +123,22 @@
 
 .homeSlideArrowSmall {
     animation: 0.2s ease-in-out 0s homeSlideArrowSmallAnim;
+}
+
+.homeInfoFadeIn {
+    animation: 0.3s ease-in-out 0s homeInfoFadeInAnim;
+}
+
+.homeInfoFadeOut {
+    animation: 0.3s ease-in-out 0s homeInfoFadeOutAnim;
+}
+
+.homeInfoFadeInComplete {
+    opacity: 1;
+}
+
+.homeInfoFadeOutComplete {
+    opacity: 0;
 }
 
 body {
@@ -505,7 +541,7 @@ hamburger-menu {
     margin-left: 12.2vw;
     width: 20vw;
     height: 21.85vh;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     padding-top: 1vh;
     text-decoration: none;
     color: black;
