@@ -27,6 +27,46 @@
     }
 }
 
+@keyframes homeSlideGlowAnim {
+    from {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    to {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes homeSlideUnglowAnim {
+    from {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    to {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+@keyframes homeSlideArrowBigAnim {
+    from {
+        width: 2vw;
+    }
+
+    to {
+        width: 2.5vw;
+    }
+}
+
+@keyframes homeSlideArrowSmallAnim {
+    from {
+        width: 2.5vw;
+    }
+
+    to {
+        width: 2vw;
+    }
+}
+
 @keyframes marquee {
     from {
         transform: translateX(0%);
@@ -47,6 +87,22 @@
 
 .hamCloseNow {
     animation: 0.5s ease-in-out 0s hamClose;
+}
+
+.homeSlideGlow {
+    animation: 0.2s ease-in-out 0s homeSlideGlowAnim;
+}
+
+.homeSlideUnglow {
+    animation: 0.2s ease-in-out 0s homeSlideUnglowAnim;
+}
+
+.homeSlideArrowBig {
+    animation: 0.2s ease-in-out 0s homeSlideArrowBigAnim;
+}
+
+.homeSlideArrowSmall {
+    animation: 0.2s ease-in-out 0s homeSlideArrowSmallAnim;
 }
 
 body {
@@ -366,7 +422,7 @@ hamburger-menu {
 }
 
 .marqueeAnim {
-    animation: 600s linear 0s marquee;
+    animation: 800s linear 0s marquee;
 }
 
 .homeTopImg {
@@ -427,8 +483,9 @@ hamburger-menu {
     text-align: center;
 }
 
-.homeLink {
+#homeLinks a {
     display: inline;
+    text-decoration: none;
 }
 
 .homeLinkImg {
@@ -437,6 +494,30 @@ hamburger-menu {
     filter: drop-shadow(0px 0.4vh 7px black);
     z-index: 50;
     margin: 0 3vw;
+    margin-top: 4.5vh;
+}
+
+.homeLinkInfo {
+    z-index: 10;
+    margin: 0;
+    margin-top: 4.5vh;
+    margin-left: 12.2vw;
+    width: 20vw;
+    height: 21.85vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-top: 1vh;
+    text-decoration: none;
+    color: black;
+}
+
+.homeLinkTop {
+    font-size: 1.6vw;
+}
+
+.homeLinkBottom {
+    font-size: 1vw;
+    margin-top: 13vh;
 }
 
 #homeSlideShow { 
@@ -455,19 +536,19 @@ hamburger-menu {
     border-top: 2px black solid;
     border-left: 2px black solid;
     border-bottom: 2px black solid;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #homeSlideRightArrow {
     position: absolute;
     margin-top: 0;
-    margin-left: auto;
+    margin-left: -4vw;
     height: 27vw;
-    width: 4vw;
+    width: 3.87vw;
     border-top: 2px black solid;
     border-right: 2px black solid;
     border-bottom: 2px black solid;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #homeSlideLeftArrow img {
@@ -482,6 +563,29 @@ hamburger-menu {
     rotate: 90deg;
 }
 
+#homeSlideInfo {
+    margin: 0;
+    margin-left: 4.15vw;
+    margin-top: 29.1vh;
+    width: 32.13vw;
+    height: 15vh;
+    position: absolute;
+    border-bottom: 2px black solid;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-top: 1vh;
+    text-decoration: none;
+    color: black;
+}
+
+#homeSlideInfo strong {
+    font-size: 2vw;
+}
+
+#homeSlideInfo p {
+    margin-top: 0.3vh;
+    font-size: 0.8vw;
+}
+
 #homeSlideImg {
     width: 40vw;
     height: 27vw;
@@ -493,7 +597,7 @@ hamburger-menu {
     margin-top: 1vh;
 }
 
-#homeSlideButtons > a {
+#homeSlideButtons a {
     text-decoration: none;
     text-align: center;
 }
