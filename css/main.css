@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
@@ -498,26 +498,38 @@ hamburger-menu {
 }
 
 .homeLinkInfo {
+    position: absolute;
     z-index: 10;
     margin: 0;
     margin-top: 4.5vh;
     margin-left: 12.2vw;
     width: 20vw;
     height: 21.85vh;
-    position: absolute;
     background-color: rgba(255, 255, 255, 0.6);
     padding-top: 1vh;
     text-decoration: none;
     color: black;
 }
 
+#homeLinkInfo2, #homeLinkInfo5 {
+    margin-top: -23.4vh;
+    margin-left: 38.47vw;
+}
+
+#homeLinkInfo3, #homeLinkInfo6 {
+    margin-top: -23.4vh;
+    margin-left: 64.7vw;
+}
+
 .homeLinkTop {
-    font-size: 1.6vw;
+    font-size: 1.4vw;
+    font-weight: 700;
 }
 
 .homeLinkBottom {
-    font-size: 1vw;
-    margin-top: 13vh;
+    font-size: 0.9vw;
+    font-weight: 500;
+    margin-top: 14.6vh;
 }
 
 #homeSlideShow { 
