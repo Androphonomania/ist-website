@@ -310,36 +310,6 @@ const openSearch = function (term, button) {
     return false;
 }
 
-
-let tableSort = document.createElement('div');
-let searchFilter = document.createElement('div');
-tableSort.innerHTML = "Item 1";
-searchFilter.innerHTML = '<details id="filter" name="filter">' +
-'<summary><img id="filterImg" src="../img/filter.png"></summary>' +
-'<div id="filterGroup">' +
-    '<fieldset id="filterOptions">' +
-        '<Legend>Sort:</Legend>' +
-        '<h6>File Type</h6>' +
-        '<div>' +
-            '<input type="checkbox" id="docx" name="docx" value="Docx"/>' +
-            '<label for="docx">Docx</label>' +
-        '</div>' +
-        '<div>' +
-            '<input type="checkbox" id="PDF" name="PDF" value="PDF"/>' +
-            '<label for="PDF">PDF</label>' +
-        '</div>' +
-        '<div>' +
-            '<input type="checkbox" id="web" name="web" value="Web Page"/>' +
-            '<label for="web">Web Page</label>' +
-        '</div>' +
-        '<div>' +
-            '<input type="checkbox" id="other" name="other" value="Other"/>' +
-            '<label for="other">Other</label>' +
-        '</div>' +
-    '</fieldset>' +
-'</div>' +
-'</details>';
-
 let homeSlideImgList = {
     1: "../img/homeSlide1.png",
     2: "../img/homeSlide2.png",
@@ -425,6 +395,35 @@ async function homeSlideAutoReset() {
 }
 
 homeSlideAutoReset();
+
+let tableSort = document.createElement('div');
+let searchFilter = document.createElement('div');
+tableSort.innerHTML = "Item 1";
+searchFilter.innerHTML = '<details id="filter" name="filter">' +
+'<summary><img id="filterImg" src="../img/filter.png"></summary>' +
+'<div id="filterGroup">' +
+    '<fieldset id="filterOptions">' +
+        '<Legend>Sort:</Legend>' +
+        '<h6>File Type</h6>' +
+        '<div>' +
+            '<input type="checkbox" id="docx" name="docx" value="Docx"/>' +
+            '<label for="docx">Docx</label>' +
+        '</div>' +
+        '<div>' +
+            '<input type="checkbox" id="PDF" name="PDF" value="PDF"/>' +
+            '<label for="PDF">PDF</label>' +
+        '</div>' +
+        '<div>' +
+            '<input type="checkbox" id="web" name="web" value="Web Page"/>' +
+            '<label for="web">Web Page</label>' +
+        '</div>' +
+        '<div>' +
+            '<input type="checkbox" id="other" name="other" value="Other"/>' +
+            '<label for="other">Other</label>' +
+        '</div>' +
+    '</fieldset>' +
+'</div>' +
+'</details>';
 
 $(document).ready(function () {
     var table = $('#mainSearchResults').DataTable({
