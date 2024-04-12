@@ -52,6 +52,18 @@ let marqueeContent;
 let homeSlideImg;
 let homeSlideInfo;
 let homeSlideButtonList;
+let homeLink1;
+let homeLink2;
+let homeLink3;
+let homeLink4;
+let homeLink5;
+let homeLink6;
+let homeLinkInfo1;
+let homeLinkInfo2;
+let homeLinkInfo3;
+let homeLinkInfo4;
+let homeLinkInfo5;
+let homeLinkInfo6;
 
 window.onload = function () {
     icon = document.getElementById("icon");
@@ -72,6 +84,18 @@ window.onload = function () {
     marqueeContent = document.getElementById("homeTopMarqueeContent");
     homeSlideImg = document.getElementById("homeSlideImg");
     homeSlideInfo = document.getElementById("homeSlideInfo");
+    homeLink1 = document.getElementById("homeLink1");
+    homeLink2 = document.getElementById("homeLink2");
+    homeLink3 = document.getElementById("homeLink3");
+    homeLink4 = document.getElementById("homeLink4");
+    homeLink5 = document.getElementById("homeLink5");
+    homeLink6 = document.getElementById("homeLink6");
+    homeLinkInfo1 = document.getElementById("homeLinkInfo1");
+    homeLinkInfo2 = document.getElementById("homeLinkInfo2");
+    homeLinkInfo3 = document.getElementById("homeLinkInfo3");
+    homeLinkInfo4 = document.getElementById("homeLinkInfo4");
+    homeLinkInfo5 = document.getElementById("homeLinkInfo5");
+    homeLinkInfo6 = document.getElementById("homeLinkInfo6");
 
     homeSlideButtonList = {
         1: document.getElementById("homeSlideButton1"),
@@ -117,7 +141,7 @@ window.onload = function () {
 
     let timer2;
 
-    const hover = function (element) {
+    const hover1 = function (element) {
         element.addEventListener('mouseenter', function () {
             element.className = ""
             element.classList.add("homeSlideGlow")
@@ -158,9 +182,45 @@ window.onload = function () {
         })
     }
 
-    hover(document.getElementById("homeSlideLeftArrow"))
-    hover(document.getElementById("homeSlideRightArrow"))
-    hover(homeSlideInfo)
+    let timer3;
+
+    const hover2 = function (element) {
+        element.addEventListener('mouseenter', function () {
+            element.className = "homeLinkInfo"
+            element.classList.add("homeInfoFadeIn")
+            if (timer3) {
+                timer3 = "";
+            }
+            timer3 = setTimeout(function () {
+                element.classList.add("homeInfoFadeInComplete");
+                timer3 = ""
+            }, 270)
+        })
+        element.addEventListener('mouseleave', function () {
+            element.className = "homeLinkInfo"
+            element.classList.add("homeInfoFadeOut");
+            if (timer3) {
+                timer3 = "";
+            }
+            timer3 = setTimeout(function () {
+                element.classList.add("homeInfoFadeOutComplete");
+                timer3 = "";
+            }, 270)
+        })
+    }
+
+    if (homeSlideInfo) {
+        hover1(document.getElementById("homeSlideLeftArrow"));
+        hover1(document.getElementById("homeSlideRightArrow"));
+        hover1(homeSlideInfo);
+    
+        hover2(homeLinkInfo1);
+        hover2(homeLinkInfo2);
+        hover2(homeLinkInfo3);
+        hover2(homeLinkInfo4);
+        hover2(homeLinkInfo5);
+        hover2(homeLinkInfo6);
+    }
 
     searchInput.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' && !searchMenu.hidden) {
@@ -310,167 +370,175 @@ const openSearch = function (term, button) {
     return false;
 }
 
-let homeSlideImgList = {
-    1: "../img/homeSlide1.png",
-    2: "../img/homeSlide2.png",
-    3: "../img/homeSlide3.png",
-    4: "../img/homeSlide4.png",
-    5: "../img/homeSlide5.png",
-    6: "../img/homeSlide6.png"
-};
-
-let homeSlideInfoList = {
-    1: `<strong>DIVERSITY</strong>
-    <p>With an enrolment of over 1400 students, RSC is a co-educational high school with an academically selective cohort, a gifted and talented stream, mainstream classes and a Special Education Unit for students with special  needs. 70% of students come from multi-lingual backgrounds. Diversity is a major characteristic of RSC.</p>`,
-    2: `<strong>SPORT</strong>
-    <p>All students have the opportunity to participate in Swimming, Athletics and Cross Country carnivals as well as Inter School activities.<br /><br />Tuesday Sport includes a wide range of Grade and House Summer Sports, Winter Sports and Social Sports.</p>`,
-    3: `<strong>STUDENT LEADERSHIP</strong>
-    <p>Opportunities for school leadership exist within our team of twelve prefects and four captains. The positions are elected by both the students and staff.<br /><br />Our captains lead our prefect body and manage our regular College Assembly program.</p>`,
-    4: `<strong>ACADEMIC EXCELLENCE</strong>
-    <p>At Ryde Secondary College our students are proudly continuing our tradition of academic excellence.<br /><br />Your son or daughter will thrive in our vibrant college where they will be challenged and engaged by a diverse curriculum rich in traditional and innovative disciplines.</p>`,
-    5: `<strong>COLLEGE TOURS</strong>
-    <p>College tours are available throughout the year, generally once per month. Please contact the school to make a booking for the next available tour.<br /><br />Click here for more information on the dates of the tours or contact us on 9809 4894 to book a tour date with us.</p>`,
-    6: `<strong>OPPORTUNITY</strong>
-    <p>We have a wide range of opportunities for students to participate in activities, competitions and performance at Ryde Secondary College.<br /><br />We provide more than 100 co-curricular activities to students. These create opportunities to develop a wide range of talents and interests and achieve at the highest levels.</p>`
-};
-
-let homeSlideCurr = 1;
-
-const homeSlideLeft = function () {
-    homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
-    homeSlideCurr--;
-    if (homeSlideCurr === 0) {
-        homeSlideCurr = 6;
+if (homeSlideImg) {
+    let homeSlideImgList = {
+        1: "../img/homeSlide1.png",
+        2: "../img/homeSlide2.png",
+        3: "../img/homeSlide3.png",
+        4: "../img/homeSlide4.png",
+        5: "../img/homeSlide5.png",
+        6: "../img/homeSlide6.png"
     };
-    homeSlideImg.src = homeSlideImgList[homeSlideCurr];
-    homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
-    homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
-    homeSlideAutoReset();
-}
-
-const homeSlideRight = function () {
-    homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
-    homeSlideCurr++;
-    if (homeSlideCurr === 7) {
-        homeSlideCurr = 1;
+    
+    let homeSlideInfoList = {
+        1: `<strong>DIVERSITY</strong>
+        <p>With an enrolment of over 1400 students, RSC is a co-educational high school with an academically selective cohort, a gifted and talented stream, mainstream classes and a Special Education Unit for students with special  needs. 70% of students come from multi-lingual backgrounds. Diversity is a major characteristic of RSC.</p>`,
+        2: `<strong>SPORT</strong>
+        <p>All students have the opportunity to participate in Swimming, Athletics and Cross Country carnivals as well as Inter School activities.<br /><br />Tuesday Sport includes a wide range of Grade and House Summer Sports, Winter Sports and Social Sports.</p>`,
+        3: `<strong>STUDENT LEADERSHIP</strong>
+        <p>Opportunities for school leadership exist within our team of twelve prefects and four captains. The positions are elected by both the students and staff.<br /><br />Our captains lead our prefect body and manage our regular College Assembly program.</p>`,
+        4: `<strong>ACADEMIC EXCELLENCE</strong>
+        <p>At Ryde Secondary College our students are proudly continuing our tradition of academic excellence.<br /><br />Your son or daughter will thrive in our vibrant college where they will be challenged and engaged by a diverse curriculum rich in traditional and innovative disciplines.</p>`,
+        5: `<strong>COLLEGE TOURS</strong>
+        <p>College tours are available throughout the year, generally once per month. Please contact the school to make a booking for the next available tour.<br /><br />Click here for more information on the dates of the tours or contact us on 9809 4894 to book a tour date with us.</p>`,
+        6: `<strong>OPPORTUNITY</strong>
+        <p>We have a wide range of opportunities for students to participate in activities, competitions and performance at Ryde Secondary College.<br /><br />We provide more than 100 co-curricular activities to students. These create opportunities to develop a wide range of talents and interests and achieve at the highest levels.</p>`
     };
-    homeSlideImg.src = homeSlideImgList[homeSlideCurr];
-    homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
-    homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
-    homeSlideAutoReset();
-}
-
-const homeSlideButton = function (num) {
-    homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
-    homeSlideCurr = num;
-    homeSlideImg.src = homeSlideImgList[homeSlideCurr];
-    homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
-    homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
-    homeSlideAutoReset();
-}
-
-let timer;
-
-async function homeSlideAutoReset() {
-    let i = 0;
-    while (i < 10) {
-        await new Promise((resolve, reject) => {
-            if (timer) {
-                clearTimeout(timer);
-            }
-
-            timer = setTimeout(() => {
-                homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
-                homeSlideCurr++;
-                if (homeSlideCurr === 7) {
-                    homeSlideCurr = 1;
-                };
-                homeSlideImg.src = homeSlideImgList[homeSlideCurr];
-                homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
-                homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
-                resolve();
-            }, 10000);
-        });
+    
+    let homeSlideCurr = 1;
+    
+    const homeSlideLeft = function () {
+        homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+        homeSlideCurr--;
+        if (homeSlideCurr === 0) {
+            homeSlideCurr = 6;
+        };
+        homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+        homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+        homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+        homeSlideAutoReset();
     }
+    
+    const homeSlideRight = function () {
+        homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+        homeSlideCurr++;
+        if (homeSlideCurr === 7) {
+            homeSlideCurr = 1;
+        };
+        homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+        homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+        homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+        homeSlideAutoReset();
+    }
+    
+    const homeSlideButton = function (num) {
+        homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+        homeSlideCurr = num;
+        homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+        homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+        homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+        homeSlideAutoReset();
+    }
+    
+    let timer;
+    
+    async function homeSlideAutoReset() {
+        let i = 0;
+        while (i < 10) {
+            await new Promise((resolve, reject) => {
+                if (timer) {
+                    clearTimeout(timer);
+                }
+    
+                timer = setTimeout(() => {
+                    homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+                    homeSlideCurr++;
+                    if (homeSlideCurr === 7) {
+                        homeSlideCurr = 1;
+                    };
+                    homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+                    homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+                    homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+                    resolve();
+                }, 10000);
+            });
+        }
+    }
+    
+    homeSlideAutoReset();
 }
-
-homeSlideAutoReset();
 
 let tableSort = document.createElement('div');
 let searchFilter = document.createElement('div');
 tableSort.innerHTML = "Item 1";
 searchFilter.innerHTML = '<details id="filter" name="filter">' +
-'<summary><img id="filterImg" src="../img/filter.png"></summary>' +
-'<div id="filterGroup">' +
+    '<summary><img id="filterImg" src="../img/filter.png"></summary>' +
+    '<div id="filterGroup">' +
     '<fieldset id="filterOptions">' +
-        '<Legend>Sort:</Legend>' +
-        '<h6>File Type</h6>' +
-        '<div>' +
-            '<input type="checkbox" id="docx" name="docx" value="Docx"/>' +
-            '<label for="docx">Docx</label>' +
-        '</div>' +
-        '<div>' +
-            '<input type="checkbox" id="PDF" name="PDF" value="PDF"/>' +
-            '<label for="PDF">PDF</label>' +
-        '</div>' +
-        '<div>' +
-            '<input type="checkbox" id="web" name="web" value="Web Page"/>' +
-            '<label for="web">Web Page</label>' +
-        '</div>' +
-        '<div>' +
-            '<input type="checkbox" id="other" name="other" value="Other"/>' +
-            '<label for="other">Other</label>' +
-        '</div>' +
+    '<Legend>Sort:</Legend>' +
+    '<h6>File Type</h6>' +
+    '<div>' +
+    '<input type="checkbox" id="docx" name="docx" value="Docx"/>' +
+    '<label for="docx">Docx</label>' +
+    '</div>' +
+    '<div>' +
+    '<input type="checkbox" id="PDF" name="PDF" value="PDF"/>' +
+    '<label for="PDF">PDF</label>' +
+    '</div>' +
+    '<div>' +
+    '<input type="checkbox" id="web" name="web" value="Web Page"/>' +
+    '<label for="web">Web Page</label>' +
+    '</div>' +
+    '<div>' +
+    '<input type="checkbox" id="other" name="other" value="Other"/>' +
+    '<label for="other">Other</label>' +
+    '</div>' +
     '</fieldset>' +
-'</div>' +
-'</details>';
+    '</div>' +
+    '</details>';
 
 $(document).ready(function () {
-    var table = $('#mainSearchResults').DataTable({
-        lengthChange: false,
-        layout: {
-            top2Start: 'search',
-            top2End: [tableSort, searchFilter],
-            topStart: 'info',
-            topEnd: null,
-            bottomStart: 'paging',
-            bottomEnd: null    
-        },
-        columnDefs: [{visible:false,type:'date',targets:3}],
-        language: {
-          'paginate': {
-                'previous': '<img class="paginationImg" src="../img/nextpage.png">',
-                'next': '<span class="next-icon"></span>'
+    var mydiv = document.querySelector('#filterGroup'); // track event on parent element
+    if (mydiv) {
+        var table = $('#mainSearchResults').DataTable({
+            lengthChange: false,
+            layout: {
+                top2Start: 'search',
+                top2End: [tableSort, searchFilter],
+                topStart: 'info',
+                topEnd: null,
+                bottomStart: 'paging',
+                bottomEnd: null
+            },
+            columnDefs: [{
+                visible: false,
+                type: 'date',
+                targets: 3
+            }],
+    
+            language: {
+                'paginate': {
+                    'previous': '<img class="paginationImg" src="../img/nextpage.png">',
+                    'next': '<span class="next-icon"></span>'
+                }
             }
-        }
-    });
-    var mydiv = document.querySelector('#filterGroup');  // track event on parent element
-    var selected = [];  // store selected checkbox here
-
-    mydiv.addEventListener('change', event => {  // listen to any change
-
-        if (event.target.type === 'checkbox') {  // is it coming from a checkbox?
-
-            var checked = document.querySelectorAll('input[type="checkbox"]:checked'); // get all checked checkbox
-            selected = Array.from(checked, (x) => x.value);  // map from the node itself to the node value
-
-            var filterRegex = selected.join('|');  // construct regular expression for the search
-            table.column(2).search(filterRegex, true, false).draw();   // do the search
-
-        }
-    });
-
-    var mysort = document.getElementById('sort');
-    mysort.addEventListener('change', event => {
-        if (mysort.value == 'alpha') {
-            table.order([1, 'asc']).draw();
-        } else if (mysort.value == 'revAlpha') {
-            table.order([1, 'desc']).draw();
-        } else if (mysort.value == 'newest') {
-            table.order([3,'desc']).draw();
-        } else if (mysort.value == 'oldest') {
-            table.order([3,'asc']).draw();
-        }
-    });
+        });
+        var selected = []; // store selected checkbox here
+    
+        mydiv.addEventListener('change', event => { // listen to any change
+    
+            if (event.target.type === 'checkbox') { // is it coming from a checkbox?
+    
+                var checked = document.querySelectorAll('input[type="checkbox"]:checked'); // get all checked checkbox
+                selected = Array.from(checked, (x) => x.value); // map from the node itself to the node value
+    
+                var filterRegex = selected.join('|'); // construct regular expression for the search
+                table.column(2).search(filterRegex, true, false).draw(); // do the search
+    
+            }
+        });
+    
+        var mysort = document.getElementById('sort');
+        mysort.addEventListener('change', event => {
+            if (mysort.value == 'alpha') {
+                table.order([1, 'asc']).draw();
+            } else if (mysort.value == 'revAlpha') {
+                table.order([1, 'desc']).draw();
+            } else if (mysort.value == 'newest') {
+                table.order([3, 'desc']).draw();
+            } else if (mysort.value == 'oldest') {
+                table.order([3, 'asc']).draw();
+            }
+        });
+    }
 });
-
