@@ -686,6 +686,8 @@ hamburger-menu {
     margin: 4vh 3vw;
     text-align: center;
     display: inline-block;
+    text-decoration: none;
+    color: black;
 }
 
 .contactStuffImg {
