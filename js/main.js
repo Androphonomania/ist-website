@@ -437,7 +437,6 @@ $(document).ready(function () {
             bottomEnd: null    
         },
         columnDefs: [{visible:false,type:'date',targets:3}],
-        
         language: {
           'paginate': {
                 'previous': '<img class="paginationImg" src="../img/nextpage.png">',
