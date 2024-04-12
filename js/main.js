@@ -488,12 +488,14 @@ searchFilter.innerHTML = '<details id="filter" name="filter">' +
     '</details>';
 
 $(document).ready(function () {
-    var mydiv = document.querySelector('#filterGroup'); // track event on parent element
-    if (mydiv) {
         var table = $('#mainSearchResults').DataTable({
             lengthChange: false,
             layout: {
-                top2Start: 'search',
+                top2Start: {
+                    search: {
+                        placeholder: 'Search'
+                    }
+                },
                 top2End: [tableSort, searchFilter],
                 topStart: 'info',
                 topEnd: null,
@@ -514,7 +516,7 @@ $(document).ready(function () {
             }
         });
         var selected = []; // store selected checkbox here
-    
+        var mydiv = document.querySelector('#filterGroup'); // track event on parent element
         mydiv.addEventListener('change', event => { // listen to any change
     
             if (event.target.type === 'checkbox') { // is it coming from a checkbox?
@@ -540,5 +542,5 @@ $(document).ready(function () {
                 table.order([3, 'asc']).draw();
             }
         });
-    }
+    
 });
