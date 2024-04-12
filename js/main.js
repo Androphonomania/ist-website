@@ -64,6 +64,11 @@ let homeLinkInfo3;
 let homeLinkInfo4;
 let homeLinkInfo5;
 let homeLinkInfo6;
+let contactVisit;
+let contactOpenMap;
+let homeSlideLeft;
+let homeSlideRight;
+let homeSlideButton;
 
 window.onload = function () {
     icon = document.getElementById("icon");
@@ -96,6 +101,7 @@ window.onload = function () {
     homeLinkInfo4 = document.getElementById("homeLinkInfo4");
     homeLinkInfo5 = document.getElementById("homeLinkInfo5");
     homeLinkInfo6 = document.getElementById("homeLinkInfo6");
+    contactVisit = document.getElementById("contactVisit");
 
     homeSlideButtonList = {
         1: document.getElementById("homeSlideButton1"),
@@ -227,6 +233,100 @@ window.onload = function () {
             commitSearch(searchInput.value)
         }
     });
+
+    if (contactVisit) {
+        contactOpenMap = function () {
+            alert('hi')
+        }
+    }
+
+    if (homeSlideImg) {
+        let homeSlideImgList = {
+            1: "../img/homeSlide1.png",
+            2: "../img/homeSlide2.png",
+            3: "../img/homeSlide3.png",
+            4: "../img/homeSlide4.png",
+            5: "../img/homeSlide5.png",
+            6: "../img/homeSlide6.png"
+        };
+        
+        let homeSlideInfoList = {
+            1: `<strong>DIVERSITY</strong>
+            <p><br />With an enrolment of over 1400 students, RSC is a co-educational high school with an academically selective cohort, a gifted and talented stream, mainstream classes and a Special Education Unit for students with special  needs. 70% of students come from multi-lingual backgrounds. Diversity is a major characteristic of RSC.</p>`,
+            2: `<strong>SPORT</strong>
+            <p>All students have the opportunity to participate in Swimming, Athletics and Cross Country carnivals as well as Inter School activities.<br /><br />Tuesday Sport includes a wide range of Grade and House Summer Sports, Winter Sports and Social Sports.</p>`,
+            3: `<strong>STUDENT LEADERSHIP</strong>
+            <p>Opportunities for school leadership exist within our team of twelve prefects and four captains. The positions are elected by both the students and staff.<br /><br />Our captains lead our prefect body and manage our regular College Assembly program.</p>`,
+            4: `<strong>ACADEMIC EXCELLENCE</strong>
+            <p>At Ryde Secondary College our students are proudly continuing our tradition of academic excellence.<br /><br />Your son or daughter will thrive in our vibrant college where they will be challenged and engaged by a diverse curriculum rich in traditional and innovative disciplines.</p>`,
+            5: `<strong>COLLEGE TOURS</strong>
+            <p>College tours are available throughout the year, generally once per month. Please contact the school to make a booking for the next available tour.<br /><br />Click here for more information on the dates of the tours or contact us on 9809 4894 to book a tour date with us.</p>`,
+            6: `<strong>OPPORTUNITY</strong>
+            <p>We have a wide range of opportunities for students to participate in activities, competitions and performance at Ryde Secondary College.<br /><br />We provide more than 100 co-curricular activities to students. These create opportunities to develop a wide range of talents and interests and achieve at the highest levels.</p>`
+        };
+        
+        let homeSlideCurr = 1;
+        
+        homeSlideLeft = function () {
+            homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+            homeSlideCurr--;
+            if (homeSlideCurr === 0) {
+                homeSlideCurr = 6;
+            };
+            homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+            homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+            homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+            homeSlideAutoReset();
+        }
+        
+        homeSlideRight = function () {
+            homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+            homeSlideCurr++;
+            if (homeSlideCurr === 7) {
+                homeSlideCurr = 1;
+            };
+            homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+            homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+            homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+            homeSlideAutoReset();
+        }
+        
+        homeSlideButton = function (num) {
+            homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+            homeSlideCurr = num;
+            homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+            homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+            homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+            homeSlideAutoReset();
+        }
+        
+        let timer;
+        
+        async function homeSlideAutoReset() {
+            let i = 0;
+            while (i < 10) {
+                await new Promise((resolve, reject) => {
+                    if (timer) {
+                        clearTimeout(timer);
+                    }
+        
+                    timer = setTimeout(() => {
+                        homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
+                        homeSlideCurr++;
+                        if (homeSlideCurr === 7) {
+                            homeSlideCurr = 1;
+                        };
+                        homeSlideImg.src = homeSlideImgList[homeSlideCurr];
+                        homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
+                        homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
+                        resolve();
+                    }, 10000);
+                });
+            }
+        }
+        
+        homeSlideAutoReset();
+    }
 }
 
 const openHamburgerMenu = function () {
@@ -368,94 +468,6 @@ const openSearch = function (term, button) {
         }
     }
     return false;
-}
-
-if (homeSlideImg) {
-    let homeSlideImgList = {
-        1: "../img/homeSlide1.png",
-        2: "../img/homeSlide2.png",
-        3: "../img/homeSlide3.png",
-        4: "../img/homeSlide4.png",
-        5: "../img/homeSlide5.png",
-        6: "../img/homeSlide6.png"
-    };
-    
-    let homeSlideInfoList = {
-        1: `<strong>DIVERSITY</strong>
-        <p>With an enrolment of over 1400 students, RSC is a co-educational high school with an academically selective cohort, a gifted and talented stream, mainstream classes and a Special Education Unit for students with special  needs. 70% of students come from multi-lingual backgrounds. Diversity is a major characteristic of RSC.</p>`,
-        2: `<strong>SPORT</strong>
-        <p>All students have the opportunity to participate in Swimming, Athletics and Cross Country carnivals as well as Inter School activities.<br /><br />Tuesday Sport includes a wide range of Grade and House Summer Sports, Winter Sports and Social Sports.</p>`,
-        3: `<strong>STUDENT LEADERSHIP</strong>
-        <p>Opportunities for school leadership exist within our team of twelve prefects and four captains. The positions are elected by both the students and staff.<br /><br />Our captains lead our prefect body and manage our regular College Assembly program.</p>`,
-        4: `<strong>ACADEMIC EXCELLENCE</strong>
-        <p>At Ryde Secondary College our students are proudly continuing our tradition of academic excellence.<br /><br />Your son or daughter will thrive in our vibrant college where they will be challenged and engaged by a diverse curriculum rich in traditional and innovative disciplines.</p>`,
-        5: `<strong>COLLEGE TOURS</strong>
-        <p>College tours are available throughout the year, generally once per month. Please contact the school to make a booking for the next available tour.<br /><br />Click here for more information on the dates of the tours or contact us on 9809 4894 to book a tour date with us.</p>`,
-        6: `<strong>OPPORTUNITY</strong>
-        <p>We have a wide range of opportunities for students to participate in activities, competitions and performance at Ryde Secondary College.<br /><br />We provide more than 100 co-curricular activities to students. These create opportunities to develop a wide range of talents and interests and achieve at the highest levels.</p>`
-    };
-    
-    let homeSlideCurr = 1;
-    
-    const homeSlideLeft = function () {
-        homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
-        homeSlideCurr--;
-        if (homeSlideCurr === 0) {
-            homeSlideCurr = 6;
-        };
-        homeSlideImg.src = homeSlideImgList[homeSlideCurr];
-        homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
-        homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
-        homeSlideAutoReset();
-    }
-    
-    const homeSlideRight = function () {
-        homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
-        homeSlideCurr++;
-        if (homeSlideCurr === 7) {
-            homeSlideCurr = 1;
-        };
-        homeSlideImg.src = homeSlideImgList[homeSlideCurr];
-        homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
-        homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
-        homeSlideAutoReset();
-    }
-    
-    const homeSlideButton = function (num) {
-        homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
-        homeSlideCurr = num;
-        homeSlideImg.src = homeSlideImgList[homeSlideCurr];
-        homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
-        homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
-        homeSlideAutoReset();
-    }
-    
-    let timer;
-    
-    async function homeSlideAutoReset() {
-        let i = 0;
-        while (i < 10) {
-            await new Promise((resolve, reject) => {
-                if (timer) {
-                    clearTimeout(timer);
-                }
-    
-                timer = setTimeout(() => {
-                    homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
-                    homeSlideCurr++;
-                    if (homeSlideCurr === 7) {
-                        homeSlideCurr = 1;
-                    };
-                    homeSlideImg.src = homeSlideImgList[homeSlideCurr];
-                    homeSlideInfo.innerHTML = homeSlideInfoList[homeSlideCurr];
-                    homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
-                    resolve();
-                }, 10000);
-            });
-        }
-    }
-    
-    homeSlideAutoReset();
 }
 
 let tableSort = document.createElement('div');
