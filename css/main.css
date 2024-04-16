@@ -1087,3 +1087,6 @@ details summary::marker {
     rotate: 180deg;
 }
 
+div.dt-search label {
+    display:none;
+}

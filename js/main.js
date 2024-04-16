@@ -472,7 +472,15 @@ const openSearch = function (term, button) {
 
 let tableSort = document.createElement('div');
 let searchFilter = document.createElement('div');
-tableSort.innerHTML = "Item 1";
+tableSort.innerHTML = ' <div>Sort By:' +
+        '<select id="sort" name="sort">' +
+            '<option value="relevance" selected>Relevance</option>' +
+            '<option value="alpha">A-Z</option>' +
+            '<option value="revAlpha">Z-A</option>' +
+            '<option value="newest">Newest</option>' +
+            '<option value="oldest">Oldest</option>' +
+       '</select>'+
+    '</div>';
 searchFilter.innerHTML = '<details id="filter" name="filter">' +
     '<summary><img id="filterImg" src="../img/filter.png"></summary>' +
     '<div id="filterGroup">' +
