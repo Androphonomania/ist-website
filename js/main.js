@@ -535,7 +535,9 @@ $(document).ready(function () {
             },
             columnDefs: [
                 { visible: false, type: 'date', targets: 3},
-                {type: 'natural-ci', target: 1}
+                { visible: false, target: 4},
+                {type: 'natural-ci', target: 1},
+                {searchable: false, target:2}
             ],
     
             language: {
@@ -567,13 +569,13 @@ $(document).ready(function () {
                 selected = Array.from(checked, (x) => x.value); // map from the node itself to the node value
     
                 var filterRegex = selected.join('|'); // construct regular expression for the search
-                table.column(2).search(filterRegex, true, false).draw(); // do the search
+                table.column(4).search(filterRegex, true, false).draw(); // do the search
             }
         });
 
         $("#clearFilter").click(function(e) { 
             $(".filterCheckbox").prop("checked", false);
-            table.column(2).search("", true, false).draw();
+            table.column(4).search("", true, false).draw();
         }); 
 
         $('#sortTest input:radio').on('change', function(){
