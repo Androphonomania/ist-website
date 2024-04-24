@@ -1067,6 +1067,7 @@ h4.resourceTitle {
     font-family: 'Rubik';
     font-size: 30px;
     font-weight: 500;
+    margin:10px 0;
 }
 
 #filterImg {
@@ -1362,4 +1363,21 @@ div.dt-search {
   #clearFilter {
     display: flex;
     color: #990000ff;
+  }
+
+  .readMore {
+    font-family: 'Rubik';
+    font-size: 12px;
+    color: #444;
+    font-style: italic;
+  }
+
+  .resourceBlurb {
+    font-family: 'Rubik';
+    color: #444;
+    height: 130px;
+    margin: 0;
+    font-size: 20px;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   }
