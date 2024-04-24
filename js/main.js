@@ -64,7 +64,7 @@ let homeLinkInfo3;
 let homeLinkInfo4;
 let homeLinkInfo5;
 let homeLinkInfo6;
-let contactVisit;
+let contactMap;
 let contactOpenMap;
 let homeSlideLeft;
 let homeSlideRight;
@@ -101,7 +101,7 @@ window.onload = function () {
     homeLinkInfo4 = document.getElementById("homeLinkInfo4");
     homeLinkInfo5 = document.getElementById("homeLinkInfo5");
     homeLinkInfo6 = document.getElementById("homeLinkInfo6");
-    contactVisit = document.getElementById("contactVisit");
+    contactMap = document.getElementById("contactMap");
 
     homeSlideButtonList = {
         1: document.getElementById("homeSlideButton1"),
@@ -234,9 +234,14 @@ window.onload = function () {
         }
     });
 
-    if (contactVisit) {
+    if (contactMap) {
+        contactMap.hidden = true
         contactOpenMap = function () {
-            alert('hi')
+            if (contactMap.hidden === true) {
+                contactMap.hidden = false
+            } else {
+                contactMap.hidden = true
+            }
         }
     }
 

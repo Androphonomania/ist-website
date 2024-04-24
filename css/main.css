@@ -701,6 +701,12 @@ hamburger-menu {
     font-size: 3vw;
 }
 
+#contactMap {
+    position: absolute;
+    margin-top: -31.1vh;
+    margin-left: 10vw;
+}
+
 #fallbackP {
     margin-top: 22vh;
     margin-left: 1vw;
