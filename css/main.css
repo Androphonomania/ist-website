@@ -702,9 +702,20 @@ hamburger-menu {
 }
 
 #contactMap {
+    -webkit-mask-image:url(../img/contactMapMask.png);
+    mask-image:url(../img/contactMapMask.png);
+    mask-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#contactMapDiv {
     position: absolute;
-    margin-top: -31.1vh;
-    margin-left: 10vw;
+    margin-top: -31.9vh;
+    margin-left: 18vw;
+    border: 3px solid black;
+    border-radius: 6%;
+    padding: 0;
 }
 
 #fallbackP {
