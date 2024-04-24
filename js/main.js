@@ -472,49 +472,60 @@ const openSearch = function (term, button) {
 
 let tableSort = document.createElement('div');
 let searchFilter = document.createElement('div');
-tableSort.innerHTML = ' <div>Sort By:' +
-        '<select id="sort" name="sort">' +
-            '<option value="relevance" selected>Relevance</option>' +
-            '<option value="alpha">A-Z</option>' +
-            '<option value="revAlpha">Z-A</option>' +
-            '<option value="newest">Newest</option>' +
-            '<option value="oldest">Oldest</option>' +
-       '</select>'+
-    '</div>';
+let clearFilter = document.getElementById('#clearFilter');
+
+tableSort.innerHTML = '<div id="sortContainer">' +
+'<p id="sortText">Sort by:</p>' +
+    '<fieldset id="sortTest" class="select" tabindex="2">' +
+        '<input class="selectopt" name="sort" type="radio" id="relevance" value="relevance" checked />' +
+        '<label for="relevance" class="option">Relevance</label>' +
+        '<input class="selectopt" name="sort" type="radio" id="alpha" value="alpha" />' +
+        '<label for="alpha" class="option">A - Z</label>' +
+        '<input class="selectopt" name="sort" type="radio" id="revAlpha" value="revAlpha"/>'+
+        '<label for="revAlpha" class="option">Z - A</label>' +
+        '<input class="selectopt" name="sort" type="radio" id="newest" value="newest"/>' +
+        '<label for="newest" class="option">Newest</label>' +
+        '<input class="selectopt" name="sort" type="radio" id="oldest" value="oldest"/>' +
+        '<label for="oldest" class="option">Oldest</label>' +
+    '</fieldset>' +
+'</div>';
+
 searchFilter.innerHTML = '<details id="filter" name="filter">' +
     '<summary><img id="filterImg" src="../img/filter.png"></summary>' +
     '<div id="filterGroup">' +
-    '<fieldset id="filterOptions">' +
-    '<Legend>Sort:</Legend>' +
-    '<h6>File Type</h6>' +
-    '<div>' +
-    '<input type="checkbox" id="docx" name="docx" value="Docx"/>' +
-    '<label for="docx">Docx</label>' +
-    '</div>' +
-    '<div>' +
-    '<input type="checkbox" id="PDF" name="PDF" value="PDF"/>' +
-    '<label for="PDF">PDF</label>' +
-    '</div>' +
-    '<div>' +
-    '<input type="checkbox" id="web" name="web" value="Web Page"/>' +
-    '<label for="web">Web Page</label>' +
-    '</div>' +
-    '<div>' +
-    '<input type="checkbox" id="other" name="other" value="Other"/>' +
-    '<label for="other">Other</label>' +
-    '</div>' +
-    '</fieldset>' +
+        '<fieldset id="filterOptions">' +
+            '<h6 class="filterCategory">File Type</h6>' +
+            '<div class="singleFilter">' +
+                '<input type="checkbox" id="docx" name="docx" value="Docx" class="filterCheckbox" />' +
+                '<label for="docx">Docx</label>' +
+            '</div>' +
+            '<div class="singleFilter">' +
+                '<input type="checkbox" id="PDF" name="PDF" value="PDF" class="filterCheckbox"/>' +
+                '<label for="PDF">PDF</label>' +
+            '</div>' +
+            '<div class="singleFilter">' +
+                '<input type="checkbox" id="web" name="web" value="Web Page" class="filterCheckbox"/>' +
+                '<label for="web">Web Page</label>' +
+            '</div>' +
+            '<div class="singleFilter">' +
+                '<input type="checkbox" id="other" name="other" value="Other" class="filterCheckbox"/>' +
+                '<label for="other">Other</label>' +
+            '</div>' +
+            '<a id="clearFilter" href="" onclick="return false;">Clear</a>' +
+        '</fieldset>' +
     '</div>' +
     '</details>';
+
 
 $(document).ready(function () {
         var table = $('#mainSearchResults').DataTable({
             lengthChange: false,
+            "pagingType": "bootstrap_input",
             layout: {
                 top2Start: {
                     search: {
                         placeholder: 'Search'
-                    }
+                    }, 
                 },
                 top2End: [tableSort, searchFilter],
                 topStart: 'info',
@@ -522,21 +533,32 @@ $(document).ready(function () {
                 bottomStart: 'paging',
                 bottomEnd: null
             },
-            columnDefs: [{
-                visible: false,
-                type: 'date',
-                targets: 3
-            }],
+            columnDefs: [
+                { visible: false, type: 'date', targets: 3},
+                {type: 'natural-ci', target: 1}
+            ],
     
             language: {
                 'paginate': {
-                    'previous': '<img class="paginationImg" src="../img/nextpage.png">',
-                    'next': '<span class="next-icon"></span>'
-                }
+                    'previous': '<img class="paginationImgFlipped" src="../img/nextpage.png" />',
+                    'next': '<img class="paginationImg" src="../img/nextpage.png" />',
+                    'first': '<img class="paginationImgFlipped" src="../img/lastpage.png" />',
+                    'last': '<img class="paginationImg" src="../img/lastpage.png" />'
+                },
+                info: '_START_ - _END_ of _TOTAL_ results',
+                infoFiltered: '',
+                infoEmpty: '0 results'
             }
         });
+        
+        $('.dt-input[type=search]').each(function () {
+            $(this).attr("placeholder");
+            $(this).after('<img src="../img/searchMaroon.png" class="searchIcon"  tabindex="1" />');
+        });
+
         var selected = []; // store selected checkbox here
         var mydiv = document.querySelector('#filterGroup'); // track event on parent element
+        
         mydiv.addEventListener('change', event => { // listen to any change
     
             if (event.target.type === 'checkbox') { // is it coming from a checkbox?
@@ -546,21 +568,35 @@ $(document).ready(function () {
     
                 var filterRegex = selected.join('|'); // construct regular expression for the search
                 table.column(2).search(filterRegex, true, false).draw(); // do the search
-    
             }
         });
-    
-        var mysort = document.getElementById('sort');
-        mysort.addEventListener('change', event => {
-            if (mysort.value == 'alpha') {
+
+        $("#clearFilter").click(function(e) { 
+            $(".filterCheckbox").prop("checked", false);
+            table.column(2).search("", true, false).draw();
+        }); 
+
+        $('#sortTest input:radio').on('change', function(){
+            if ($(this).val() == 'alpha') {
                 table.order([1, 'asc']).draw();
-            } else if (mysort.value == 'revAlpha') {
+            } else if ($(this).val() == 'revAlpha') {
                 table.order([1, 'desc']).draw();
-            } else if (mysort.value == 'newest') {
+            } else if ($(this).val() == 'newest') {
                 table.order([3, 'desc']).draw();
-            } else if (mysort.value == 'oldest') {
+            } else if ($(this).val() == 'oldest') {
                 table.order([3, 'asc']).draw();
-            }
+            } else if ($(this).val() == 'relevance') {
+                table.order.neutral().draw();
+            };
+            
         });
-    
+        var details = [...document.querySelectorAll('details')];
+        document.addEventListener('click', function(e) {
+            if (!details.some(f => f.contains(e.target))) {
+                details.forEach(f => f.removeAttribute('open'));
+            } else {
+                details.forEach(f => !f.contains(e.target) ? f.removeAttribute('open') : '');
+            }
+        })
 });
+
