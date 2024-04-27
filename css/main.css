@@ -422,31 +422,6 @@ hamburger-menu {
     height: auto;
 }
 
-/*#searchWhite {
-    position: fixed;
-    z-index: 99;
-    margin-left: 70vw;
-    margin-top: 8vh;
-    background-color: white;
-    width: 30vw;
-    height: 91vh;
-    overflow-y: auto;
-    opacity: 1;
-    border: 2px #595959 solid;
-    padding: 1.5vw;
-    font-size: 1.5vw;
-}
-
-#searchBlack {
-    position: fixed;
-    z-index: 98;
-    margin-top: 0vh;
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-}*/
-
 #content {
     width: 100%;
     padding: 0;
