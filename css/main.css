@@ -202,8 +202,15 @@ nav {
     height: auto;
 }
 
+#navSearchForm {
+    position: fixed;
+    right: 29vw;
+}
+
 #searchButton {
-    margin-left: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 #searchButton img {
@@ -415,7 +422,7 @@ hamburger-menu {
     height: auto;
 }
 
-#searchWhite {
+/*#searchWhite {
     position: fixed;
     z-index: 99;
     margin-left: 70vw;
@@ -438,7 +445,7 @@ hamburger-menu {
     width: 100vw;
     height: 100vh;
     opacity: 0;
-}
+}*/
 
 #content {
     width: 100%;

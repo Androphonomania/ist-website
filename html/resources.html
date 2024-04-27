@@ -73,10 +73,6 @@
         </div>
         <div id="hamBlack" onclick="openHamburgerMenu()" class="hamOpenNow"></div>
     </hamburger-menu>
-    <search-menu id="searchMenu">
-        <div id="searchWhite">No results found for ''.</div>
-        <div id="searchBlack" onclick="openSearch()"></div>
-    </search-menu>
     <nav>
         <div class="navImg" id="hamIcon"><img id="hamIconImg" onclick="openHamburgerMenu()" src="../img/ham.png"></div>
         <div id="navSep">|</div>
@@ -84,9 +80,10 @@
         <div><a href="index.html" id="navRSCText">
                 Ryde Secondary College
             </a></div>
-        <input id="searchInput" type="search" placeholder="Search." name="search">
-
-        <div class="navImg" id="searchButton"><img onclick="openSearch(null, true)" src="../img/search.webp"></div>
+            <form action="resources.html" method="GET" id="navSearchForm">   
+                <input id="searchInput" type="search" placeholder="Press enter to submit" name="search">
+            </form>
+            <div class="navImg" id="searchButton"><img onclick="openSearch()" src="../img/search.webp"></div>
     </nav>
     <div id="headerExtend"></div>
     <header>
@@ -302,7 +299,9 @@
                     </td>
                     <td class="resourceContent">
                         <h4 class="resourceTitle">P&C Scholarship Information</h4>
-                        <p class="resourceBlurb">content</p>
+                        <p class="resourceBlurb">Ryde Secondary College is pleased to announce that its Parents and Citizens Scholarships are open for application. These scholarships focus on fostering participation of students whose opportunities would be more limited without this support.
+                            <br>10 x scholarships for up to $1000 are open to students seeking further opportunities to achieve their academic, vocational, sporting, creative and performing arts, community and/or cultural goals. They may be used to:
+                        </p>
                         <a class="readMore" href="../docs/RSC_P&C_Scholarship.pdf" target="_blank">(Read More)</a>
                     </td>
                     <td class="resourceDetailsCell">
@@ -336,7 +335,22 @@
                     </td>
                     <td class="resourceContent">
                         <h4 class="resourceTitle">Compulsory School Attendance</h4>
-                        <p class="resourceBlurb">content</p>
+                        <p class="resourceBlurb">
+                            Education for your child is important
+                            and regular attendance at school is
+                            essential for your child to achieve their
+                            educational best and increase their
+                            career and life options. NSW public
+                            schools work in partnership with parents
+                            to encourage and support regular
+                            attendance of children and young
+                            people. When your child attends school
+                            every day, learning becomes easier
+                            and your child will build and maintain
+                            friendships with other children.
+                            <br>What are my Legal
+                            responsibilities?
+                        </p>
                         <a class="readMore" href="../docs/Compulsory_School_Attendance.pdf" target="_blank">(Read More)</a>
                     </td>
                     <td class="resourceDetailsCell">
@@ -370,7 +384,17 @@
                     </td>
                     <td class="resourceContent">
                         <h4 class="resourceTitle">RSC BYOD Policy</h4>
-                        <p class="resourceBlurb">content</p>
+                        <p class="resourceBlurb">
+                            Ryde Secondary College has run a Bring Your Own Device (BYOD) policy over the last
+                            decade. <br>
+                            Students have embraced this policy and are well established in the routine of bringing a
+                            suitable device to enable learning across all subjects. <br>
+                            Students have always received this policy on enrolment and agree to meet legislative
+                            requirements and observe a range of ethical practices to use their devices and access our
+                            school’s Wi-Fi network. Our expectations are clear and are aligned with privacy, child
+                            protection, student behaviour and other policies, for the protection of students, staff and
+                            the community.
+                        </p>
                         <a class="readMore" href="../docs/RSC_BYOD_2024.pdf" target="_blank">(Read More)</a>
                     </td>
                     <td class="resourceDetailsCell">
@@ -404,7 +428,11 @@
                     </td>
                     <td class="resourceContent">
                         <h4 class="resourceTitle">Subjects</h4>
-                        <p class="resourceBlurb">content</p>
+                        <p class="resourceBlurb">
+                            Creative Arts<br>
+                            In creative arts, students discover a variety of art forms through a study of dance, drama, music and visual arts. <br>
+                            Studying the creative arts, students learn to appreciate, compose, listen, make and perform. Each art form has its own unique knowledge and skills, elements or concepts as well as a capacity to inspire and enrich lives.
+                        </p>
                         <a class="readMore" href="../html/subjects.html" target="_blank">(Read More)</a>
                     </td>
                     <td class="resourceDetailsCell">
@@ -438,7 +466,14 @@
                     </td>
                     <td class="resourceContent">
                         <h4 class="resourceTitle">Enrollment Application</h4>
-                        <p class="resourceBlurb">content</p>
+                        <p class="resourceBlurb">
+                            Thank you for your interest in seeking enrolment in a NSW Government school. <br>
+                            This application to enrol form is to be completed in English. If you need an explanation of any of the questions or help in
+                            completing this application, please ask for assistance from the school staff. You are welcome to provide further information
+                            on an attached sheet. <br>
+                            Before beginning to complete this form please refer to pages 15 and 16 of this form for details about completing
+                            this application and documents that you are required to provide to the school.
+                        </p>
                         <a class="readMore" href="../docs/Enrol_K-12.pdf" target="_blank">(Read More)</a>
                     </td>
                     <td class="resourceDetailsCell">
@@ -472,7 +507,10 @@
                     </td>
                     <td class="resourceContent">
                         <h4 class="resourceTitle">RSC Phone Policy</h4>
-                        <p class="resourceBlurb">content</p>
+                        <p class="resourceBlurb">
+                            Rationale and Objectives <br>
+                            Ryde Secondary College supports the restrictions on the use of mobile phones in accordance with the NSW Department of Education: Students’ Use of Mobile Phones in Schools policy. Mobile phone use in schools can impact student learning and wellbeing. Restricting mobile phone use at school aims to increase focus in classrooms, remove distractions and promote positive social interaction, whilst reducing the potential for online bullying. Ryde Secondary College has strong teaching and learning practices to support students in the classroom using various forms of appropriate technology, which maximise the benefits and minimise the risks of digital environments and prepare students for life beyond school. We foster a safe learning environment which supports and enhances each child’s social and emotional health through our wellbeing and learning support teams.
+                        </p>
                         <a class="readMore" href="../docs/RSC_Phone_Policy.pdf" target="_blank">(Read More)</a>
                     </td>
                     <td class="resourceDetailsCell">
@@ -506,7 +544,15 @@
                     </td>
                     <td class="resourceContent">
                         <h4 class="resourceTitle">Canteen Menu</h4>
-                        <p class="resourceBlurb">content</p>
+                        <p class="resourceBlurb">
+                            Snacks <br>
+                            Fresh fruit – piece (V, Ve, GF) <br>
+                            Fresh fruit salad (V, Ve, GF) <br>
+                            Muffin of the day (V) <br>
+                            Yoghurt cup<br>
+                            &ensp;• With berries (V, GF) <br>
+                            &ensp;• With muesli (V)
+                        </p>
                         <a class="readMore" href="../docs/Canteen_Menu.pdf" target="_blank">(Read More)</a>
                     </td>
                     <td class="resourceDetailsCell">

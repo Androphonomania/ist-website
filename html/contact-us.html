@@ -70,10 +70,6 @@
         </div>
         <div id="hamBlack" onclick="openHamburgerMenu()" class="hamOpenNow"></div>
     </hamburger-menu>
-    <search-menu id="searchMenu">
-        <div id="searchWhite">No results found for ''.</div>
-        <div id="searchBlack" onclick="openSearch()"></div>
-    </search-menu>
     <nav>
         <div class="navImg" id="hamIcon"><img id="hamIconImg" onclick="openHamburgerMenu()" src="../img/ham.png"></div>
         <div id="navSep">|</div>
@@ -81,9 +77,10 @@
         <div><a href="index.html" id="navRSCText">
                 Ryde Secondary College
             </a></div>
-        <input id="searchInput" type="search" placeholder="Search." name="search">
-
-        <div class="navImg" id="searchButton"><img onclick="openSearch(null, true)" src="../img/search.webp"></div>
+            <form action="resources.html" method="GET" id="navSearchForm">   
+                <input id="searchInput" type="search" placeholder="Press enter to submit" name="search">
+            </form>
+            <div class="navImg" id="searchButton"><img onclick="openSearch()" src="../img/search.webp"></div>
     </nav>
     <div id="headerExtend"></div>
     <header>
