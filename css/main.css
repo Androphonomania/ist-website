@@ -701,6 +701,23 @@ hamburger-menu {
     font-size: 3vw;
 }
 
+#contactMap {
+    -webkit-mask-image:url(../img/contactMapMask.png);
+    mask-image:url(../img/contactMapMask.png);
+    mask-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#contactMapDiv {
+    position: absolute;
+    margin-top: -31.9vh;
+    margin-left: 18vw;
+    border: 3px solid black;
+    border-radius: 6%;
+    padding: 0;
+}
+
 #fallbackP {
     margin-top: 22vh;
     margin-left: 1vw;
