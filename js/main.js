@@ -626,3 +626,75 @@ if (window.location.href.match('resources.html') != null) {
 } //end of if (window.location.href.match)
 
 
+if (window.location.href.match('subjects.html') != null) {
+    function clearHighlighted() {
+        document.getElementById('englishNav').classList.remove('highlighted');
+        document.getElementById('artNav').classList.remove('highlighted');
+        document.getElementById('HSIENav').classList.remove('highlighted');
+        document.getElementById('languagesNav').classList.remove('highlighted');
+        document.getElementById('mathsNav').classList.remove('highlighted');
+        document.getElementById('PDHPENav').classList.remove('highlighted');
+        document.getElementById('scienceNav').classList.remove('highlighted');
+        document.getElementById('TASNav').classList.remove('highlighted');
+        document.getElementById('religionNav').classList.remove('highlighted');
+        document.getElementById('lifeReadyNav').classList.remove('highlighted');
+    }
+    
+    $(document).ready(function () {
+        let artTop = 0;
+        let englishTop = parseInt($('#english').offset().top) - 0.5 * parseInt(window.innerHeight);
+        let HSIETop = parseInt($('#HSIE').offset().top) - 0.5 * window.innerHeight;
+        let languagesTop = parseInt($('#languages').offset().top) - 0.5 * window.innerHeight;
+        let mathsTop = parseInt($('#maths').offset().top) - 0.5 * window.innerHeight;
+        let PDHPETop = parseInt($('#PDHPE').offset().top) - 0.5 * window.innerHeight;
+        let scienceTop = parseInt($('#science').offset().top) - 0.5* window.innerHeight;
+        let TASTop = parseInt($('#TAS').offset().top) - 0.5 * window.innerHeight;
+        let religionTop = parseInt($('#religion').offset().top) - 0.5 * window.innerHeight;
+        let lifeReadyTop = parseInt($('#lifeReady').offset().top) - 0.5 * window.innerHeight;
+
+        $(document).scroll(function() {
+            var scrollPos = $(document).scrollTop();
+            if (scrollPos >= artTop && scrollPos < englishTop) {
+                document.getElementById('englishNav').classList.remove('highlighted');
+                document.getElementById('artNav').classList.add('highlighted');
+            } else if (scrollPos >= englishTop && scrollPos < HSIETop) {
+                document.getElementById('artNav').classList.remove('highlighted');
+                document.getElementById('HSIENav').classList.remove('highlighted');
+                document.getElementById('englishNav').classList.add('highlighted');
+            } else if (scrollPos >= HSIETop && scrollPos < languagesTop) {
+                document.getElementById('englishNav').classList.remove('highlighted');
+                document.getElementById('languagesNav').classList.remove('highlighted');
+                document.getElementById('HSIENav').classList.add('highlighted');
+            } else if (scrollPos >= languagesTop && scrollPos < mathsTop) {
+                document.getElementById('HSIENav').classList.remove('highlighted');
+                document.getElementById('mathsNav').classList.remove('highlighted');
+                document.getElementById('languagesNav').classList.add('highlighted');
+            } else if (scrollPos >= mathsTop && scrollPos < PDHPETop) {
+                document.getElementById('PDHPENav').classList.remove('highlighted');
+                document.getElementById('languagesNav').classList.remove('highlighted');
+                document.getElementById('mathsNav').classList.add('highlighted');
+            } else if (scrollPos >= PDHPETop && scrollPos < scienceTop) {
+                document.getElementById('scienceNav').classList.remove('highlighted');
+                document.getElementById('mathsNav').classList.remove('highlighted');
+                document.getElementById('PDHPENav').classList.add('highlighted');
+            } else if (scrollPos >= scienceTop && scrollPos < TASTop) {
+                document.getElementById('TASNav').classList.remove('highlighted');
+                document.getElementById('PDHPENav').classList.remove('highlighted');
+                document.getElementById('scienceNav').classList.add('highlighted');
+            } else if (scrollPos >= TASTop && scrollPos < religionTop) {
+                document.getElementById('religionNav').classList.remove('highlighted');
+                document.getElementById('scienceNav').classList.remove('highlighted');
+                document.getElementById('TASNav').classList.add('highlighted');
+            } else if (scrollPos >= religionTop && scrollPos < lifeReadyTop) {
+                document.getElementById('lifeReadyNav').classList.remove('highlighted');
+                document.getElementById('TASNav').classList.remove('highlighted');
+                document.getElementById('religionNav').classList.add('highlighted');
+            } else if (scrollPos >= lifeReadyTop) {
+                document.getElementById('religionNav').classList.remove('highlighted');
+                document.getElementById('lifeReadyNav').classList.add('highlighted');
+            }
+        });
+    });
+}; 
+
+

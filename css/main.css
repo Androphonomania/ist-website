@@ -864,16 +864,22 @@ input[type='search']::-webkit-search-cancel-button {
 
 .subjectsNavButton {
     width: 90%;
-    margin: 14px;
-    background-color: #990000ff;
-    border-radius: 10px;
+    margin: 7px 14px;
+    background-color: white;
     height: 55px;
     font-family: 'Rubik';
     font-size: 30px;
-    color: white;
+    color: #555;
     display:flex;
     align-items: center;
     justify-content: center;
+}
+
+.subjectsNavButton.highlighted {
+    background-color: #990000ff;
+    color: white;
+    border-radius: 10px;
+    border: none;
 }
 
 
@@ -1404,4 +1410,10 @@ div.dt-search {
     font-size: 20px;
     overflow: hidden;
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+
+  .subjectDivider {
+    margin: 0;
+    width: 80%;
+    border: 0.5px solid #ccc;
   }
