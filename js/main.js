@@ -696,5 +696,3 @@ if (window.location.href.match('subjects.html') != null) {
         });
     });
 }; 
-
-
