@@ -228,12 +228,6 @@ window.onload = function () {
         hover2(homeLinkInfo6);
     }
 
-    /*searchInput.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' && !searchInput.hidden) {
-            commitSearch(searchInput.value)
-        }
-    });*/
-
     if (contactMapDiv) {
         contactMapDiv.hidden = true
         contactOpenMap = function () {
@@ -434,39 +428,21 @@ const commitSearch = function (term) {
 
 const openSearch = function () {
     if (searchInput.hidden) {
-        
-        //searchMenu.hidden = false;
         searchInput.hidden = false;
         searchInput.className = "";
         searchInput.classList.add("animate__animated")
         searchInput.classList.add("animate__faster");
         searchInput.classList.add("animate__fadeInRight");
         searchInput.value = "";
-        /*searchWhite.className = "";
-        searchWhite.classList.add("animate__animated");
-        searchWhite.classList.add("animate__faster");
-        searchWhite.classList.add("animate__slideInRight");
-        searchBlack.className = "";
-        searchWhite.innerHTML = "Enter a search term."
-        searchBlack.classList.add("hamOpenNow")*/
         if (!hamMenu.hidden) {
             openHamburgerMenu();
         }
-        /*setTimeout(function () {
-            searchBlack.style.opacity = 0.3;
-        }, 480)*/
+
     } else {
-            //searchInput.hidden = true;
             searchInput.className = "";
             searchInput.classList.add("animate__animated");
             searchInput.classList.add("animate__faster");
             searchInput.classList.add("animate__fadeOutRight");
-            /*searchWhite.className = "";
-            searchWhite.classList.add("animate__animated");
-            searchWhite.classList.add("animate__faster");
-            searchWhite.classList.add("animate__slideOutRight");
-            searchBlack.className = "";
-            searchBlack.classList.add("hamCloseNow")*/
             setTimeout(function () {
                 searchInput.hidden = true;
             }, 480)
