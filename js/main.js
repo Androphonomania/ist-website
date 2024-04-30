@@ -155,7 +155,7 @@ window.onload = function () {
                 timer2 = "";
             }
             timer2 = setTimeout(function () {
-                element.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+                element.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
                 if (potentialArrow) {
                     potentialArrow.style.width = "2.5vw";
                 }
@@ -174,7 +174,7 @@ window.onload = function () {
                 timer2 = "";
             }
             timer2 = setTimeout(function () {
-                element.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+                element.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
                 if (potentialArrow) {
                     potentialArrow.style.width = "2vw";
                 }

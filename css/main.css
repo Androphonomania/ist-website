@@ -29,21 +29,21 @@
 
 @keyframes homeSlideGlowAnim {
     from {
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.8);
     }
 
     to {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.9);
     }
 }
 
 @keyframes homeSlideUnglowAnim {
     from {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     to {
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.8);
     }
 }
 
@@ -567,7 +567,7 @@ hamburger-menu {
     border-top: 2px black solid;
     border-left: 2px black solid;
     border-bottom: 2px black solid;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 #homeSlideRightArrow {
@@ -579,7 +579,7 @@ hamburger-menu {
     border-top: 2px black solid;
     border-right: 2px black solid;
     border-bottom: 2px black solid;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 #homeSlideLeftArrow img {
@@ -602,7 +602,7 @@ hamburger-menu {
     height: 15vh;
     position: absolute;
     border-bottom: 2px black solid;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     padding-top: 1vh;
     text-decoration: none;
     color: black;
