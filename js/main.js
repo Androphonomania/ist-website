@@ -1,5 +1,3 @@
-// import * as ts from tween.umd.js
-
 var preloadedImg = [];
 
 const preload = function (array) {
@@ -44,7 +42,6 @@ let hamArrow3;
 let hamExpand1;
 let hamExpand2;
 let hamExpand3;
-//let searchMenu;
 let searchWhite;
 let searchBlack;
 let searchInput;
@@ -82,7 +79,6 @@ window.onload = function () {
     hamExpand1 = document.getElementById("hamExpand1");
     hamExpand2 = document.getElementById("hamExpand2");
     hamExpand3 = document.getElementById("hamExpand3");
-    //searchMenu = document.getElementById("searchMenu");
     searchWhite = document.getElementById("searchWhite");
     searchBlack = document.getElementById("searchBlack");
     searchInput = document.getElementById("searchInput");
@@ -113,7 +109,6 @@ window.onload = function () {
     };
 
     hamMenu.hidden = true;
-    //searchMenu.hidden = true;
     searchInput.hidden = true;
     hamExpand1.style.display = 'none';
     hamExpand2.style.display = 'none';
@@ -219,7 +214,7 @@ window.onload = function () {
         hover1(document.getElementById("homeSlideLeftArrow"));
         hover1(document.getElementById("homeSlideRightArrow"));
         hover1(homeSlideInfo);
-    
+
         hover2(homeLinkInfo1);
         hover2(homeLinkInfo2);
         hover2(homeLinkInfo3);
@@ -248,7 +243,7 @@ window.onload = function () {
             5: "../img/homeSlide5.png",
             6: "../img/homeSlide6.png"
         };
-        
+
         let homeSlideInfoList = {
             1: `<strong>DIVERSITY</strong>
             <p><br />With an enrolment of over 1400 students, RSC is a co-educational high school with an academically selective cohort, a gifted and talented stream, mainstream classes and a Special Education Unit for students with special  needs. 70% of students come from multi-lingual backgrounds. Diversity is a major characteristic of RSC.</p>`,
@@ -263,9 +258,9 @@ window.onload = function () {
             6: `<strong>OPPORTUNITY</strong>
             <p>We have a wide range of opportunities for students to participate in activities, competitions and performance at Ryde Secondary College.<br /><br />We provide more than 100 co-curricular activities to students. These create opportunities to develop a wide range of talents and interests and achieve at the highest levels.</p>`
         };
-        
+
         let homeSlideCurr = 1;
-        
+
         homeSlideLeft = function () {
             homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
             homeSlideCurr--;
@@ -277,7 +272,7 @@ window.onload = function () {
             homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
             homeSlideAutoReset();
         }
-        
+
         homeSlideRight = function () {
             homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
             homeSlideCurr++;
@@ -289,7 +284,7 @@ window.onload = function () {
             homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
             homeSlideAutoReset();
         }
-        
+
         homeSlideButton = function (num) {
             homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
             homeSlideCurr = num;
@@ -298,9 +293,9 @@ window.onload = function () {
             homeSlideButtonList[homeSlideCurr].style = "background-color: black;"
             homeSlideAutoReset();
         }
-        
+
         let timer;
-        
+
         async function homeSlideAutoReset() {
             let i = 0;
             while (i < 10) {
@@ -308,7 +303,7 @@ window.onload = function () {
                     if (timer) {
                         clearTimeout(timer);
                     }
-        
+
                     timer = setTimeout(() => {
                         homeSlideButtonList[homeSlideCurr].style = "background-color: white;"
                         homeSlideCurr++;
@@ -323,7 +318,7 @@ window.onload = function () {
                 });
             }
         }
-        
+
         homeSlideAutoReset();
     }
 }
@@ -439,13 +434,13 @@ const openSearch = function () {
         }
 
     } else {
-            searchInput.className = "";
-            searchInput.classList.add("animate__animated");
-            searchInput.classList.add("animate__faster");
-            searchInput.classList.add("animate__fadeOutRight");
-            setTimeout(function () {
-                searchInput.hidden = true;
-            }, 480)
+        searchInput.className = "";
+        searchInput.classList.add("animate__animated");
+        searchInput.classList.add("animate__faster");
+        searchInput.classList.add("animate__fadeOutRight");
+        setTimeout(function () {
+            searchInput.hidden = true;
+        }, 480)
     }
     return false;
 }
@@ -456,147 +451,159 @@ if (window.location.href.match('resources.html') != null) {
     let searchFilter = document.createElement('div');
 
     tableSort.innerHTML = '<div id="sortContainer">' +
-    '<p id="sortText">Sort by:</p>' +
+        '<p id="sortText">Sort by:</p>' +
         '<fieldset id="sortTest" class="select" tabindex="2">' +
-            '<input class="selectopt" name="sort" type="radio" id="relevance" value="relevance" checked />' +
-            '<label for="relevance" class="option">Relevance</label>' +
-            '<input class="selectopt" name="sort" type="radio" id="alpha" value="alpha" />' +
-            '<label for="alpha" class="option">A - Z</label>' +
-            '<input class="selectopt" name="sort" type="radio" id="revAlpha" value="revAlpha"/>'+
-            '<label for="revAlpha" class="option">Z - A</label>' +
-            '<input class="selectopt" name="sort" type="radio" id="newest" value="newest"/>' +
-            '<label for="newest" class="option">Newest</label>' +
-            '<input class="selectopt" name="sort" type="radio" id="oldest" value="oldest"/>' +
-            '<label for="oldest" class="option">Oldest</label>' +
+        '<input class="selectopt" name="sort" type="radio" id="relevance" value="relevance" checked />' +
+        '<label for="relevance" class="option">Relevance</label>' +
+        '<input class="selectopt" name="sort" type="radio" id="alpha" value="alpha" />' +
+        '<label for="alpha" class="option">A - Z</label>' +
+        '<input class="selectopt" name="sort" type="radio" id="revAlpha" value="revAlpha"/>' +
+        '<label for="revAlpha" class="option">Z - A</label>' +
+        '<input class="selectopt" name="sort" type="radio" id="newest" value="newest"/>' +
+        '<label for="newest" class="option">Newest</label>' +
+        '<input class="selectopt" name="sort" type="radio" id="oldest" value="oldest"/>' +
+        '<label for="oldest" class="option">Oldest</label>' +
         '</fieldset>' +
-    '</div>';
+        '</div>';
 
     searchFilter.innerHTML = '<details id="filter" name="filter">' +
         '<summary><img id="filterImg" src="../img/filter.png"></summary>' +
         '<div id="filterGroup">' +
-            '<fieldset id="filterOptions">' +
-                '<h6 class="filterCategory">File Type</h6>' +
-                '<div class="singleFilter">' +
-                    '<input type="checkbox" id="docx" name="docx" value="Docx" class="filterCheckbox" />' +
-                    '<label for="docx">Docx</label>' +
-                '</div>' +
-                '<div class="singleFilter">' +
-                    '<input type="checkbox" id="PDF" name="PDF" value="PDF" class="filterCheckbox"/>' +
-                    '<label for="PDF">PDF</label>' +
-                '</div>' +
-                '<div class="singleFilter">' +
-                    '<input type="checkbox" id="web" name="web" value="Web Page" class="filterCheckbox"/>' +
-                    '<label for="web">Web Page</label>' +
-                '</div>' +
-                '<div class="singleFilter">' +
-                    '<input type="checkbox" id="other" name="other" value="Other" class="filterCheckbox"/>' +
-                    '<label for="other">Other</label>' +
-                '</div>' +
-                '<a id="clearFilter" href="" onclick="return false;">Clear</a>' +
-            '</fieldset>' +
+        '<fieldset id="filterOptions">' +
+        '<h6 class="filterCategory">File Type</h6>' +
+        '<div class="singleFilter">' +
+        '<input type="checkbox" id="docx" name="docx" value="Docx" class="filterCheckbox" />' +
+        '<label for="docx">Docx</label>' +
+        '</div>' +
+        '<div class="singleFilter">' +
+        '<input type="checkbox" id="PDF" name="PDF" value="PDF" class="filterCheckbox"/>' +
+        '<label for="PDF">PDF</label>' +
+        '</div>' +
+        '<div class="singleFilter">' +
+        '<input type="checkbox" id="web" name="web" value="Web Page" class="filterCheckbox"/>' +
+        '<label for="web">Web Page</label>' +
+        '</div>' +
+        '<div class="singleFilter">' +
+        '<input type="checkbox" id="other" name="other" value="Other" class="filterCheckbox"/>' +
+        '<label for="other">Other</label>' +
+        '</div>' +
+        '<a id="clearFilter" href="" onclick="return false;">Clear</a>' +
+        '</fieldset>' +
         '</div>' +
         '</details>';
 
 
     $(document).ready(function () {
-            if (window.location.search.trim() != "") {
-                var urlParam = new URLSearchParams(window.location.search.trim());
-                var searchTerm = urlParam.get("search");
+        if (window.location.search.trim() != "") {
+            var urlParam = new URLSearchParams(window.location.search.trim());
+            var searchTerm = urlParam.get("search");
+        };
+
+        var table = $('#mainSearchResults').DataTable({
+            lengthChange: false,
+            "pagingType": "bootstrap_input",
+            layout: {
+                top2Start: {
+                    search: {
+                        placeholder: 'Search'
+                    },
+                },
+                top2End: [tableSort, searchFilter],
+                topStart: 'info',
+                topEnd: null,
+                bottomStart: 'paging',
+                bottomEnd: null
+            },
+            columnDefs: [{
+                    visible: false,
+                    type: 'date',
+                    targets: 3
+                },
+                {
+                    visible: false,
+                    target: 4
+                },
+                {
+                    type: 'natural-ci',
+                    target: 1
+                },
+                {
+                    searchable: false,
+                    target: 2
+                }
+            ],
+
+            language: {
+                'paginate': {
+                    'previous': '<img class="paginationImgFlipped" src="../img/nextpage.png" />',
+                    'next': '<img class="paginationImg" src="../img/nextpage.png" />',
+                    'first': '<img class="paginationImgFlipped" src="../img/lastpage.png" />',
+                    'last': '<img class="paginationImg" src="../img/lastpage.png" />'
+                },
+                info: '_START_ - _END_ of _TOTAL_ results',
+                infoFiltered: '',
+                infoEmpty: '0 results'
+            },
+            initComplete: function () {
+                if (searchTerm.trim() != "") {
+                    this.api().search(searchTerm).draw();
+                }
+            }
+        });
+
+        $('.dt-input[type=search]').each(function () {
+            $(this).attr("placeholder");
+            $(this).after('<img src="../img/searchMaroon.png" class="searchIcon"  tabindex="1" />');
+        });
+
+        var selected = []; // store selected checkbox here
+        var mydiv = document.querySelector('#filterGroup'); // track event on parent element
+
+        mydiv.addEventListener('change', event => { // listen to any change
+
+            if (event.target.type === 'checkbox') { // is it coming from a checkbox?
+
+                var checked = document.querySelectorAll('input[type="checkbox"]:checked'); // get all checked checkbox
+                selected = Array.from(checked, (x) => x.value); // map from the node itself to the node value
+
+                var filterRegex = selected.join('|'); // construct regular expression for the search
+                table.column(4).search(filterRegex, true, false).draw(); // do the search
+            }
+        });
+
+        $("#clearFilter").click(function (e) {
+            $(".filterCheckbox").prop("checked", false);
+            table.column(4).search("", true, false).draw();
+        });
+
+        $('#sortTest input:radio').on('change', function () {
+            if ($(this).val() == 'alpha') {
+                table.order([1, 'asc']).draw();
+            } else if ($(this).val() == 'revAlpha') {
+                table.order([1, 'desc']).draw();
+            } else if ($(this).val() == 'newest') {
+                table.order([3, 'desc']).draw();
+            } else if ($(this).val() == 'oldest') {
+                table.order([3, 'asc']).draw();
+            } else if ($(this).val() == 'relevance') {
+                table.order.neutral().draw();
             };
 
-            var table = $('#mainSearchResults').DataTable({
-                lengthChange: false,
-                "pagingType": "bootstrap_input",
-                layout: {
-                    top2Start: {
-                        search: {
-                            placeholder: 'Search'
-                        }, 
-                    },
-                    top2End: [tableSort, searchFilter],
-                    topStart: 'info',
-                    topEnd: null,
-                    bottomStart: 'paging',
-                    bottomEnd: null
-                },
-                columnDefs: [
-                    { visible: false, type: 'date', targets: 3},
-                    { visible: false, target: 4},
-                    {type: 'natural-ci', target: 1},
-                    {searchable: false, target:2}
-                ],
-        
-                language: {
-                    'paginate': {
-                        'previous': '<img class="paginationImgFlipped" src="../img/nextpage.png" />',
-                        'next': '<img class="paginationImg" src="../img/nextpage.png" />',
-                        'first': '<img class="paginationImgFlipped" src="../img/lastpage.png" />',
-                        'last': '<img class="paginationImg" src="../img/lastpage.png" />'
-                    },
-                    info: '_START_ - _END_ of _TOTAL_ results',
-                    infoFiltered: '',
-                    infoEmpty: '0 results'
-                },
-                initComplete: function() {
-                    if (searchTerm.trim() != "") {
-                        this.api().search(searchTerm).draw();        
-                    }
-                }
-            });
-            
-            $('.dt-input[type=search]').each(function () {
-                $(this).attr("placeholder");
-                $(this).after('<img src="../img/searchMaroon.png" class="searchIcon"  tabindex="1" />');
-            });
+        });
+        var details = [...document.querySelectorAll('details')];
+        document.addEventListener('click', function (e) {
+            if (!details.some(f => f.contains(e.target))) {
+                details.forEach(f => f.removeAttribute('open'));
+            } else {
+                details.forEach(f => !f.contains(e.target) ? f.removeAttribute('open') : '');
+            }
+        })
+        $('#mainSearchResults').on('page.dt', function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 200);
+        });
 
-            var selected = []; // store selected checkbox here
-            var mydiv = document.querySelector('#filterGroup'); // track event on parent element
-            
-            mydiv.addEventListener('change', event => { // listen to any change
-        
-                if (event.target.type === 'checkbox') { // is it coming from a checkbox?
-        
-                    var checked = document.querySelectorAll('input[type="checkbox"]:checked'); // get all checked checkbox
-                    selected = Array.from(checked, (x) => x.value); // map from the node itself to the node value
-        
-                    var filterRegex = selected.join('|'); // construct regular expression for the search
-                    table.column(4).search(filterRegex, true, false).draw(); // do the search
-                }
-            });
-
-            $("#clearFilter").click(function(e) { 
-                $(".filterCheckbox").prop("checked", false);
-                table.column(4).search("", true, false).draw();
-            }); 
-
-            $('#sortTest input:radio').on('change', function(){
-                if ($(this).val() == 'alpha') {
-                    table.order([1, 'asc']).draw();
-                } else if ($(this).val() == 'revAlpha') {
-                    table.order([1, 'desc']).draw();
-                } else if ($(this).val() == 'newest') {
-                    table.order([3, 'desc']).draw();
-                } else if ($(this).val() == 'oldest') {
-                    table.order([3, 'asc']).draw();
-                } else if ($(this).val() == 'relevance') {
-                    table.order.neutral().draw();
-                };
-                
-            });
-            var details = [...document.querySelectorAll('details')];
-            document.addEventListener('click', function(e) {
-                if (!details.some(f => f.contains(e.target))) {
-                    details.forEach(f => f.removeAttribute('open'));
-                } else {
-                    details.forEach(f => !f.contains(e.target) ? f.removeAttribute('open') : '');
-                }
-            })
-            $('#mainSearchResults').on( 'page.dt', function () {
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 200);        
-            });    
-            
     });
 
 } //end of if (window.location.href.match)
@@ -615,7 +622,7 @@ if (window.location.href.match('subjects.html') != null) {
         document.getElementById('religionNav').classList.remove('highlighted');
         document.getElementById('lifeReadyNav').classList.remove('highlighted');
     }
-    
+
     $(document).ready(function () {
         let artTop = 0;
         let englishTop = parseInt($('#english').offset().top) - 0.5 * parseInt(window.innerHeight);
@@ -623,12 +630,12 @@ if (window.location.href.match('subjects.html') != null) {
         let languagesTop = parseInt($('#languages').offset().top) - 0.5 * window.innerHeight;
         let mathsTop = parseInt($('#maths').offset().top) - 0.5 * window.innerHeight;
         let PDHPETop = parseInt($('#PDHPE').offset().top) - 0.5 * window.innerHeight;
-        let scienceTop = parseInt($('#science').offset().top) - 0.5* window.innerHeight;
+        let scienceTop = parseInt($('#science').offset().top) - 0.5 * window.innerHeight;
         let TASTop = parseInt($('#TAS').offset().top) - 0.5 * window.innerHeight;
         let religionTop = parseInt($('#religion').offset().top) - 0.5 * window.innerHeight;
         let lifeReadyTop = parseInt($('#lifeReady').offset().top) - 0.5 * window.innerHeight;
 
-        $(document).scroll(function() {
+        $(document).scroll(function () {
             var scrollPos = $(document).scrollTop();
             if (scrollPos >= artTop && scrollPos < englishTop) {
                 document.getElementById('englishNav').classList.remove('highlighted');
@@ -671,4 +678,4 @@ if (window.location.href.match('subjects.html') != null) {
             }
         });
     });
-}; 
+};

@@ -528,12 +528,14 @@ hamburger-menu {
     color: black;
 }
 
-#homeLinkInfo2, #homeLinkInfo5 {
+#homeLinkInfo2,
+#homeLinkInfo5 {
     margin-top: -23.4vh;
     margin-left: 38.47vw;
 }
 
-#homeLinkInfo3, #homeLinkInfo6 {
+#homeLinkInfo3,
+#homeLinkInfo6 {
     margin-top: -23.4vh;
     margin-left: 64.7vw;
 }
@@ -549,7 +551,7 @@ hamburger-menu {
     margin-top: 14.6vh;
 }
 
-#homeSlideShow { 
+#homeSlideShow {
     text-align: center;
 }
 
@@ -655,15 +657,18 @@ hamburger-menu {
     margin-bottom: 3vh;
 }
 
-#contactStuff1Container > *, #contactStuff2Container  > * {
+#contactStuff1Container>*,
+#contactStuff2Container>* {
     text-align: center;
 }
 
-#contactStuff1, #contactStuff2 {
+#contactStuff1,
+#contactStuff2 {
     margin: 0;
 }
 
-#contactStuff1 > *, #contactStuff2 > * {
+#contactStuff1>*,
+#contactStuff2>* {
     margin: 4vh 3vw;
     text-align: center;
     display: inline-block;
@@ -683,8 +688,8 @@ hamburger-menu {
 }
 
 #contactMap {
-    -webkit-mask-image:url(../img/contactMapMask.png);
-    mask-image:url(../img/contactMapMask.png);
+    -webkit-mask-image: url(../img/contactMapMask.png);
+    mask-image: url(../img/contactMapMask.png);
     mask-size: 100%;
     margin: 0;
     padding: 0;
@@ -807,7 +812,7 @@ td#DOELogo img {
     background: linear-gradient(to right, #ffffff, #f3f3f3, #ffffff);
 }
 
-input[type='search']::-webkit-search-cancel-button { 
+input[type='search']::-webkit-search-cancel-button {
     -webkit-appearance: none;
     height: 20px;
     width: 20px;
@@ -821,7 +826,7 @@ input[type='search']::-webkit-search-cancel-button {
 
 .subjectsBody:after {
     content: "";
-    display:table;
+    display: table;
     clear: both;
 }
 
@@ -829,7 +834,7 @@ input[type='search']::-webkit-search-cancel-button {
     width: 20%;
     float: left;
     position: sticky;
-    top:75px;
+    top: 75px;
 }
 
 #subjectsNav a {
@@ -844,7 +849,7 @@ input[type='search']::-webkit-search-cancel-button {
     font-family: 'Rubik';
     font-size: 30px;
     color: #555;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -872,14 +877,14 @@ input[type='search']::-webkit-search-cancel-button {
     margin-right: 0;
     font-family: 'Rubik';
     font-size: 25px;
-    color:#595959;
+    color: #595959;
 }
 
 h4.subject {
     padding: 0;
     font-size: 40px;
     font-weight: 400;
-    color:black;
+    color: black;
 }
 
 ul.subject {
@@ -1007,9 +1012,13 @@ a.subjectDescLink {
     padding-right: 20px;
 }
 
-#english h4.subject, #languages h4.subject, #PDHPE h4.subject, #TAS h4.subject, #lifeReady h4.subject {
-    float:right;
-    width:100%;
+#english h4.subject,
+#languages h4.subject,
+#PDHPE h4.subject,
+#TAS h4.subject,
+#lifeReady h4.subject {
+    float: right;
+    width: 100%;
 }
 
 table#mainSearchResults thead {
@@ -1017,7 +1026,7 @@ table#mainSearchResults thead {
 }
 
 #mainSearchResults {
-    width:99% !important;
+    width: 99% !important;
 }
 
 .thumbnailBox {
@@ -1037,8 +1046,8 @@ table#mainSearchResults thead {
 }
 
 .resourceDetails {
-    width:100%;
-    height:200px;
+    width: 100%;
+    height: 200px;
     border-left: 2px solid gray;
 }
 
@@ -1051,11 +1060,11 @@ table.resourceDetails td {
 }
 
 .resourceDetailsRow {
-    height:50%;
+    height: 50%;
 }
 
 img.resourceDetailsImg {
-    height:85px;
+    height: 85px;
 }
 
 .resourceDetailsTxt {
@@ -1064,18 +1073,18 @@ img.resourceDetailsImg {
 }
 
 .mainSearchResultsRow {
-    height:225px;
+    height: 225px;
 }
 
 h4.resourceTitle {
     font-family: 'Rubik';
     font-size: 30px;
     font-weight: 500;
-    margin:10px 0;
+    margin: 10px 0;
 }
 
 #filterImg {
-    height:55px;
+    height: 55px;
     margin-top: 15px;
 }
 
@@ -1095,7 +1104,7 @@ details#filter {
 
 details summary::marker {
     content: "";
-  }
+}
 
 .resourceDetailsCell {
     width: 22%;
@@ -1111,7 +1120,7 @@ details summary::marker {
 }
 
 .paginationImg {
-    width:20px;
+    width: 20px;
 }
 
 .dt-paging-button:hover {
@@ -1119,7 +1128,7 @@ details summary::marker {
 }
 
 div.dt-search label {
-    display:none;
+    display: none;
 }
 
 div.dt-container div.dt-layout-cell.dt-end {
@@ -1127,19 +1136,19 @@ div.dt-container div.dt-layout-cell.dt-end {
     justify-content: right;
     align-items: center;
     height: 50px;
-  }
+}
 
-  div.dt-container div.dt-layout-cell.dt-end div {
+div.dt-container div.dt-layout-cell.dt-end div {
     margin: 10px;
-  }
+}
 
-  div.dt-layout-cell.dt-start {
+div.dt-layout-cell.dt-start {
     padding-left: 30px !important;
-  }
+}
 
-  div.dt-container .dt-search input {
+div.dt-container .dt-search input {
     margin-left: 0px;
-  }
+}
 
 .docx {
     display: none;
@@ -1149,7 +1158,9 @@ div.dt-container div.dt-layout-cell.dt-end {
     visibility: hidden;
 }
 
-.thumbnailCell, .resourceContent, .resourceDetailsCell {
+.thumbnailCell,
+.resourceContent,
+.resourceDetailsCell {
     border-bottom: 2px solid gray !important;
 }
 
@@ -1167,7 +1178,7 @@ div.dt-container div.dt-layout-cell.dt-end {
     display: flex;
     align-items: flex-start;
     top: 155px;
-    height:15px;
+    height: 15px;
     border-bottom: 3px solid gray;
     padding-top: 0;
     padding-bottom: 10px;
@@ -1186,7 +1197,7 @@ div.dt-container div.dt-layout-cell.dt-end {
 
 .dt-start:has(.dt-input) {
     width: 65% !important;
-    height:50px !important;
+    height: 50px !important;
     padding-bottom: 0 !important;
 }
 
@@ -1196,7 +1207,7 @@ div.dt-container div.dt-layout-cell.dt-end {
     border-left: none !important;
     border-right: none !important;
     width: 82%;
-    height:50px;
+    height: 50px;
     align-self: bottom;
     color: #555555 !important;
     font-family: 'Rubik';
@@ -1212,17 +1223,17 @@ div.dt-container div.dt-layout-cell.dt-end {
 }
 
 #sortContainer {
-    display:flex;
-    justify-content:left;
-    flex-wrap:wrap;
-    padding:0;
-    margin:15px 0 0;
-    height:60px;
-    width:30vw;
-  }
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 15px 0 0;
+    height: 60px;
+    width: 30vw;
+}
 
 .dt-end div:has(#sortContainer) {
-    width:70%;
+    width: 70%;
     height: 50px;
     margin-right: 0;
 }
@@ -1233,13 +1244,13 @@ div.dt-container div.dt-layout-cell.dt-end {
     font-weight: 400;
     align-self: flex-start;
     margin-top: 15px;
-  }
+}
 
 .searchIcon {
     height: 40px;
     position: absolute;
     top: 25px;
-    left:52%;
+    left: 52%;
 }
 
 div.dt-search {
@@ -1247,136 +1258,136 @@ div.dt-search {
     height: 60px;
 }
 
-  .select {
-    display:flex;
+.select {
+    display: flex;
     flex-direction: column;
-    position:relative;
-    width:200px;
-    height:200px;
+    position: relative;
+    width: 200px;
+    height: 200px;
     margin-top: 8px;
     border: none;
     z-index: 5;
-  }
-  
-  .select:focus {
+}
+
+.select:focus {
     border: gray 1px solid;
     background-color: white;
     border-radius: 10px;
-  }
+}
 
-  .select:not(:focus) {
-    height:45px;
-  }
-  
+.select:not(:focus) {
+    height: 45px;
+}
+
 .select:not(:focus) .option {
     border-top: none;
 }
 
-  .option {
-    padding:0 30px 0 10px;
-    min-height:40px;
-    display:flex;
-    align-items:center;
-    background:white;
+.option {
+    padding: 0 30px 0 10px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    background: white;
     border-top: #aaa solid 1px;
-    position:absolute;
-    top:0;
+    position: absolute;
+    top: 0;
     width: 100%;
-    pointer-events:none;
-    order:2;
-    z-index:6;
-    transition:background .4s ease-in-out;
-    box-sizing:border-box;
-    overflow:hidden;
-    white-space:nowrap;
-    color:#990000ff;
+    pointer-events: none;
+    order: 2;
+    z-index: 6;
+    transition: background .4s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #990000ff;
     border-radius: 2px;
     font-size: 25px;
     font-weight: 400;
-  }
-  
-  .option:hover {
-    background:#990000ff;
+}
+
+.option:hover {
+    background: #990000ff;
     color: white;
-  }
-  
-  .select:focus .option {
-    position:relative;
-    pointer-events:all;
-  }
-  
+}
+
+.select:focus .option {
+    position: relative;
+    pointer-events: all;
+}
+
 .selectopt {
-    opacity:1;
-    position:absolute;
-    left:99px;
-  }
-  
-  input.selectopt:checked + label {
+    opacity: 1;
+    position: absolute;
+    left: 99px;
+}
+
+input.selectopt:checked+label {
     order: 2;
-    z-index:7;
-    background:#990000ff;
-    border-top:none;
-    position:relative;
+    z-index: 7;
+    background: #990000ff;
+    border-top: none;
+    position: relative;
     color: white;
-  }
-  
-  input.selectopt:checked + label:after {
-    content:'';
-    width: 0; 
-    height: 0; 
+}
+
+input.selectopt:checked+label:after {
+    content: '';
+    width: 0;
+    height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid white;
-    position:absolute;
-    right:10px;
-    top:calc(50% - 2.5px);
-    pointer-events:none;
-    z-index:8;
-  }
-  
-  input.selectopt:checked + label:before {
-    position:absolute;
-    right:0;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 2.5px);
+    pointer-events: none;
+    z-index: 8;
+}
+
+input.selectopt:checked+label:before {
+    position: absolute;
+    right: 0;
     height: 40px;
     width: 40px;
     content: '';
-    background:#990000ff;
-  }
+    background: #990000ff;
+}
 
-  #filterOptions {
+#filterOptions {
     left: -70px;
     position: relative;
     width: 130px;
     background-color: white;
     border-radius: 10px;
-  }
+}
 
-  .filterCategory {
-    margin:2px 0 8px 0;
+.filterCategory {
+    margin: 2px 0 8px 0;
     display: flex;
     font-family: 'Rubik';
     font-size: 18px;
     font-weight: 600;
-  }
+}
 
-  .singleFilter {
-    margin:5px 0px 5px -5px !important;
+.singleFilter {
+    margin: 5px 0px 5px -5px !important;
     display: flex;
-  }
+}
 
-  #clearFilter {
+#clearFilter {
     display: flex;
     color: #990000ff;
-  }
+}
 
-  .readMore {
+.readMore {
     font-family: 'Rubik';
     font-size: 12px;
     color: #444;
     font-style: italic;
-  }
+}
 
-  .resourceBlurb {
+.resourceBlurb {
     font-family: 'Rubik';
     color: #444;
     height: 130px;
@@ -1384,10 +1395,10 @@ div.dt-search {
     font-size: 20px;
     overflow: hidden;
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-  }
+}
 
-  .subjectDivider {
+.subjectDivider {
     margin: 0;
     width: 80%;
     border: 0.5px solid #ccc;
-  }
+}
